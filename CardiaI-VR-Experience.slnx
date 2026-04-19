@@ -110,6 +110,7 @@
   <Project Path="Meta.XR.Editor.Id.csproj" />
   <Project Path="AssistantCoreSDKEditor.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="VoiceSDK.Editor.Composer.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="UnityEditor.XR.LegacyInputHelpers.csproj" />
