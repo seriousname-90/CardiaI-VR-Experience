@@ -3,7 +3,97 @@ guid: ed5c70275549f604caa0460b66700a3a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carpet
+    second: {fileID: 2100000, guid: 19103979eef629145ba8a65ff0dbad2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: circle1
+    second: {fileID: 2100000, guid: fbb36e6b52cd35b4b9934776ecc9178e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: circle2
+    second: {fileID: 2100000, guid: 5804cff03313a27488474559d37d8d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: circle3
+    second: {fileID: 2100000, guid: a44bd2f31d7fabf4a8089663ae5293f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: house1
+    second: {fileID: 2100000, guid: 0570598c51f463b4f91de6d187914e12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: house2
+    second: {fileID: 2100000, guid: a60863ce3e15bf04b8b4dbfa9ca5e49e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plants
+    second: {fileID: 2100000, guid: 6c44212c60acf1c438af6a7b34e538cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rocks
+    second: {fileID: 2100000, guid: 2ee73a102349fa74998726c2fd3913d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: seat1
+    second: {fileID: 2100000, guid: e5eeb181d03f0964085342e50469e5e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: seat2
+    second: {fileID: 2100000, guid: 220ad83096f909e45a0103e264bab7e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: seat3
+    second: {fileID: 2100000, guid: 9b892471382d62946b9f77a7b70daddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: seat4
+    second: {fileID: 2100000, guid: 3e6b50be45608294f97af4fe6217022e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sphere
+    second: {fileID: 2100000, guid: 4a31318d2d097fc418d0d79f496bca33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage1
+    second: {fileID: 2100000, guid: 26a7a56d67a314649a6982ab68434f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage2
+    second: {fileID: 2100000, guid: 115f810acaeb3374a86116a649bacbf8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage3
+    second: {fileID: 2100000, guid: 65619fc2f953860448f531f1ec094feb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage4
+    second: {fileID: 2100000, guid: 4d15b94cde8172c4286e440cdf40c16d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vase
+    second: {fileID: 2100000, guid: 1b0f2f88640e89e41914d1999ca93aa2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
