@@ -98,6 +98,7 @@
   <Project Path="Meta.XR.Editor.Guide.About.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Meta.XR.MultiplayerBlocks.NGO.Editor.csproj" />
   <Project Path="Meta.Wit.Dictation.csproj" />
   <Project Path="Meta.XR.EnvironmentDepth.csproj" />
@@ -110,7 +111,6 @@
   <Project Path="Meta.XR.Editor.Id.csproj" />
   <Project Path="AssistantCoreSDKEditor.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="VoiceSDK.Editor.Composer.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="UnityEditor.XR.LegacyInputHelpers.csproj" />
