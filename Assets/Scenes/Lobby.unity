@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 92647784}
   - component: {fileID: 92647783}
   - component: {fileID: 92647786}
+  - component: {fileID: 92647787}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -370,12 +371,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92647782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.22037885, z: 0, w: 0.9754144}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1728785200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &92647786
 MonoBehaviour:
@@ -392,6 +393,45 @@ MonoBehaviour:
   m_SendPointerHoverToParent: 1
   _useInitialPressPositionForDrag: 1
   _exclusiveMode: 1
+--- !u!114 &92647787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92647782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 2
+  m_TrackedScrollDeltaMultiplier: 5
+  m_BypassUIToolkitEvents: 0
+  m_ActiveInputMode: 0
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_PointAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_NavigateAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_EnableBuiltinActionsAsFallback: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!1 &123103865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &689794677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3183,6 +3223,10 @@ PrefabInstance:
       propertyPath: _centerEyeCamera
       value: 
       objectReference: {fileID: 754135208}
+    - target: {fileID: 594552357310180489, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
+      propertyPath: _radius
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 2336446269904782542, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: _leftEyeAnchor
       value: 
@@ -3195,6 +3239,10 @@ PrefabInstance:
       propertyPath: _centerEyeCamera
       value: 
       objectReference: {fileID: 754135208}
+    - target: {fileID: 3591711987113391845, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
+      propertyPath: _radius
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 4148778239110795873, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_Name
       value: '[BuildingBlock] OVRInteractionComprehensive'
@@ -4541,6 +4589,7 @@ GameObject:
   - component: {fileID: 1713562633}
   - component: {fileID: 1713562632}
   - component: {fileID: 1713562635}
+  - component: {fileID: 1713562636}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4674,7 +4723,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4759,6 +4808,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1713562636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713562630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 159.6, y: -28.9, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1728785199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,6 +4860,7 @@ RectTransform:
   m_LocalScale: {x: 0.002385551, y: 0.0023454002, z: 0.0005}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 92647785}
   - {fileID: 1713562631}
   - {fileID: 1528088009}
   - {fileID: 1967738884}
@@ -5998,6 +6069,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1148384514}
+    - target: {fileID: 8495302706695560031, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8868419149285711527, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6007,7 +6082,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1978026354}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8495302706695560031, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
@@ -6269,7 +6345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2895692098114450572, guid: b2c768f75c6e51f42b3e7a3219fd9612, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2895692098114450572, guid: b2c768f75c6e51f42b3e7a3219fd9612, type: 3}
       propertyPath: m_TagString
@@ -6811,7 +6887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4510251910540025971, guid: b883f53069e8d954b95bc15930528f0e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4510251910540025971, guid: b883f53069e8d954b95bc15930528f0e, type: 3}
       propertyPath: m_TagString
@@ -6958,7 +7034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 795843814777451010, guid: 4ca1d65a6d0875e46af1132fcd110f66, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 795843814777451010, guid: 4ca1d65a6d0875e46af1132fcd110f66, type: 3}
       propertyPath: m_TagString
@@ -7172,7 +7248,6 @@ SceneRoots:
   - {fileID: 5692999042261525467}
   - {fileID: 1344794061}
   - {fileID: 157022180}
-  - {fileID: 92647785}
   - {fileID: 1728785200}
   - {fileID: 1625865648830821985}
   - {fileID: 1819059615}
