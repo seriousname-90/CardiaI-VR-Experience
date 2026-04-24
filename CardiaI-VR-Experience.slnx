@@ -78,6 +78,7 @@
   <Project Path="Meta.Wit.Composer.Editor.csproj" />
   <Project Path="Oculus.Interaction.UnityXR.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Analytics.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.ProBuilder.KdTree.csproj" />
   <Project Path="Unity.XR.Management.Editor.csproj" />
   <Project Path="Unity.ProBuilder.AddOns.Editor.csproj" />
@@ -98,7 +99,6 @@
   <Project Path="Meta.XR.Editor.Guide.About.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Meta.XR.MultiplayerBlocks.NGO.Editor.csproj" />
   <Project Path="Meta.Wit.Dictation.csproj" />
   <Project Path="Meta.XR.EnvironmentDepth.csproj" />
