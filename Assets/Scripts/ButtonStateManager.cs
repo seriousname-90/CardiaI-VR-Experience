@@ -5,6 +5,7 @@ public class ButtonStateManager : MonoBehaviour
 {
     public Button boton;
     public ObjectManager objectManager;
+    public AudioManager audioManager;
 
     private int contador = 0;
 
@@ -15,7 +16,6 @@ public class ButtonStateManager : MonoBehaviour
         {
             Debug.LogError("ObjectManager no asignado en ButtonStateManager.");
         }
-
     }
 
     void OnButtonPressed()
@@ -24,18 +24,24 @@ public class ButtonStateManager : MonoBehaviour
         if (contador == 0)
         {
             objectManager.ActivarObjetos();
+            if (audioManager != null)
+                audioManager.ReproducirLocucion(1); // Locución para primera acción
             contador++;
             Debug.Log("Botón presionado por primera vez. Objetos activados.");
         }
         else if (contador == 1)
         {
             objectManager.DestruirEInstanciar();
+            if (audioManager != null)
+                audioManager.ReproducirLocucion(2); // Locución para segunda acción
             contador++;
             Debug.Log("Botón presionado por segunda vez. Objetos destruidos e instanciados.");
         }
         else if (contador == 2)
         {
             objectManager.ActivarAnimacionMano();
+            if (audioManager != null)
+                audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;
             Debug.Log("Botón presionado por tercera vez, animación de la mano activada.");
         }
