@@ -39,7 +39,8 @@ public class ButtonStateManager : MonoBehaviour
             }
             StartCoroutine(objectManager.DestruirEInstanciar());
             if (audioManager != null)
-                audioManager.ReproducirLocucion(1); // Locución para segunda acción
+                Debug.Log("AUDIOMANAGER NO ES NULL, PORQUE NO FUNCIONA?");
+                audioManager.ReproducirLocucion(2); // Locución para segunda acción
             contador++;
             Debug.Log("Botón presionado por segunda vez. Objetos destruidos e instanciados.");
         }
