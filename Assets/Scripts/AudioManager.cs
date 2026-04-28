@@ -4,14 +4,18 @@ using System.Collections;
 public class AudioManager : MonoBehaviour
 {
     [Header("Locuciones por estado del botón")]
-    public AudioClip[] locucionesBoton; // 0: inicial, 1: primera acción, 2: segunda acción, 3: tercera acción
-    [Header("Locuciones con tiempo específico")]
-    public AudioClip loc_exito;           // Audio de "perfecto"
-    public AudioClip lobby2;        // Segundo audio 
+    public AudioClip[] locucionesBoton;
 
-    
+    [Header("Referencias de Interfaz (NUEVO)")]
+    public GameObject panelBienvenida;
+    public GameObject panelInstrucciones;
+
+    [Header("Locuciones con tiempo específico")]
+    public AudioClip loc_exito;
+    public AudioClip lobby2;
+
     [Header("Configuración inicial")]
-    public GameObject button; // Referencia al botón para detectar su estado   
+    public GameObject button;
     public AudioSource audioSource;
     public float delayInicial = 5f;
     public float tiempo_loc_exito = 41f;
@@ -21,11 +25,14 @@ public class AudioManager : MonoBehaviour
     {
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
-        
+
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
-        // Reproducir locución inicial con delay
+        // Estado inicial de la pantalla
+        if (panelBienvenida != null) panelBienvenida.SetActive(true);
+        if (panelInstrucciones != null) panelInstrucciones.SetActive(false);
+
         if (locucionesBoton != null && locucionesBoton.Length > 0)
             StartCoroutine(ReproducirConDelay(0, delayInicial));
     }
@@ -48,7 +55,12 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.PlayOneShot(lobby2);
             Debug.Log("Reproduciendo locución lobby2 (40 seg)");
-            button.SetActive(true); // Activar el botón después de reproducir lobby2
+
+            button.SetActive(true);
+
+            // Cambio de paneles al aparecer el botón
+            if (panelBienvenida != null) panelBienvenida.SetActive(false);
+            if (panelInstrucciones != null) panelInstrucciones.SetActive(true);
         }
     }
 
