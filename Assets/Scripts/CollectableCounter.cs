@@ -15,6 +15,7 @@ public class CollectableCounter : MonoBehaviour
     public GameObject botonAActivar;        // Botón que se activa
     public AudioSource audioCompletado;     // Audio al completar
     public ObjectManager objectManager;
+    public AudioManager audioManager;
     public AudioClip indicador;        // Audio al activar indicador
     public AudioClip exito;        // Audio al completar
     private int contador = 0;
@@ -84,6 +85,7 @@ public class CollectableCounter : MonoBehaviour
         
         if (audioCompletado != null)
             objectManager.audioSource.Stop();
+            audioManager.audioSource.Stop();
             audioCompletado.Play();
     }
 }
