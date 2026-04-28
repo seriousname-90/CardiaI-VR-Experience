@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public float delayInicial = 5f;
     public float tiempo_loc_exito = 41f;
     public float tiempo_lobby2 = 45f;
+    public CollectableCounter collectableCounter;
 
     void Start()
     {
@@ -62,6 +63,11 @@ public class AudioManager : MonoBehaviour
 
         if (locucionesBoton[indice] != null && this.audioSource != null)
         {
+            // ✅ Verificar que el AudioSource del CollectableCounter exista antes de usarlo
+            if (collectableCounter != null && collectableCounter.audioCompletado != null)
+            {
+                collectableCounter.audioCompletado.Stop();
+            }
             audioSource.Stop();
             audioSource.PlayOneShot(locucionesBoton[indice]);
             Debug.Log($"Reproduciendo locución {indice}: {locucionesBoton[indice].name}");

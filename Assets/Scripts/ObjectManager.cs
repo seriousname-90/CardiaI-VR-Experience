@@ -13,13 +13,14 @@ public class ObjectManager : MonoBehaviour
     public float tiempo_lobby4 = 3f;
 
     [Header("Objetos a instanciar (segunda presión)")]
-    public GameObject prefabDistantGrab;
-    public Vector3[] posicionesDistantGrab = new Vector3[3];
+    public GameObject[] objetosAInstanciar;
     
     [Header("Objetos a destruir (segunda presión)")]
     public GameObject[] objetosADestruir = new GameObject[4];
     [Header("Objetos a instanciar (tercera presión)")]
     public GameObject animacionMano;
+    public GameObject[] objetosAInstanciar2;
+    public GameObject[] objetosADestruir2;
 
     public IEnumerator ActivarObjetos()
     {
@@ -39,7 +40,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    public void DestruirEInstanciar()
+    public IEnumerator DestruirEInstanciar()
     {
         // Destruir
         foreach (GameObject obj in objetosADestruir)
@@ -49,11 +50,11 @@ public class ObjectManager : MonoBehaviour
         }
 
         // Instanciar nuevos
-        foreach (Vector3 pos in posicionesDistantGrab)
+        yield return new WaitForSeconds(2);
+        foreach (GameObject obj in objetosAInstanciar)
         {
-            Instantiate(prefabDistantGrab, pos, Quaternion.identity);
-            Debug.Log("Instanciando: " + prefabDistantGrab.name);
-        
+            if (obj != null) obj.SetActive(true);
+            Debug.Log("Activando: " + obj.name);
         }
     }
 
@@ -63,6 +64,23 @@ public class ObjectManager : MonoBehaviour
             Debug.Log("Activando: " + animacionMano.name);
         // Aquí puedes agregar el código para activar la animación de la mano
         Debug.Log("Activando animación de la mano.");
+    }
+
+    public void DestruirEInstanciarPortales()
+    {
+        // Destruir
+        foreach (GameObject obj in objetosADestruir2)
+        {
+            if (obj != null) Destroy(obj);
+            Debug.Log("Destruyendo: " + obj.name);
+        }
+
+        // Instanciar nuevos
+        foreach (GameObject obj in objetosAInstanciar2)
+        {
+            if (obj != null) obj.SetActive(true);
+            Debug.Log("Activando: " + obj.name);
+        }
     }
 
     public IEnumerator CambiarEscenaLobby()
