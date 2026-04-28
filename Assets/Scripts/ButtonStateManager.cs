@@ -23,9 +23,9 @@ public class ButtonStateManager : MonoBehaviour
         Debug.Log("Botón presionado. Contador actual: " + contador);
         if (contador == 0)
         {
-            objectManager.ActivarObjetos();
             if (audioManager != null)
                 audioManager.ReproducirLocucion(1); // Locución para primera acción
+            StartCoroutine(objectManager.ActivarObjetos());
             contador++;
             Debug.Log("Botón presionado por primera vez. Objetos activados.");
         }
@@ -47,7 +47,7 @@ public class ButtonStateManager : MonoBehaviour
         }
         else if (contador == 3)
         {
-            objectManager.CambiarEscenaLobby();
+            StartCoroutine(objectManager.CambiarEscenaLobby());
             Debug.Log("Botón presionado por cuarta vez, cambiando a la escena Assemble.");
         }
          else

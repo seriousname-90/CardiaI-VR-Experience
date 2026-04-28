@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class ActivarComponente : MonoBehaviour
@@ -12,5 +14,18 @@ public class ActivarComponente : MonoBehaviour
     public void Desactivar()
     {
         componente.SetActive(false);
+    }
+
+
+    public void DesactivarDespuesDeMedioSegundo()
+    {
+        StartCoroutine(DesactivarDelay());
+    }
+
+    IEnumerator DesactivarDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (componente != null)
+            componente.SetActive(false);
     }
 }

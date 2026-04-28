@@ -1,23 +1,37 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ObjectManager : MonoBehaviour
 {
-    [Header("Objetos a destruir (segunda presión)")]
-    public GameObject[] objetosADestruir = new GameObject[4];
-
+    
+    public AudioSource audioSource;
     [Header("Objetos a activar (primera presión)")]
     public GameObject[] objetosAActivar;
+    public AudioClip lobby4;        // Tercer audio 
+    public AudioClip lobby9;       // Cuarto audio 
+    public float tiempo_lobby4 = 3f;
 
     [Header("Objetos a instanciar (segunda presión)")]
     public GameObject prefabDistantGrab;
     public Vector3[] posicionesDistantGrab = new Vector3[3];
-
+    
+    [Header("Objetos a destruir (segunda presión)")]
+    public GameObject[] objetosADestruir = new GameObject[4];
     [Header("Objetos a instanciar (tercera presión)")]
     public GameObject animacionMano;
 
-    public void ActivarObjetos()
+    public IEnumerator ActivarObjetos()
     {
+        yield return new WaitForSeconds(tiempo_lobby4);
+
+        // Reproducir audio inicial (37 seg)
+        if (lobby4 != null)
+        {
+            audioSource.PlayOneShot(lobby4);
+            Debug.Log("Reproduciendo audio lobby4 (3 seg después de la primera acción)");
+        }
+
         foreach (GameObject obj in objetosAActivar)
         {
             if (obj != null) obj.SetActive(true);
@@ -51,8 +65,14 @@ public class ObjectManager : MonoBehaviour
         Debug.Log("Activando animación de la mano.");
     }
 
-    public void CambiarEscenaLobby()
+    public IEnumerator CambiarEscenaLobby()
     {
+         if (lobby9 != null)
+        {
+            audioSource.PlayOneShot(lobby9);
+            Debug.Log("Reproduciendo audio lobby9");
+        }
+        yield return new WaitForSeconds(tiempo_lobby4 + 1);
         Debug.Log("Cambiando a la escena Assemble.");
         SceneManager.LoadScene("Assemble");
     }
