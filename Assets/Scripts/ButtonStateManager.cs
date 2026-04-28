@@ -31,15 +31,22 @@ public class ButtonStateManager : MonoBehaviour
         }
         else if (contador == 1)
         {
-            objectManager.DestruirEInstanciar();
+            // Verificar que objectManager existe
+            if (objectManager == null)
+            {
+                Debug.LogError("objectManager es NULL!");
+                return;
+            }
+            StartCoroutine(objectManager.DestruirEInstanciar());
             if (audioManager != null)
-                audioManager.ReproducirLocucion(2); // Locución para segunda acción
+                audioManager.ReproducirLocucion(1); // Locución para segunda acción
             contador++;
             Debug.Log("Botón presionado por segunda vez. Objetos destruidos e instanciados.");
         }
         else if (contador == 2)
         {
             objectManager.ActivarAnimacionMano();
+            objectManager.DestruirEInstanciarPortales();
             if (audioManager != null)
                 audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;

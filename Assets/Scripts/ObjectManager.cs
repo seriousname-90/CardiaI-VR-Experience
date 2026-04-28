@@ -42,20 +42,59 @@ public class ObjectManager : MonoBehaviour
 
     public IEnumerator DestruirEInstanciar()
     {
+        Debug.Log("=== INICIANDO DESTRUIR E INSTANCIAR ===");
         // Destruir
-        foreach (GameObject obj in objetosADestruir)
+        // Verificar si hay objetos para destruir
+        if (objetosADestruir == null || objetosADestruir.Length == 0)
         {
-            if (obj != null) Destroy(obj);
-            Debug.Log("Destruyendo: " + obj.name);
+            Debug.LogError("objetosADestruir está VACÍO o es NULL. Asigna objetos en el Inspector.");
+        }
+        else
+        {
+            Debug.Log($"Hay {objetosADestruir.Length} objetos para destruir");
+            
+            // Destruir
+            foreach (GameObject obj in objetosADestruir)
+            {
+                if (obj != null)
+                {
+                    Destroy(obj);
+                    Debug.Log("Destruyendo: " + obj.name);
+                }
+                else
+                {
+                    Debug.LogWarning("Un objeto en objetosADestruir es NULL");
+                }
+            }
         }
 
-        // Instanciar nuevos
         yield return new WaitForSeconds(2);
-        foreach (GameObject obj in objetosAInstanciar)
+        
+        // Verificar si hay objetos para instanciar
+        if (objetosAInstanciar == null || objetosAInstanciar.Length == 0)
         {
-            if (obj != null) obj.SetActive(true);
-            Debug.Log("Activando: " + obj.name);
+            Debug.LogError("objetosAInstanciar está VACÍO o es NULL. Asigna objetos en el Inspector.");
         }
+        else
+        {
+            Debug.Log($"Hay {objetosAInstanciar.Length} objetos para instanciar");
+            
+            // Instanciar nuevos
+            foreach (GameObject obj in objetosAInstanciar)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(true);
+                    Debug.Log("Activando: " + obj.name);
+                }
+                else
+                {
+                    Debug.LogWarning("Un objeto en objetosAInstanciar es NULL");
+                }
+            }
+        }
+    
+        Debug.Log("=== FIN DESTRUIR E INSTANCIAR ===");
     }
 
     public void ActivarAnimacionMano()
