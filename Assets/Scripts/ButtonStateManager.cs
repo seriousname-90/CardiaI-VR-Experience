@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;  
 
 public class ButtonStateManager : MonoBehaviour
 {
@@ -24,10 +25,10 @@ public class ButtonStateManager : MonoBehaviour
         if (contador == 0)
         {
             if (audioManager != null)
-                audioManager.ReproducirLocucion(1); // Locución para primera acción
-            StartCoroutine(objectManager.ActivarObjetos());
+                audioManager.ReproducirLocucion(0); // Locución para primera acción
+            objectManager.CambiarBoton(0);
             contador++;
-            Debug.Log("Botón presionado por primera vez. Objetos activados.");
+            Debug.Log("Botón presionado por primera vez. Locución inicial reproducida.");
         }
         else if (contador == 1)
         {
@@ -37,26 +38,19 @@ public class ButtonStateManager : MonoBehaviour
                 Debug.LogError("objectManager es NULL!");
                 return;
             }
-            StartCoroutine(objectManager.DestruirEInstanciar());
+            objectManager.ActivarObjetos();
             if (audioManager != null)
-                Debug.Log("AUDIOMANAGER NO ES NULL, PORQUE NO FUNCIONA?");
-                audioManager.ReproducirLocucion(2); // Locución para segunda acción
+                audioManager.ReproducirLocucion(1); // Locución para segunda acción
             contador++;
-            Debug.Log("Botón presionado por segunda vez. Objetos destruidos e instanciados.");
+            Debug.Log("Botón presionado por segunda vez. Objetos activados");
         }
         else if (contador == 2)
         {
-            objectManager.ActivarAnimacionMano();
-            objectManager.DestruirEInstanciarPortales();
             if (audioManager != null)
                 audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;
-            Debug.Log("Botón presionado por tercera vez, animación de la mano activada.");
-        }
-        else if (contador == 3)
-        {
             StartCoroutine(objectManager.CambiarEscenaLobby());
-            Debug.Log("Botón presionado por cuarta vez, cambiando a la escena Assemble.");
+            Debug.Log("Botón presionado por tercera vez, cambio de escena programado.");
         }
          else
         {
