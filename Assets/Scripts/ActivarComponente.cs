@@ -24,7 +24,7 @@ public class ActivarComponente : MonoBehaviour
 
     IEnumerator DesactivarDelay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         if (componente != null)
             componente.SetActive(false);
     }
