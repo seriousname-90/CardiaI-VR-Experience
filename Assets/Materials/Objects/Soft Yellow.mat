@@ -32,9 +32,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Metallic: 0
+    - _XRMotionVectorsPass: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.8774346, b: 0.15566039, a: 0.13333334}
-    - _Color: {r: 1, g: 0.8774346, b: 0.15566036, a: 0.13333334}
+    - _BaseColor: {r: 1, g: 0.8774346, b: 0.15566033, a: 0.6509804}
+    - _Color: {r: 1, g: 0.8774346, b: 0.1556603, a: 0.6509804}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2137418595424259081

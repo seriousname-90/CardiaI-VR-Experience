@@ -4109,10 +4109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locucionesBoton:
-  - {fileID: 8300000, guid: 0d408761ea6d20241afee309beafabd6, type: 3}
+  - {fileID: 8300000, guid: b37e67cc30806be41925e5722b6eaf1a, type: 3}
   - {fileID: 8300000, guid: 8fa68c95e9a8cb24f991b54cc5cd507a, type: 3}
   - {fileID: 8300000, guid: 66325a64c408cb8478a4bf7db674bf1d, type: 3}
-  - {fileID: 8300000, guid: 1e3792b0da992b14e9480ed693f3d119, type: 3}
+  - {fileID: 8300000, guid: 8504c89747de22a42a8f1cb52bba58fb, type: 3}
   audioSource: {fileID: 1989596775}
   boton: {fileID: 1713562630}
 --- !u!1 &1902426935
