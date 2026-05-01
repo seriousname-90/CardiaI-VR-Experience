@@ -18,22 +18,25 @@ public class CollectableCounter : MonoBehaviour
     public AudioClip sonidoIndicador;        // Audio al activar indicador
     public AudioClip exito;        // Audio al completar
     public AudioSource audiosource; // AudioSource para reproducir los clips
-    private bool grabbed;
+    private bool grabbed = false;
 
     // Llama a este método desde el evento OnSelectEntered de cada objeto
     public void RegistrarAgarre(GameObject objetoAgarrado)
     {
-        Renderer renderer = indicador.GetComponent<Renderer>();
-        if (renderer != null && grabbed == false)
-            renderer.material = materialActivado;
-            audiosource.PlayOneShot(sonidoIndicador);
-            grabbed = true;
+        if (grabbed) return; // Si ya se ejecutó, no hace nada
         
+        Renderer renderer = indicador.GetComponent<Renderer>();
+        if (renderer != null)
+            renderer.material = materialActivado;
+
+        audiosource.PlayOneShot(sonidoIndicador);
         Completado();
     }
 
     void Completado()
     {
+        if (grabbed) return; // Si ya se ejecutó, no hace nada
+
         Debug.Log("¡Completado! Activando botón y reproduciendo audio");
         
         Renderer renderer = indicador.GetComponent<Renderer>();
@@ -44,9 +47,10 @@ public class CollectableCounter : MonoBehaviour
         if (botonAActivar != null)
             botonAActivar.SetActive(true);
         
-        if (audiosource != null && grabbed)
+        if (audiosource != null && audioManager != null) 
             audioManager.audioSource.Stop();
             audioManager.ReproducirLocucion(2); // Locución para completar la acción
-            grabbed = false; // Reiniciar para evitar múltiples activaciones
+
+        grabbed = true; // Reiniciar para evitar múltiples activaciones  
     }
 }

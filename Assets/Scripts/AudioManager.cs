@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Locuciones por estado del botón")]
-    public AudioClip[] locucionesBoton; 
+    [Header("Locuciones")]
+    public AudioClip[] locuciones; 
     [Header("Configuración inicial")]
     public AudioSource audioSource;
     public GameObject boton; // Botón que se activará después de la primera locución
@@ -23,20 +23,20 @@ public class AudioManager : MonoBehaviour
     }
     public void ReproducirLocucion(int indice)
     {
-        if (locucionesBoton == null || indice >= locucionesBoton.Length)
+        if (locuciones == null || indice >= locuciones.Length)
         {
             Debug.LogWarning($"No hay locución configurada para el índice {indice}");
             return;
         }
 
-        if (locucionesBoton[indice] != null && audioSource != null)
+        if (locuciones[indice] != null && audioSource != null)
         {
             audioSource.Stop();
-            audioSource.PlayOneShot(locucionesBoton[indice]);
+            audioSource.PlayOneShot(locuciones[indice]);
             if (indice == 0)
-                StartCoroutine(ActivarBotonCuandoTermine(locucionesBoton[indice]));
+                StartCoroutine(ActivarBotonCuandoTermine(locuciones[indice]));
                 Debug.Log("Esperando para activar el botón...");
-            Debug.Log($"Reproduciendo locución {indice}: {locucionesBoton[indice].name}");
+            Debug.Log($"Reproduciendo locución {indice}: {locuciones[indice].name}");
         }
     }
 }
