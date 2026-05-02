@@ -12,5 +12,13 @@ public class DestroyPulse : MonoBehaviour
 
     }
 
+    public void Mostrar()
+
+    {
+
+        gameObject.SetActive(true);
+
+    }
+
 }
  

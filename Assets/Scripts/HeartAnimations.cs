@@ -18,46 +18,29 @@ public class HeartAnimations : MonoBehaviour
     public AudioSource audioSource;
     
     [Header("Bolitas eléctricas (Animators)")]
-    public Animator bolitaAuricula;
-    public Animator bolitaAV;
-    public Animator bolitaPurkinjeIzq;
-    public Animator bolitaPurkinjeDer;
+    public Animator bolitaAuricula;      // 12 frames
+    public Animator bolitaAV;            // 12 frames
+    public Animator bolitaPurkinjeIzq;   // 40 frames
+    public Animator bolitaPurkinjeDer;   // 40 frames
 
     [Header("Objetos a desactivar al finalizar la animación")]
     public TrailRenderer[] trails;
-    
-    [Header("Duración de las animaciones de bolitas (en segundos)")]
-    public float duracionBolitaCorta = 1.0f;    // Duración de SA-Auricula y SA-AV
-    public float duracionBolitaLarga = 2.0f;    // Duración de Purkinje (67 frames)
-    
-    private float corteFrame21 = 21f / 67f;
-    private float corteFrame38 = 38f / 67f;
     
     void Start()
     {
         animator = GetComponent<Animator>();
         animator.speed = 0f;
         animator.Play(nombreAnimacion, 0, 0f);
-        
-        CongelarAnimacionesBolitas();
+
+        DetenerBolitas();
     }
-    
-    private void CongelarAnimacionesBolitas()
+
+    void DetenerBolitas()
     {
         if (bolitaAuricula != null) bolitaAuricula.speed = 0f;
         if (bolitaAV != null) bolitaAV.speed = 0f;
         if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = 0f;
         if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = 0f;
-    }
-    
-    private void OcultarBolita(Animator bolita)
-    {
-        if (bolita != null) bolita.gameObject.SetActive(false);
-    }
-    
-    private void MostrarBolita(Animator bolita)
-    {
-        if (bolita != null) bolita.gameObject.SetActive(true);
     }
 
     public void ReproducirSA()
@@ -66,8 +49,9 @@ public class HeartAnimations : MonoBehaviour
         
         float inicio = 0f;
         float fin = 0.315f;
-        StartCoroutine(ReproducirSegmentoSA(inicio, fin));
+        StartCoroutine(ReproducirSegmento(inicio, fin));
         saReproducido = true;
+        StartCoroutine(ReproducirBolitasSA(inicio, fin));
     }
 
     public void ReproducirAV()
@@ -76,8 +60,9 @@ public class HeartAnimations : MonoBehaviour
         
         float inicio = 0.35f;
         float fin = 0.6f;
-        StartCoroutine(ReproducirSegmentoAV(inicio, fin));
+        StartCoroutine(ReproducirSegmento(inicio, fin));
         avReproducido = true;
+        StartCoroutine(ReproducirBolitasAV(inicio, fin));
     }
 
     public void ReproducirHis()
@@ -86,146 +71,156 @@ public class HeartAnimations : MonoBehaviour
         
         float inicio = 0.65f;
         float fin = 1f;
-        StartCoroutine(ReproducirSegmentoHis(inicio, fin));
+        StartCoroutine(ReproducirHisSegmento(inicio, fin));
         hisReproducido = true;
+        StartCoroutine(ReproducirBolitasHis(inicio, fin));
     }
 
-    private IEnumerator ReproducirSegmentoSA(float inicio, float fin)
+    private IEnumerator ReproducirSegmento(float inicio, float fin)
     {
         reproduciendoSegmento = true;
         
+        // Calcular duración REAL a velocidad normal
         float duracionNormal = duracionTotal * (fin - inicio);
+        // Ajustar por la velocidad lenta
         float duracionReal = duracionNormal / velocidadSegmentos;
         
-        // Reproducir corazón
         animator.speed = velocidadSegmentos;
         animator.Play(nombreAnimacion, 0, inicio);
         
-        // Activar bolitas
-        MostrarBolita(bolitaAuricula);
-        MostrarBolita(bolitaAV);
-        MostrarBolita(bolitaPurkinjeIzq);
-        MostrarBolita(bolitaPurkinjeDer);
-        
-        // Calcular velocidad para bolitas cortas: deben completarse en duracionReal
-        float velocidadCorta = duracionBolitaCorta / duracionReal;
-        
-        if (bolitaAuricula != null)
-        {
-            bolitaAuricula.speed = velocidadCorta;
-            bolitaAuricula.Play(0, 0, 0f);
-        }
-        if (bolitaAV != null)
-        {
-            bolitaAV.speed = velocidadCorta;
-            bolitaAV.Play(0, 0, 0f);
-        }
-        
-        // Calcular velocidad para bolitas largas (deben llegar al frame 21 en duracionReal)
-        float tiempoDestino = corteFrame21 * duracionBolitaLarga;
-        float velocidadLarga = tiempoDestino / duracionReal;
-        
-        if (bolitaPurkinjeIzq != null)
-        {
-            bolitaPurkinjeIzq.speed = velocidadLarga;
-            bolitaPurkinjeIzq.Play(0, 0, 0f);
-        }
-        if (bolitaPurkinjeDer != null)
-        {
-            bolitaPurkinjeDer.speed = velocidadLarga;
-            bolitaPurkinjeDer.Play(0, 0, 0f);
-        }
-        
         yield return new WaitForSeconds(duracionReal);
         
-        // Pausar corazón
+        // Pausar al final del segmento
         animator.speed = 0f;
         animator.Play(nombreAnimacion, 0, fin);
-        
-        // Ocultar bolitas cortas
-        OcultarBolita(bolitaAuricula);
-        OcultarBolita(bolitaAV);
-        
-        // Pausar bolitas largas
-        if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = 0f;
-        if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = 0f;
         
         reproduciendoSegmento = false;
         VerificarCompletados();
     }
 
-    private IEnumerator ReproducirSegmentoAV(float inicio, float fin)
+    private IEnumerator ReproducirBolitasSA(float inicio, float fin)
     {
         reproduciendoSegmento = true;
         
+        // Calcular duración REAL a velocidad normal
+        float duracionNormal = duracionTotal * 2 * (fin - inicio);
+        // Ajustar por la velocidad lenta
+        float duracionReal = duracionNormal / velocidadSegmentos / 2;
+        
+        bolitaAuricula.speed = velocidadSegmentos;
+        bolitaAuricula.Play("SA-Auricula", 0, inicio);
+
+        bolitaAV.speed = velocidadSegmentos;
+        bolitaAV.Play("SA-AV", 0, inicio);
+
+        bolitaPurkinjeIzq.speed = velocidadSegmentos;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, inicio);
+
+        bolitaPurkinjeDer.speed = velocidadSegmentos;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, inicio);
+        
+        yield return new WaitForSeconds(duracionReal);
+
+        // Pausar al final del segmento
+        bolitaAuricula.speed = 0f;
+        bolitaAuricula.Play("SA-Auricula", 0, fin);
+
+        bolitaAV.speed = 0f;
+        bolitaAV.Play("SA-AV", 0, fin);
+
+        // Pausar al final del segmento
+        bolitaPurkinjeIzq.speed = 0f;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, fin);
+
+        bolitaPurkinjeDer.speed = 0f;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, fin);
+        
+        reproduciendoSegmento = false;
+    }
+
+    private IEnumerator ReproducirBolitasAV(float inicio, float fin)
+    {
+        reproduciendoSegmento = true;
+        
+        // Calcular duración REAL a velocidad normal
+        float duracionNormal = duracionTotal * 2 * (fin - inicio);
+        // Ajustar por la velocidad lenta
+        float duracionReal = duracionNormal / velocidadSegmentos / 2;
+
+        bolitaAuricula.speed = velocidadSegmentos;
+        bolitaAuricula.Play("SA-Auricula", 0, inicio);
+
+        bolitaAV.speed = velocidadSegmentos;
+        bolitaAV.Play("SA-AV", 0, inicio);
+
+        bolitaPurkinjeIzq.speed = velocidadSegmentos;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, inicio);
+
+        bolitaPurkinjeDer.speed = velocidadSegmentos;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, inicio);
+        
+        yield return new WaitForSeconds(duracionReal);
+
+        // Pausar al final del segmento
+        bolitaAuricula.speed = 0f;
+        bolitaAuricula.Play("SA-Auricula", 0, fin);
+
+        bolitaAV.speed = 0f;
+        bolitaAV.Play("SA-AV", 0, fin);
+        
+        // Pausar al final del segmento
+        bolitaPurkinjeIzq.speed = 0f;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, fin);
+
+        bolitaPurkinjeDer.speed = 0f;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, fin);
+        
+        reproduciendoSegmento = false;
+    }
+
+    private IEnumerator ReproducirHisSegmento(float inicio, float fin)
+    {
+        reproduciendoSegmento = true;
+        
+        // Calcular duración REAL a velocidad normal
         float duracionNormal = duracionTotal * (fin - inicio);
+        // Ajustar por la velocidad lenta
         float duracionReal = duracionNormal / velocidadSegmentos;
         
-        // Reproducir corazón
         animator.speed = velocidadSegmentos;
         animator.Play(nombreAnimacion, 0, inicio);
         
-        // Calcular velocidad para continuar desde frame 21 hasta frame 38
-        float tiempoRecorrido = (corteFrame38 - corteFrame21) * duracionBolitaLarga;
-        float velocidadLarga = tiempoRecorrido / duracionReal;
-        
-        if (bolitaPurkinjeIzq != null)
-        {
-            bolitaPurkinjeIzq.speed = velocidadLarga;
-            bolitaPurkinjeIzq.Play(0, 0, corteFrame21);
-        }
-        if (bolitaPurkinjeDer != null)
-        {
-            bolitaPurkinjeDer.speed = velocidadLarga;
-            bolitaPurkinjeDer.Play(0, 0, corteFrame21);
-        }
-        
         yield return new WaitForSeconds(duracionReal);
         
-        // Pausar corazón
-        animator.speed = 0f;
-        animator.Play(nombreAnimacion, 0, fin);
-        
-        // Pausar bolitas largas
-        if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = 0f;
-        if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = 0f;
-        
+        // NO pausar His, dejar que siga PERO cambiar a velocidad normal
         reproduciendoSegmento = false;
         VerificarCompletados();
     }
 
-    private IEnumerator ReproducirSegmentoHis(float inicio, float fin)
+    private IEnumerator ReproducirBolitasHis(float inicio, float fin)
     {
         reproduciendoSegmento = true;
         
-        float duracionNormal = duracionTotal * (fin - inicio);
-        float duracionReal = duracionNormal / velocidadSegmentos;
+        // Calcular duración REAL a velocidad normal
+        float duracionNormal = duracionTotal * 2 * (fin - inicio);
+        // Ajustar por la velocidad lenta
+        float duracionReal = duracionNormal / velocidadSegmentos / 2;
         
-        // Reproducir corazón
-        animator.speed = velocidadSegmentos;
-        animator.Play(nombreAnimacion, 0, inicio);
-        
-        // Calcular velocidad para completar desde frame 38 hasta frame 67
-        float tiempoRestante = (1f - corteFrame38) * duracionBolitaLarga;
-        float velocidadLarga = tiempoRestante / duracionReal;
-        
-        if (bolitaPurkinjeIzq != null)
-        {
-            bolitaPurkinjeIzq.speed = velocidadLarga;
-            bolitaPurkinjeIzq.Play(0, 0, corteFrame38);
-        }
-        if (bolitaPurkinjeDer != null)
-        {
-            bolitaPurkinjeDer.speed = velocidadLarga;
-            bolitaPurkinjeDer.Play(0, 0, corteFrame38);
-        }
+        bolitaAuricula.speed = velocidadSegmentos;
+        bolitaAuricula.Play("SA-Auricula", 0, inicio);
+
+        bolitaAV.speed = velocidadSegmentos;
+        bolitaAV.Play("SA-AV", 0, inicio);
+
+        bolitaPurkinjeIzq.speed = velocidadSegmentos;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, inicio);
+
+        bolitaPurkinjeDer.speed = velocidadSegmentos;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, inicio);
         
         yield return new WaitForSeconds(duracionReal);
         
-        // Ocultar bolitas largas al terminar
-        OcultarBolita(bolitaPurkinjeIzq);
-        OcultarBolita(bolitaPurkinjeDer);
-        
+        // NO pausar His, dejar que siga PERO cambiar a velocidad normal
         reproduciendoSegmento = false;
         VerificarCompletados();
     }
@@ -234,118 +229,32 @@ public class HeartAnimations : MonoBehaviour
     {
         if (saReproducido && avReproducido && hisReproducido)
         {
+            Debug.Log("Los 3 segmentos (SA, AV y His) han sido reproducidos. Iniciando loop completo a velocidad normal");
             EmpezarLoopCompleto();
-            DesactivarTrails();
+            audioSource.Play();
         }
     }
 
     private void EmpezarLoopCompleto()
     {
-        Debug.Log("Los 3 fragmentos completados. Iniciando loop completo");
-        
-        // Corazón a velocidad normal
+        Debug.Log("Los 3 fragmentos completados. Iniciando loop completo a velocidad normal");
         animator.speed = 0.86f;
         animator.Play(nombreAnimacion, 0, 0f);
-        
-        // Calcular la duración real de un latido completo a velocidad 0.86f
-        float duracionLatidoLoop = duracionTotal / 0.86f;  // 0.667 / 0.86 = 0.7756 segundos
-        
-        // Iniciar el loop de las bolitas sincronizado con el latido
-        StartCoroutine(LoopBolitasElectricas(duracionLatidoLoop));
-        
-        if (audioSource != null) audioSource.Play();
-    }
 
-    private IEnumerator LoopBolitasElectricas(float duracionLatido)
-    {
-        while (true)
-        {
-            // === FASE SA (0% - 31.5% del latido) ===
-            float duracionSA = duracionLatido * 0.315f;  // 0.315 es el fin de SA
-            
-            // Activar y reproducir bolitas cortas (completas)
-            MostrarBolita(bolitaAuricula);
-            MostrarBolita(bolitaAV);
-            
-            float velocidadCorta = duracionBolitaCorta / duracionSA;
-            
-            if (bolitaAuricula != null)
-            {
-                bolitaAuricula.speed = velocidadCorta;
-                bolitaAuricula.Play(0, 0, 0f);
-            }
-            if (bolitaAV != null)
-            {
-                bolitaAV.speed = velocidadCorta;
-                bolitaAV.Play(0, 0, 0f);
-            }
-            
-            // Iniciar bolitas largas (deben llegar al frame 21 en duracionSA)
-            MostrarBolita(bolitaPurkinjeIzq);
-            MostrarBolita(bolitaPurkinjeDer);
-            
-            float tiempoDestino = corteFrame21 * duracionBolitaLarga;
-            float velocidadLarga = tiempoDestino / duracionSA;
-            
-            if (bolitaPurkinjeIzq != null)
-            {
-                bolitaPurkinjeIzq.speed = velocidadLarga;
-                bolitaPurkinjeIzq.Play(0, 0, 0f);
-            }
-            if (bolitaPurkinjeDer != null)
-            {
-                bolitaPurkinjeDer.speed = velocidadLarga;
-                bolitaPurkinjeDer.Play(0, 0, 0f);
-            }
-            
-            yield return new WaitForSeconds(duracionSA);
-            
-            // === FASE AV (31.5% - 60% del latido) ===
-            float duracionAV = duracionLatido * (0.6f - 0.315f);  // 0.285 * duracionLatido
-            
-            float tiempoRecorrido = (corteFrame38 - corteFrame21) * duracionBolitaLarga;
-            velocidadLarga = tiempoRecorrido / duracionAV;
-            
-            if (bolitaPurkinjeIzq != null)
-            {
-                bolitaPurkinjeIzq.speed = velocidadLarga;
-                bolitaPurkinjeIzq.Play(0, 0, corteFrame21);
-            }
-            if (bolitaPurkinjeDer != null)
-            {
-                bolitaPurkinjeDer.speed = velocidadLarga;
-                bolitaPurkinjeDer.Play(0, 0, corteFrame21);
-            }
-            
-            // Ocultar bolitas cortas (ya terminaron)
-            OcultarBolita(bolitaAuricula);
-            OcultarBolita(bolitaAV);
-            
-            yield return new WaitForSeconds(duracionAV);
-            
-            // === FASE HIS (60% - 100% del latido) ===
-            float duracionHis = duracionLatido * (1f - 0.6f);  // 0.4 * duracionLatido
-            
-            float tiempoRestante = (1f - corteFrame38) * duracionBolitaLarga;
-            velocidadLarga = tiempoRestante / duracionHis;
-            
-            if (bolitaPurkinjeIzq != null)
-            {
-                bolitaPurkinjeIzq.speed = velocidadLarga;
-                bolitaPurkinjeIzq.Play(0, 0, corteFrame38);
-            }
-            if (bolitaPurkinjeDer != null)
-            {
-                bolitaPurkinjeDer.speed = velocidadLarga;
-                bolitaPurkinjeDer.Play(0, 0, corteFrame38);
-            }
-            
-            yield return new WaitForSeconds(duracionHis);
-            
-            // Al terminar el latido, las bolitas largas se ocultan y el ciclo se repite
-            OcultarBolita(bolitaPurkinjeIzq);
-            OcultarBolita(bolitaPurkinjeDer);
-        }
+        Mostrar(bolitaAuricula);
+        Mostrar(bolitaAV);
+        bolitaAuricula.speed = 0.86f;
+        bolitaAuricula.Play("SA-Auricula", 0, 0f);
+
+        bolitaAV.speed = 0.86f;
+        bolitaAV.Play("SA-AV", 0, 0f);
+
+        bolitaPurkinjeIzq.speed = 0.86f;
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, 0f);
+
+        bolitaPurkinjeDer.speed = 0.86f;
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, 0f);
+        DesactivarTrails();
     }
 
     public void Reiniciar()
@@ -357,27 +266,18 @@ public class HeartAnimations : MonoBehaviour
         
         animator.speed = 0f;
         animator.Play(nombreAnimacion, 0, 0f);
-        
-        CongelarAnimacionesBolitas();
-        
-        OcultarBolita(bolitaAuricula);
-        OcultarBolita(bolitaAV);
-        OcultarBolita(bolitaPurkinjeIzq);
-        OcultarBolita(bolitaPurkinjeDer);
     }
 
     public void Pausar()
     {
         animator.speed = 0f;
-        if (bolitaAuricula != null) bolitaAuricula.speed = 0f;
-        if (bolitaAV != null) bolitaAV.speed = 0f;
-        if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = 0f;
-        if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = 0f;
+        Debug.Log("Animación pausada");
     }
 
     public void Continuar()
     {
         animator.speed = 1f;
+        Debug.Log("Animación continuada");
     }
 
     void DesactivarTrails()
@@ -386,5 +286,13 @@ public class HeartAnimations : MonoBehaviour
         {
             trail.enabled = false;
         }
+    } 
+
+    public void Mostrar(Animator obj)
+
+    {
+
+        obj.gameObject.SetActive(true);
+
     }
 }
