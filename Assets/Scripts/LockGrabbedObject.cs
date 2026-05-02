@@ -21,7 +21,7 @@ public class LockGrabbedObject : MonoBehaviour
         if (rb != null)
         {
             rb.isKinematic = true;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
     }
@@ -51,7 +51,7 @@ public class LockGrabbedObject : MonoBehaviour
         {
             if (rb != null)
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.position = posicionInicial;
                 rb.rotation = rotacionInicial;
