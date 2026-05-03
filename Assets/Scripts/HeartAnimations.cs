@@ -284,7 +284,7 @@ public class HeartAnimations : MonoBehaviour
     {
         foreach (TrailRenderer trail in trails)
         {
-            trail.enabled = false;
+            trail.time = 0.05f; // Reducir el tiempo de vida del trail para que desaparezca rápidamente
         }
     } 
 
