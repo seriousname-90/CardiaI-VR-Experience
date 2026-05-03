@@ -6110,7 +6110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 0d42e44bf1d2f8043a23687bcc5e5c92, type: 2}
+  m_Material: {fileID: 2100000, guid: 0b68e1da6fd71ee41a526834035c5fb8, type: 2}
   m_Color: {r: 0, g: 0.4243254, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6250,7 +6250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036891855}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2045285150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &373891019
 Animator:
@@ -7022,7 +7022,7 @@ PrefabInstance:
     - target: {fileID: 1263593256603416602, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 1276694031968489386, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.1424
@@ -7034,11 +7034,11 @@ PrefabInstance:
     - target: {fileID: 2832577910882966742, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 2832577910882966742, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 3024103978274957771, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -7046,15 +7046,15 @@ PrefabInstance:
     - target: {fileID: 3024103978274957771, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 3024103978274957771, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 3426095161159748349, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 3855582218251297577, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -7662,7 +7662,7 @@ PrefabInstance:
     - target: {fileID: 6979923119074007896, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: de9c365526f9b604889b232a3de8487d, type: 2}
+      objectReference: {fileID: 2100000, guid: 747cccb0c124b7f4781142c8d1cdc06e, type: 2}
     - target: {fileID: 7209388685355626337, guid: b2972cfaaf7a1fd4f937b6b6e5f23424, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -7962,11 +7962,15 @@ Transform:
   m_GameObject: {fileID: 536650082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2176377, y: 1.538, z: -3.356}
+  m_LocalPosition: {x: 0.965, y: 1.187, z: -3.356}
   m_LocalScale: {x: 6.1443934, y: 6.1443934, z: 6.1443934}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 251263859}
+  - {fileID: 2130637194}
+  - {fileID: 1919651466}
+  - {fileID: 1399397648}
+  - {fileID: 2045285150}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538930616
@@ -8083,7 +8087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1936555126}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2045285150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &538930621
 MonoBehaviour:
@@ -8479,7 +8483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1219877712}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2045285150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &670809187
 MonoBehaviour:
@@ -8748,7 +8752,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 599032615}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2045285150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &677450913
 Animator:
@@ -12570,7 +12574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 0d42e44bf1d2f8043a23687bcc5e5c92, type: 2}
+  m_Material: {fileID: 2100000, guid: 0b68e1da6fd71ee41a526834035c5fb8, type: 2}
   m_Color: {r: 0, g: 0.4243254, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -20093,6 +20097,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1399397646}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: fa775a2a2ec4e6442ac2cfa890a9ee1c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnhover:
     m_PersistentCalls:
       m_Calls:
@@ -20103,6 +20119,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1399397646}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: ece647a3be6276147ad241c5eceaf7f6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -20275,13 +20303,13 @@ Transform:
   m_GameObject: {fileID: 1399397640}
   serializedVersion: 2
   m_LocalRotation: {x: 0.47166196, y: 0.38514358, z: 0.28867, w: 0.73882955}
-  m_LocalPosition: {x: -0.2582, y: 1.3963, z: -3.2813}
-  m_LocalScale: {x: 0.14641526, y: 0.039857276, z: 0.10890119}
+  m_LocalPosition: {x: -0.006601512, y: -0.023061678, z: 0.012157405}
+  m_LocalScale: {x: 0.023829082, y: 0.006486772, z: 0.01772367}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1777422314}
   - {fileID: 2033206970}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 536650083}
   m_LocalEulerAnglesHint: {x: 28.333, y: 72.928, z: 63.815}
 --- !u!114 &1399397649
 MonoBehaviour:
@@ -59246,7 +59274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 0d42e44bf1d2f8043a23687bcc5e5c92, type: 2}
+  m_Material: {fileID: 2100000, guid: 0b68e1da6fd71ee41a526834035c5fb8, type: 2}
   m_Color: {r: 0, g: 0.4243254, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -59708,6 +59736,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1919651464}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: fa775a2a2ec4e6442ac2cfa890a9ee1c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _whenUnhover:
     m_PersistentCalls:
       m_Calls:
@@ -59718,6 +59758,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1919651464}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: ece647a3be6276147ad241c5eceaf7f6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -59890,13 +59942,13 @@ Transform:
   m_GameObject: {fileID: 1919651458}
   serializedVersion: 2
   m_LocalRotation: {x: 0.41310555, y: 0.5042701, z: -0.30294895, w: 0.69518155}
-  m_LocalPosition: {x: 0.115, y: 1.7444, z: -3.5411}
-  m_LocalScale: {x: 0.13179877, y: -0.04012172, z: 0.13179882}
+  m_LocalPosition: {x: 0.054136783, y: 0.033591606, z: -0.030125037}
+  m_LocalScale: {x: 0.02145025, y: -0.0065298094, z: 0.021450257}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 70085114}
   - {fileID: 1895475581}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 536650083}
   m_LocalEulerAnglesHint: {x: 118.369, y: -108.416, z: -180.552}
 --- !u!114 &1919651467
 MonoBehaviour:
@@ -66733,6 +66785,41 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &2045285149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045285150}
+  m_Layer: 0
+  m_Name: ConductionAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045285150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045285149}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.035420533, y: -0.2503095, z: 0.54618895}
+  m_LocalScale: {x: 0.16274999, y: 0.16274999, z: 0.16274999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 373891018}
+  - {fileID: 677450912}
+  - {fileID: 538930620}
+  - {fileID: 670809186}
+  m_Father: {fileID: 536650083}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087954299
 GameObject:
   m_ObjectHideFlags: 0
@@ -67049,13 +67136,13 @@ Transform:
   m_GameObject: {fileID: 2130637188}
   serializedVersion: 2
   m_LocalRotation: {x: 0.8338003, y: -0.19596453, z: 0.11808192, w: 0.50242573}
-  m_LocalPosition: {x: 0.277, y: 2.1293, z: -3.675}
-  m_LocalScale: {x: 0.07876427, y: 0.040226217, z: 0.11625842}
+  m_LocalPosition: {x: 0.08050229, y: 0.09623409, z: -0.051917247}
+  m_LocalScale: {x: 0.012818882, y: 0.0065468173, z: 0.018921057}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 794009957}
   - {fileID: 1254609484}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 536650083}
   m_LocalEulerAnglesHint: {x: 117.856, y: 0, z: 26.451996}
 --- !u!82 &2130637195
 AudioSource:
@@ -67194,6 +67281,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2130637192}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: fa775a2a2ec4e6442ac2cfa890a9ee1c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _whenUnhover:
     m_PersistentCalls:
       m_Calls:
@@ -67204,6 +67303,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2130637192}
+        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: ece647a3be6276147ad241c5eceaf7f6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -67268,19 +67379,12 @@ SceneRoots:
   - {fileID: 1103848132}
   - {fileID: 1857268743}
   - {fileID: 1426756511}
-  - {fileID: 2130637194}
-  - {fileID: 1919651466}
-  - {fileID: 1399397648}
   - {fileID: 536650083}
   - {fileID: 1935475191}
   - {fileID: 1148391315}
   - {fileID: 1252417443}
   - {fileID: 2028188106}
   - {fileID: 1823098913}
-  - {fileID: 373891018}
-  - {fileID: 677450912}
-  - {fileID: 538930620}
-  - {fileID: 670809186}
   - {fileID: 1028684002}
   - {fileID: 1470884784}
   - {fileID: 361909811}
