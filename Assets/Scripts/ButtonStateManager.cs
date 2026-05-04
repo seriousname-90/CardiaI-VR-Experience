@@ -7,6 +7,8 @@ public class ButtonStateManager : MonoBehaviour
     public Button boton;
     public ObjectManager objectManager;
     public AudioManager audioManager;
+    public SubtitleController subtitleController;
+    public SubtitleTrigger welcomeTrigger;
 
     private int contador = 0;
 
@@ -38,6 +40,7 @@ public class ButtonStateManager : MonoBehaviour
             if (audioManager != null)
                 audioManager.ReproducirLocucion(0); // Locución para primera acción
             objectManager.CambiarBoton(0);
+            welcomeTrigger.Play(subtitleController);
             contador++;
             Debug.Log("Botón presionado por primera vez. Locución inicial reproducida.");
         }
