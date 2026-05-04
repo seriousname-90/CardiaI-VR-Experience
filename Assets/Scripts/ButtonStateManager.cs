@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;  
 
 public class ButtonStateManager : MonoBehaviour
 {
     public Button boton;
     public ObjectManager objectManager;
     public AudioManager audioManager;
-
-    [Header("Gestión de Pantallas (NUEVO)")]
-    public GameObject[] panelesInstrucciones;
 
     private int contador = 0;
 
@@ -24,54 +22,39 @@ public class ButtonStateManager : MonoBehaviour
     void OnButtonPressed()
     {
         Debug.Log("Botón presionado. Contador actual: " + contador);
-
         if (contador == 0)
         {
-            ActualizarInterfaz(0, 1); // Pasa del panel 1 al 2
-
             if (audioManager != null)
-                audioManager.ReproducirLocucion(1);
-            StartCoroutine(objectManager.ActivarObjetos());
+                audioManager.ReproducirLocucion(0); // Locución para primera acción
+            objectManager.CambiarBoton(0);
             contador++;
-            Debug.Log("Botón presionado por primera vez. Objetos activados.");
+            Debug.Log("Botón presionado por primera vez. Locución inicial reproducida.");
         }
         else if (contador == 1)
         {
-            ActualizarInterfaz(1, 2); // Pasa del panel 2 al 3
-
-            objectManager.DestruirEInstanciar();
+            // Verificar que objectManager existe
+            if (objectManager == null)
+            {
+                Debug.LogError("objectManager es NULL!");
+                return;
+            }
+            objectManager.ActivarObjetos();
             if (audioManager != null)
-                audioManager.ReproducirLocucion(2);
+                audioManager.ReproducirLocucion(1); // Locución para segunda acción
             contador++;
-            Debug.Log("Botón presionado por segunda vez. Objetos destruidos e instanciados.");
+            Debug.Log("Botón presionado por segunda vez. Objetos activados");
         }
         else if (contador == 2)
         {
-            ActualizarInterfaz(2, 3); // Pasa del panel 3 al 4
-
-            objectManager.ActivarAnimacionMano();
             if (audioManager != null)
-                audioManager.ReproducirLocucion(3);
+                audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;
-            Debug.Log("Botón presionado por tercera vez, animación de la mano activada.");
-        }
-        else if (contador == 3)
-        {
             StartCoroutine(objectManager.CambiarEscenaLobby());
-            Debug.Log("Botón presionado por cuarta vez, cambiando a la escena Assemble.");
+            Debug.Log("Botón presionado por tercera vez, cambio de escena programado.");
         }
-    }
-
-    // Método para cambiar los paneles de instrucciones
-    void ActualizarInterfaz(int indiceActual, int indiceSiguiente)
-    {
-        if (panelesInstrucciones != null)
+         else
         {
-            if (indiceActual < panelesInstrucciones.Length && panelesInstrucciones[indiceActual] != null)
-                panelesInstrucciones[indiceActual].SetActive(false);
-
-            if (indiceSiguiente < panelesInstrucciones.Length && panelesInstrucciones[indiceSiguiente] != null)
-                panelesInstrucciones[indiceSiguiente].SetActive(true);
+            Debug.Log("Botón presionado más de dos veces. No se realizarán más acciones.");
         }
     }
 }
