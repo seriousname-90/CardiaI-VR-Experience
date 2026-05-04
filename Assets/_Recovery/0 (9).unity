@@ -2953,38 +2953,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1819059617}
-          m_TargetAssemblyTypeName: GlassVisuals, Assembly-CSharp
-          m_MethodName: ApagarVidrio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1819059613}
-          m_TargetAssemblyTypeName: ButtonStateManager, Assembly-CSharp
-          m_MethodName: OnButtonPressed
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!223 &1728785203 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 5209399768527615636, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
@@ -3047,11 +3015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -364223573239433514, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.9
+      value: -124.30253
       objectReference: {fileID: 0}
     - target: {fileID: -364223573239433514, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 104
+      value: 104.324814
       objectReference: {fileID: 0}
     - target: {fileID: -364223573239433514, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3082,20 +3050,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2163061155770630284, guid: 241656add64d24f69947d955e504d3bb, type: 3}
-      propertyPath: m_CastShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163061155770630284, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -876546973899608171, guid: a2fd595e1a45ce4498dcaca44e1c6e02, type: 3}
     - target: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       propertyPath: m_Name
       value: GlassButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3147,7 +3107,6 @@ MonoBehaviour:
   boton: {fileID: 1713562632}
   objectManager: {fileID: 1819059614}
   audioManager: {fileID: 1819059616}
-  glassVisuals: {fileID: 0}
 --- !u!114 &1819059614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3217,7 +3176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlassVisuals
   glassRenderer: {fileID: 1784351707}
   colorNormal: {r: 0, g: 0, b: 0, a: 0}
-  colorHover: {r: 0.106532566, g: 0.1276255, b: 0.16981131, a: 0.23529412}
+  colorHover: {r: 0.43596476, g: 0.6075938, b: 0.9528302, a: 1}
 --- !u!1 &1939269089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4970,54 +4929,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_Colors.m_NormalColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_Colors.m_PressedColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1819059617}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: DesactivarVidrioTotal
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: GlassVisuals, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1142399148745527906, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_Name
       value: CanvasButton
@@ -5025,42 +4936,6 @@ PrefabInstance:
     - target: {fileID: 1592659509413251481, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740660648476738460, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275870223549290210, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: _size.x
-      value: 30.000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275870223549290210, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: _size.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912837451854131914, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: _enterHoverNormal
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912837451854131914, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: _cancelSelectNormal
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7138077211380544421, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_Pivot.x
@@ -5141,14 +5016,6 @@ PrefabInstance:
     - target: {fileID: 7138077211380544421, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681909934542645475, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681909934542645475, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1592659509413251481, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
