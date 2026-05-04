@@ -14,19 +14,34 @@ public class ObjectManager : MonoBehaviour
     public GameObject button; // Referencia al botón para cambiar su texto
     public TMP_Text buttonText; // Texto del botón para mostrar el estado
     public Canvas myCanvas;
+    
+    [Header("Gestión de Pantallas")]
+    public GameObject[] pantallas; // Arrastra aquí Screen1, Screen2, etc.
+    private int pantallaActual = -1;
 
     public void CambiarBoton(int indice)
     {
-        
+        StartCoroutine(MoverBotonConRetraso(indice));
+    }
+
+    private IEnumerator MoverBotonConRetraso(int indice)
+    {
+        // Esperamos un tiempo breve para que la animación de "encogerse" 
+        // del script UIAnimate haya avanzado lo suficiente o terminado.
+        yield return new WaitForSeconds(0.5f);  
+
         if (indice == 0 && buttonText != null)
         {
             buttonText.text = "Siguiente";
         }
+
+        // Ahora que el botón es invisible o casi invisible, lo movemos
         myCanvas.transform.position = new Vector3(0.434f, 0.665f, 0.563f);
         myCanvas.transform.rotation = Quaternion.Euler(12.079f, 27.812f, 0f);
-        // Aquí puedes cambiar el texto del botón o su apariencia
-        Debug.Log("CambiarBoton llamado. Aquí puedes actualizar el estado del botón.");
+        
+        Debug.Log("Botón movido mientras estaba oculto.");
     }
+
     public void ActivarObjetos()
     {
 
@@ -42,5 +57,24 @@ public class ObjectManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Debug.Log("Cambiando a la escena Assemble.");
         SceneManager.LoadScene("Assemble");
+    }
+
+    public void AvanzarPantalla()
+    {
+        // 1. Apagamos la pantalla actual si existe
+        if (pantallaActual >= 0 && pantallaActual < pantallas.Length)
+        {
+            // Animamos la pantalla vieja para que desaparezca
+            UIAnimate anim = pantallas[pantallaActual].GetComponent<UIAnimate>();
+            if (anim != null) 
+                StartCoroutine(anim.AnimarDesaparecer());
+            else
+                pantallas[pantallaActual].SetActive(false);
+        }
+
+        // 2. Avanzamos el índice y encendemos la que sigue
+        pantallaActual++;
+        if (pantallaActual < pantallas.Length && pantallas[pantallaActual] != null)
+            pantallas[pantallaActual].SetActive(true);
     }
 }
