@@ -7,7 +7,6 @@ public class ButtonStateManager : MonoBehaviour
     public Button boton;
     public ObjectManager objectManager;
     public AudioManager audioManager;
-    public GlassVisuals glassVisuals; 
 
     private int contador = 0;
 
@@ -38,12 +37,6 @@ public class ButtonStateManager : MonoBehaviour
             {
                 Debug.LogError("objectManager es NULL!");
                 return;
-            }
-
-            // Apagamos el vidrio justo aquí para que no estorbe en el siguiente paso
-            if (glassVisuals != null)
-            {
-                glassVisuals.DesactivarVidrioTotal();
             }
 
             objectManager.ActivarObjetos();
