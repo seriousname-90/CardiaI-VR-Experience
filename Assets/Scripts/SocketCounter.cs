@@ -9,6 +9,8 @@ public class SocketCounter : MonoBehaviour
 
     [Header("Objeto a activar cuando ambos estén llenos")]
     public GameObject objetoAActivar;
+    public AudioSource audioSource; 
+    public AudioSource ultimaLocución;  
 
     private int contador = 0;
 
@@ -38,8 +40,12 @@ public class SocketCounter : MonoBehaviour
     {
         if (contador >= 2)
         {
+            ultimaLocución.Stop(); // Detener la última locución si está sonando
             if (objetoAActivar != null)
                 objetoAActivar.SetActive(true);
+            if (audioSource != null && !audioSource.isPlaying)
+                audioSource.PlayOneShot(audioSource.clip);
+            
         }
         else
         {
