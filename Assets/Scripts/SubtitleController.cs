@@ -1,33 +1,30 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 
 public class SubtitleController : MonoBehaviour
 {
     [Header("Referencias UI")]
     public Canvas subtitleCanvas;
     public TextMeshProUGUI subtitleText;
-    public TextMeshProUGUI speakerText;  // Opcional: texto para el nombre
+    public TextMeshProUGUI speakerText;
     
     [Header("Configuración")]
     public float fadeInTime = 0.2f;
     public float fadeOutTime = 0.2f;
     public float defaultDuration = 3f;
+    private float typewriterSpeed = 60f; // Letras por segundo
     
     private Coroutine currentSubtitleCoroutine;
     private CanvasGroup canvasGroup;
     
     void Awake()
     {
-        // Asegurar que existe CanvasGroup
         canvasGroup = subtitleCanvas.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
             canvasGroup = subtitleCanvas.gameObject.AddComponent<CanvasGroup>();
         
-        // Ocultar inicialmente
         canvasGroup.alpha = 0;
-        subtitleCanvas.enabled = true;
     }
     
     public void PlaySubtitle(SubtitleData subtitle)
@@ -45,11 +42,8 @@ public class SubtitleController : MonoBehaviour
     
     IEnumerator PlaySubtitleCoroutine(string message, string speaker, float duration)
     {
-        // Configurar textos
         if (speakerText != null)
             speakerText.text = speaker + (string.IsNullOrEmpty(speaker) ? "" : ":");
-        
-        subtitleText.text = message;
         
         // Fade in
         float elapsed = 0;
@@ -60,6 +54,24 @@ public class SubtitleController : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 1;
+        
+        // Efecto máquina de escribir sin WaitForSeconds
+        subtitleText.text = "";
+        float timePerLetter = 1f / typewriterSpeed;
+        float timer = 0;
+        int currentIndex = 0;
+        
+        while (currentIndex < message.Length)
+        {
+            timer += Time.deltaTime;
+            if (timer >= timePerLetter)
+            {
+                timer = 0;
+                currentIndex++;
+                subtitleText.text = message.Substring(0, currentIndex);
+            }
+            yield return null;
+        }
         
         // Esperar duración
         float waitTime = duration > 0 ? duration : defaultDuration;
@@ -75,6 +87,10 @@ public class SubtitleController : MonoBehaviour
         }
         canvasGroup.alpha = 0;
         
+        subtitleText.text = "";
+        if (speakerText != null)
+            speakerText.text = "";
+        
         currentSubtitleCoroutine = null;
     }
     
@@ -84,5 +100,6 @@ public class SubtitleController : MonoBehaviour
             StopCoroutine(currentSubtitleCoroutine);
         
         canvasGroup.alpha = 0;
+        subtitleText.text = "";
     }
 }

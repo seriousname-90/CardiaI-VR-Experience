@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444c470244fa6e547869cea4ea5ef82b, type: 3}
+  m_Name: lobby1
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSequence
+  subtitles:
+  - delay: 0
+    trigger: {fileID: 11400000, guid: 44e22245feb82444a9ac8a9839a07bd3, type: 2}
+  - delay: 7.8
+    trigger: {fileID: 11400000, guid: 234dfc2f5de5dad4ea257ec413921060, type: 2}
+  - delay: 12
+    trigger: {fileID: 11400000, guid: d52a578efe69bf84d943b76149bad536, type: 2}
+  - delay: 14
+    trigger: {fileID: 11400000, guid: 18f98833f46a05743ac7a2449db5b26e, type: 2}
+  - delay: 21
+    trigger: {fileID: 11400000, guid: 6693f404ada005d46b8628b80c5d07ba, type: 2}
+  - delay: 24.5
+    trigger: {fileID: 11400000, guid: b35e224a524281142a1234f0ff9a19e2, type: 2}

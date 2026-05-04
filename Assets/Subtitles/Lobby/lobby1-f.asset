@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: Test
+  m_Name: lobby1-f
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "\xA1Bienvenido/a! Est\xE1s en la experiencia de realidad virtual cai100
-      de Cardiai!   Yo soy Buba y junto a mi ayudante Cardi seremos tus acompa\xF1antes
-      hoy"
-    duration: 1800
+    message: VAMOS! SIUUUUUUUUUU
+    duration: 3

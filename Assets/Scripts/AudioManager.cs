@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     [Header("Configuración inicial")]
     public AudioSource audioSource;
     public GameObject boton; // Arrastra aquí el objeto "Button" de la jerarquía
+    public SubtitlePlayer subtitlePlayer;
+    public SubtitleSequence[] secuencias; // Arrastra aquí la secuencia de subtítulos para la locución inicial
 
     void Start()
     {
@@ -42,6 +44,7 @@ public class AudioManager : MonoBehaviour
             {
                 StartCoroutine(ActivarBotonCuandoTermine(locuciones[indice]));
             }
+            subtitlePlayer.PlaySequence(secuencias[indice]);
             
             Debug.Log($"Reproduciendo locución {indice}: {locuciones[indice].name}");
         }

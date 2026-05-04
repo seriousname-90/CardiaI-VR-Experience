@@ -1156,7 +1156,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 564492330}
+      addedObject: {fileID: 633391944}
   m_SourcePrefab: {fileID: -4216948427090074523, guid: 241656add64d24f69947d955e504d3bb, type: 3}
 --- !u!4 &564492326 stripped
 Transform:
@@ -1168,7 +1168,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
   m_PrefabInstance: {fileID: 564492325}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &564492330
 --- !u!1 &633391943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1179,6 @@ GameObject:
   - component: {fileID: 633391947}
   - component: {fileID: 633391946}
   - component: {fileID: 633391945}
-  - component: {fileID: 633391944}
   - component: {fileID: 633391948}
   m_Layer: 5
   m_Name: SubtitleCanvas
@@ -1202,17 +1200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAnimate
   duracion: 0.2
-  m_GameObject: {fileID: 633391943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &633391945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,7 +1352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d15b94cde8172c4286e440cdf40c16d, type: 2}
+  - {fileID: 2100000, guid: 1b0f2f88640e89e41914d1999ca93aa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2890,10 +2877,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Speaker
+  m_text: SubtitleText
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3635,6 +3622,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1364804093}
   - component: {fileID: 1364804094}
+  - component: {fileID: 1364804096}
+  - component: {fileID: 1364804095}
   m_Layer: 0
   m_Name: SubtitleSystem
   m_TagString: Untagged
@@ -3676,6 +3665,32 @@ MonoBehaviour:
   fadeInTime: 0.2
   fadeOutTime: 0.2
   defaultDuration: 3
+--- !u!114 &1364804095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364804092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce5a18f8d3e77246b4406110d78dbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitlePlayer
+  scheduler: {fileID: 1364804096}
+--- !u!114 &1364804096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364804092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d99d6b3e7cd5e44adc196591429417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleScheduler
+  subtitleController: {fileID: 1364804094}
 --- !u!114 &1462907351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6744807187139327233, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
@@ -3727,8 +3742,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Speaker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4397,8 +4412,6 @@ MonoBehaviour:
   boton: {fileID: 1713562632}
   objectManager: {fileID: 1819059614}
   audioManager: {fileID: 1819059616}
-  subtitleController: {fileID: 1364804094}
-  welcomeTrigger: {fileID: 11400000, guid: 44e22245feb82444a9ac8a9839a07bd3, type: 2}
 --- !u!114 &1819059614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4458,6 +4471,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9ba3d3a37f07c4f4eac8775f1af74905, type: 3}
   audioSource: {fileID: 1989596775}
   boton: {fileID: 1713562630}
+  subtitlePlayer: {fileID: 1364804095}
+  secuencias:
+  - {fileID: 11400000, guid: 7d13f766fbca79e4f914349c87dc3ec5, type: 2}
 --- !u!1 &1915146083
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,6 +6832,10 @@ PrefabInstance:
       value: Iniciar
       objectReference: {fileID: 0}
     - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
@@ -6832,6 +6852,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_characterSpacing
       value: 3.02
       objectReference: {fileID: 0}
@@ -6839,8 +6863,44 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2640280232926529214, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2740660648476738460, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 69.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548333742870131441, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7138077211380544421, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
