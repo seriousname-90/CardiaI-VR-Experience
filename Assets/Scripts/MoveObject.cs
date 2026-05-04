@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events; // Necesario para usar eventos
 
 public class MoveObject : MonoBehaviour
 {
     public Vector3 posicionDestino;
     public float velocidad = 2f;
+    
+    [Header("Eventos de Finalización")]
+    public UnityEvent alTerminarMovimiento;
     
     private Vector3 posicionInicial;
     private float tiempoRecorrido = 0f;
@@ -27,6 +31,11 @@ public class MoveObject : MonoBehaviour
             {
                 transform.position = posicionDestino;
                 moviendo = false;
+                
+                if (alTerminarMovimiento != null)
+                {
+                    alTerminarMovimiento.Invoke();
+                }
             }
         }
     }

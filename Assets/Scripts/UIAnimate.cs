@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIAnimate : MonoBehaviour
 {
@@ -67,4 +68,13 @@ public class UIAnimate : MonoBehaviour
         
         gameObject.SetActive(false);
     }
-}
+
+    public void PresionarBotonDesdeScript()
+    {
+        Button btn = GetComponent<Button>();
+        if (btn != null && btn.interactable)
+        {
+            btn.onClick.Invoke();
+        }
+    }
+} 
