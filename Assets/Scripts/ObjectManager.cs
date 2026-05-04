@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Meta.XR.ImmersiveDebugger.UserInterface.Generic;
+using TMPro;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -8,29 +10,25 @@ public class ObjectManager : MonoBehaviour
     public AudioSource audioSource;
     [Header("Objetos a activar (primera presión)")]
     public GameObject[] objetosAActivar;
-    public AudioClip lobby4;        // Tercer audio 
-    public AudioClip lobby9;       // Cuarto audio 
-    public float tiempo_lobby4 = 3f;
+    public float delay = 3f;
+    public GameObject button; // Referencia al botón para cambiar su texto
+    public TMP_Text buttonText; // Texto del botón para mostrar el estado
+    public Canvas myCanvas;
 
-    [Header("Objetos a instanciar (segunda presión)")]
-    public GameObject prefabDistantGrab;
-    public Vector3[] posicionesDistantGrab = new Vector3[3];
-    
-    [Header("Objetos a destruir (segunda presión)")]
-    public GameObject[] objetosADestruir = new GameObject[4];
-    [Header("Objetos a instanciar (tercera presión)")]
-    public GameObject animacionMano;
-
-    public IEnumerator ActivarObjetos()
+    public void CambiarBoton(int indice)
     {
-        yield return new WaitForSeconds(tiempo_lobby4);
-
-        // Reproducir audio inicial (37 seg)
-        if (lobby4 != null)
+        
+        if (indice == 0 && buttonText != null)
         {
-            audioSource.PlayOneShot(lobby4);
-            Debug.Log("Reproduciendo audio lobby4 (3 seg después de la primera acción)");
+            buttonText.text = "Siguiente";
         }
+        myCanvas.transform.position = new Vector3(0.434f, 0.665f, 0.563f);
+        myCanvas.transform.rotation = Quaternion.Euler(12.079f, 27.812f, 0f);
+        // Aquí puedes cambiar el texto del botón o su apariencia
+        Debug.Log("CambiarBoton llamado. Aquí puedes actualizar el estado del botón.");
+    }
+    public void ActivarObjetos()
+    {
 
         foreach (GameObject obj in objetosAActivar)
         {
@@ -39,40 +37,9 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    public void DestruirEInstanciar()
-    {
-        // Destruir
-        foreach (GameObject obj in objetosADestruir)
-        {
-            if (obj != null) Destroy(obj);
-            Debug.Log("Destruyendo: " + obj.name);
-        }
-
-        // Instanciar nuevos
-        foreach (Vector3 pos in posicionesDistantGrab)
-        {
-            Instantiate(prefabDistantGrab, pos, Quaternion.identity);
-            Debug.Log("Instanciando: " + prefabDistantGrab.name);
-        
-        }
-    }
-
-    public void ActivarAnimacionMano()
-    {
-        if (animacionMano != null) animacionMano.SetActive(true);
-            Debug.Log("Activando: " + animacionMano.name);
-        // Aquí puedes agregar el código para activar la animación de la mano
-        Debug.Log("Activando animación de la mano.");
-    }
-
     public IEnumerator CambiarEscenaLobby()
     {
-         if (lobby9 != null)
-        {
-            audioSource.PlayOneShot(lobby9);
-            Debug.Log("Reproduciendo audio lobby9");
-        }
-        yield return new WaitForSeconds(tiempo_lobby4 + 1);
+        yield return new WaitForSeconds(delay);
         Debug.Log("Cambiando a la escena Assemble.");
         SceneManager.LoadScene("Assemble");
     }
