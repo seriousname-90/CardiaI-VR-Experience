@@ -22,6 +22,17 @@ public class ButtonStateManager : MonoBehaviour
     public void OnButtonPressed()
     {
         Debug.Log("Botón presionado. Contador actual: " + contador);
+
+        UIAnimate anim = boton.GetComponent<UIAnimate>();
+
+        if (anim != null) 
+            StartCoroutine(anim.AnimarDesaparecer());
+        else 
+            boton.gameObject.SetActive(false); 
+
+        if (objectManager != null)
+            objectManager.AvanzarPantalla();
+        
         if (contador == 0)
         {
             if (audioManager != null)
@@ -38,7 +49,6 @@ public class ButtonStateManager : MonoBehaviour
                 Debug.LogError("objectManager es NULL!");
                 return;
             }
-
             objectManager.ActivarObjetos();
             if (audioManager != null)
                 audioManager.ReproducirLocucion(1); // Locución para segunda acción
@@ -58,4 +68,6 @@ public class ButtonStateManager : MonoBehaviour
             Debug.Log("Botón presionado más de dos veces. No se realizarán más acciones.");
         }
     }
+
+    
 }
