@@ -10,10 +10,8 @@ public class ObjectManager : MonoBehaviour
     public AudioSource audioSource;
     [Header("Objetos a activar (primera presión)")]
     public GameObject[] objetosAActivar;
-    public float delay = 3f;
-    public GameObject button; // Referencia al botón para cambiar su texto
     public TMP_Text buttonText; // Texto del botón para mostrar el estado
-    public Canvas myCanvas;
+    public Canvas myCanvas; // Referencia al Canvas del botón
     
     [Header("Gestión de Pantallas")]
     public GameObject[] pantallas; // Arrastra aquí Screen1, Screen2, etc.
@@ -54,7 +52,7 @@ public class ObjectManager : MonoBehaviour
 
     public IEnumerator CambiarEscenaLobby()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(3f); // Espera 3 segundos antes de cambiar la escena
         Debug.Log("Cambiando a la escena Assemble.");
         SceneManager.LoadScene("Assemble");
     }
