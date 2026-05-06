@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 754135207}
-  forwardOffset: {x: 0, y: -0.6, z: 1.4}
+  forwardOffset: {x: 0, y: -0.3, z: 1.3}
   followSpeed: 5
   maxYAngleDistance: 30
   smoothYTime: 0.3
@@ -7039,7 +7039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1989596769
 MonoBehaviour:
   m_ObjectHideFlags: 0
