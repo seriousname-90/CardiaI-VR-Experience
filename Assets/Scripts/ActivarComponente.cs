@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivarComponente : MonoBehaviour
 {
     public GameObject componente; // Arrastra cualquier componente (Building Block)
-    public AudioSource audioSource; // Arrastra el AudioSource que deseas reproducir  
+    public AudioManager audiomanager; // Arrastra el AudioManager 
  
     public bool activarAlIniciar; // Si quieres que se active al iniciar
 
@@ -13,7 +13,7 @@ public class ActivarComponente : MonoBehaviour
     {
         if (activarAlIniciar)
         {
-            ActivarDespuesDeSegundos();
+            ActivarAudioConDelay();
         }
     }
 
@@ -40,7 +40,7 @@ public class ActivarComponente : MonoBehaviour
             componente.SetActive(false);
     }
 
-    public void ActivarDespuesDeSegundos()
+    public void ActivarAudioConDelay()
     {
         StartCoroutine(ActivarDelay());
     }
@@ -48,10 +48,20 @@ public class ActivarComponente : MonoBehaviour
     IEnumerator ActivarDelay()
     {
         yield return new WaitForSeconds(2.5f);
-        if (audioSource != null)
-            audioSource.PlayOneShot(audioSource.clip);
+        if (audiomanager != null)
+            audiomanager.ReproducirLocucion(0);
+            Debug.Log("Reproduciendo locución inicial con delay");
+    }
 
-        yield return new WaitForSeconds(audioSource.clip.length);
-        Activar();
+    public void ActivarObjecoConDelay(float delay)
+    {
+        StartCoroutine(ActivarConDelay(delay));
+    }
+
+    IEnumerator ActivarConDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (componente != null)
+            componente.SetActive(true);
     }
 }

@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -6,11 +7,12 @@ public class SocketCounter : MonoBehaviour
 {
     [Header("Sockets a monitorear")]
     public XRSocketInteractor[] sockets;
+    [Header("Objetos a desactivar gravedad")]
+    public GameObject[] grabElectrodes;
 
     [Header("Objeto a activar cuando ambos estén llenos")]
     public GameObject objetoAActivar;
-    public AudioSource audioSource; 
-    public AudioSource ultimaLocución;  
+    public AudioManager audioManager; 
 
     private int contador = 0;
 
@@ -28,6 +30,7 @@ public class SocketCounter : MonoBehaviour
     {
         contador++;
         VerificarEstado();
+        Debug.Log($"Objeto colocado en socket. Contador: {contador}");
     }
 
     void OnObjectRemoved(SelectExitEventArgs args)
@@ -40,12 +43,11 @@ public class SocketCounter : MonoBehaviour
     {
         if (contador >= 2)
         {
-            ultimaLocución.Stop(); // Detener la última locución si está sonando
             if (objetoAActivar != null)
                 objetoAActivar.SetActive(true);
-            if (audioSource != null && !audioSource.isPlaying)
-                audioSource.PlayOneShot(audioSource.clip);
-            
+            if (audioManager != null)
+                audioManager.ReproducirLocucion(7);
+                Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets.");  
         }
         else
         {

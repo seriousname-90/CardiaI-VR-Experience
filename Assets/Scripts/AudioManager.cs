@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public SubtitlePlayer subtitlePlayer;
     public SubtitleSequence[] secuencias; // Arrastra aquí la secuencia de subtítulos para la locución inicial
 
+    private int locucionActual = 0;
+
     void Start()
     {
         if (audioSource == null)
@@ -31,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
     public void ReproducirLocucion(int indice)
     {
-        if (locuciones == null || indice >= locuciones.Length) return;
+        if (locuciones == null || indice >= locuciones.Length || indice != locucionActual) return;
 
         if (locuciones[indice] != null && audioSource != null)
         {
@@ -40,13 +42,17 @@ public class AudioManager : MonoBehaviour
 
             // Reactivamos el botón después de la locución inicial (0) 
             // Y después de la locución de éxito de la actividad (2)
-            if (indice == 0 || indice == 2) 
+            if (indice == 0) 
             {
                 StartCoroutine(ActivarBotonCuandoTermine(locuciones[indice]));
             }
-            subtitlePlayer.PlaySequence(secuencias[indice]);
-            
+            if (subtitlePlayer != null && secuencias != null && indice < secuencias.Length)
+            {
+                subtitlePlayer.PlaySequence(secuencias[indice]);
+            }
+
             Debug.Log($"Reproduciendo locución {indice}: {locuciones[indice].name}");
+            locucionActual++;
         }
     }
 }
