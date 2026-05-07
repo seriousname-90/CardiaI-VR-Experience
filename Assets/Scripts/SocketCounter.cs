@@ -1,5 +1,7 @@
+using System.Collections;
 using Oculus.Interaction;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
@@ -47,13 +49,20 @@ public class SocketCounter : MonoBehaviour
                 objetoAActivar.SetActive(true);
             if (audioManager != null)
                 audioManager.ReproducirLocucion(7);
-                Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets.");  
+                Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets."); 
+                audioManager.ReproducirLocucionConDelay(8, 14f); // Reproducir locución final cuando termine la anterior
+                StartCoroutine(waitForAudioToFinish(22f)); // TODO: CAMBIAR A BOTOON O NOSE 
         }
-        else
-        {
-            // Opcional: desactivar si se quita algún objeto
-            // if (objetoAActivar != null)
-            //     objetoAActivar.SetActive(false);
-        }
+    }
+
+    private IEnumerator waitForAudioToFinish(float clipLength)
+    {
+        yield return new WaitForSeconds(clipLength);
+        CambiarEscena();
+    }
+
+    private void CambiarEscena()
+    {
+        SceneManager.LoadScene("ApplicationTest");
     }
 }

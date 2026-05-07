@@ -12,4 +12,4 @@ public class SubtitleSequence : ScriptableObject
     }
     
     public List<SubtitleEntry> subtitles = new List<SubtitleEntry>();
-}
+} 
