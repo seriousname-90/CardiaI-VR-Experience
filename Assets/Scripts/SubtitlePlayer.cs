@@ -9,6 +9,6 @@ public class SubtitlePlayer : MonoBehaviour
         foreach (var entry in sequence.subtitles)
         {
             scheduler.PlayLocutionDelay(entry.delay, entry.trigger);
-        }
+        } 
     }
 }

@@ -55,4 +55,15 @@ public class AudioManager : MonoBehaviour
             locucionActual++;
         }
     }
+
+    public void ReproducirLocucionConDelay(int indice, float delay)
+    {
+        StartCoroutine(ReproducirConDelay(indice, delay));
+    }
+    
+    IEnumerator ReproducirConDelay(int indice, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ReproducirLocucion(indice);
+    }
 }
