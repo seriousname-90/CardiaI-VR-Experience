@@ -41,7 +41,6 @@ public class AudioManager : MonoBehaviour
             audioSource.PlayOneShot(locuciones[indice]);
 
             // Reactivamos el botón después de la locución inicial (0) 
-            // Y después de la locución de éxito de la actividad (2)
             if (indice == 0) 
             {
                 StartCoroutine(ActivarBotonCuandoTermine(locuciones[indice]));
