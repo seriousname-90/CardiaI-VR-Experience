@@ -230,29 +230,29 @@ public class HeartAnimations : MonoBehaviour
         if (saReproducido && avReproducido && hisReproducido)
         {
             Debug.Log("Los 3 segmentos (SA, AV y His) han sido reproducidos. Iniciando loop completo a velocidad normal");
-            EmpezarLoopCompleto();
+            EmpezarLoopCompleto(0.86f);
             audioSource.Play();
         }
     }
 
-    private void EmpezarLoopCompleto()
+    public void EmpezarLoopCompleto(float velocidad)
     {
         Debug.Log("Los 3 fragmentos completados. Iniciando loop completo a velocidad normal");
-        animator.speed = 0.86f;
+        animator.speed = velocidad;
         animator.Play(nombreAnimacion, 0, 0f);
 
         Mostrar(bolitaAuricula);
         Mostrar(bolitaAV);
-        bolitaAuricula.speed = 0.86f;
+        bolitaAuricula.speed = velocidad;
         bolitaAuricula.Play("SA-Auricula", 0, 0f);
 
-        bolitaAV.speed = 0.86f;
+        bolitaAV.speed = velocidad;
         bolitaAV.Play("SA-AV", 0, 0f);
 
-        bolitaPurkinjeIzq.speed = 0.86f;
+        bolitaPurkinjeIzq.speed = velocidad;
         bolitaPurkinjeIzq.Play("SA-Pur1", 0, 0f);
 
-        bolitaPurkinjeDer.speed = 0.86f;
+        bolitaPurkinjeDer.speed = velocidad;
         bolitaPurkinjeDer.Play("SA-Pur2", 0, 0f);
         DesactivarTrails();
     }
