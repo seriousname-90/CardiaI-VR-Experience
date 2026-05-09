@@ -257,6 +257,21 @@ public class HeartAnimations : MonoBehaviour
         DesactivarTrails();
     }
 
+    public void ReproducirTaquicardia()
+    {
+        EmpezarLoopCompleto(1.5f); // Aumentar la velocidad para simular taquicardia
+        // función para modificar la velociidad del audio source y el pitch para que suene más rápido
+        audioSource.pitch = 1.74f; // Aumentar el pitch para que suene más rápido
+    }
+
+    public void ReproducirBradicardia()
+    {
+        EmpezarLoopCompleto(0.5733f); // Reducir la velocidad para simular bradicardia (40 latidos por minuto es 0.5733 veces la velocidad normal)
+
+        // función para modificar la velociidad del audio source y el pitch para que suene más lento
+        audioSource.pitch = 0.6666f; // Reducir el pitch para que suene más lento
+    }
+
     public void Reiniciar()
     {
         saReproducido = false;
