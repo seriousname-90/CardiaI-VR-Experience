@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SubtitleController : MonoBehaviour
 {
@@ -13,10 +14,23 @@ public class SubtitleController : MonoBehaviour
     public float fadeInTime = 0.2f;
     public float fadeOutTime = 0.2f;
     public float defaultDuration = 3f;
-    private float typewriterSpeed = 60f; // Letras por segundo
+    public float typewriterSpeed = 60f; // Letras por segundo
+    
+    [Header("Configuración por Speaker")]
+    public List<SpeakerConfig> speakerConfigs = new List<SpeakerConfig>();
     
     private Coroutine currentSubtitleCoroutine;
     private CanvasGroup canvasGroup;
+    private Dictionary<string, SpeakerConfig> speakerConfigMap;
+    private SpeakerConfig currentConfig;
+    
+    [System.Serializable]
+    public class SpeakerConfig
+    {
+        public string speakerName;
+        public Color textColor = Color.white;
+        public GameObject componentToActivate;
+    }
     
     void Awake()
     {
@@ -25,6 +39,12 @@ public class SubtitleController : MonoBehaviour
             canvasGroup = subtitleCanvas.gameObject.AddComponent<CanvasGroup>();
         
         canvasGroup.alpha = 0;
+        
+        speakerConfigMap = new Dictionary<string, SpeakerConfig>();
+        foreach (var config in speakerConfigs)
+        {
+            speakerConfigMap[config.speakerName.ToLower()] = config;
+        }
     }
     
     public void PlaySubtitle(SubtitleData subtitle)
@@ -35,15 +55,31 @@ public class SubtitleController : MonoBehaviour
     public void PlaySubtitle(string message, string speaker = "", float duration = -1)
     {
         if (currentSubtitleCoroutine != null)
+        {
+            if (currentConfig != null && currentConfig.componentToActivate != null)
+                currentConfig.componentToActivate.SetActive(false);
+            
             StopCoroutine(currentSubtitleCoroutine);
+        }
         
         currentSubtitleCoroutine = StartCoroutine(PlaySubtitleCoroutine(message, speaker, duration));
     }
     
     IEnumerator PlaySubtitleCoroutine(string message, string speaker, float duration)
     {
+        // Obtener configuración del speaker
+        currentConfig = GetSpeakerConfig(speaker);
+        
+        // Configurar speaker
         if (speakerText != null)
+        {
             speakerText.text = speaker + (string.IsNullOrEmpty(speaker) ? "" : ":");
+            speakerText.color = currentConfig.textColor;
+        }
+        
+        // Activar componente
+        if (currentConfig.componentToActivate != null)
+            currentConfig.componentToActivate.SetActive(true);
         
         // Fade in
         float elapsed = 0;
@@ -55,7 +91,7 @@ public class SubtitleController : MonoBehaviour
         }
         canvasGroup.alpha = 1;
         
-        // Efecto máquina de escribir sin WaitForSeconds
+        // Efecto máquina de escribir
         subtitleText.text = "";
         float timePerLetter = 1f / typewriterSpeed;
         float timer = 0;
@@ -87,19 +123,47 @@ public class SubtitleController : MonoBehaviour
         }
         canvasGroup.alpha = 0;
         
+        // Desactivar componente
+        if (currentConfig.componentToActivate != null)
+            currentConfig.componentToActivate.SetActive(false);
+        
+        // Limpiar textos
         subtitleText.text = "";
         if (speakerText != null)
             speakerText.text = "";
         
         currentSubtitleCoroutine = null;
+        currentConfig = null;
+    }
+    
+    private SpeakerConfig GetSpeakerConfig(string speaker)
+    {
+        if (string.IsNullOrEmpty(speaker))
+            return new SpeakerConfig { textColor = Color.white };
+        
+        string key = speaker.ToLower();
+        if (speakerConfigMap.ContainsKey(key))
+            return speakerConfigMap[key];
+        
+        return new SpeakerConfig { textColor = Color.white };
     }
     
     public void Hide()
     {
         if (currentSubtitleCoroutine != null)
+        {
+            if (currentConfig != null && currentConfig.componentToActivate != null)
+                currentConfig.componentToActivate.SetActive(false);
+            
             StopCoroutine(currentSubtitleCoroutine);
+        }
         
         canvasGroup.alpha = 0;
         subtitleText.text = "";
+        if (speakerText != null)
+            speakerText.text = "";
+        
+        currentSubtitleCoroutine = null;
+        currentConfig = null;
     }
 }
