@@ -237,24 +237,30 @@ public class HeartAnimations : MonoBehaviour
 
     public void EmpezarLoopCompleto(float velocidad)
     {
-        Debug.Log("Los 3 fragmentos completados. Iniciando loop completo a velocidad normal");
+        Debug.Log("Iniciando loop completo a velocidad " + velocidad);
+        
+        // Corazón
         animator.speed = velocidad;
         animator.Play(nombreAnimacion, 0, 0f);
-
-        Mostrar(bolitaAuricula);
-        Mostrar(bolitaAV);
-        bolitaAuricula.speed = velocidad;
-        bolitaAuricula.Play("SA-Auricula", 0, 0f);
-
-        bolitaAV.speed = velocidad;
-        bolitaAV.Play("SA-AV", 0, 0f);
-
-        bolitaPurkinjeIzq.speed = velocidad;
-        bolitaPurkinjeIzq.Play("SA-Pur1", 0, 0f);
-
-        bolitaPurkinjeDer.speed = velocidad;
-        bolitaPurkinjeDer.Play("SA-Pur2", 0, 0f);
+        
+        // Forzar reinicio de cada bolita
+        ReiniciarAnimator(bolitaAuricula, "SA-Auricula", velocidad);
+        ReiniciarAnimator(bolitaAV, "SA-AV", velocidad);
+        ReiniciarAnimator(bolitaPurkinjeIzq, "SA-Pur1", velocidad);
+        ReiniciarAnimator(bolitaPurkinjeDer, "SA-Pur2", velocidad);
+        
         DesactivarTrails();
+    }
+
+    private void ReiniciarAnimator(Animator anim, string estado, float velocidad)
+    {
+        if (anim == null) return;
+        
+        // Desactivar y reactivar para forzar el reinicio
+        anim.gameObject.SetActive(false);
+        anim.speed = velocidad;
+        anim.Play(estado, 0, 0f);
+        anim.gameObject.SetActive(true);
     }
 
     public void ReproducirTaquicardia()
