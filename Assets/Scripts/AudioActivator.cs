@@ -4,7 +4,7 @@ public class AudioActivator : MonoBehaviour
 {
     [Header("Configuración")]
     [SerializeField] private AudioClip[] audioClips;
-    [SerializeField] private GameObject objectToActivate;
+    [SerializeField] private GameObject[] objectsToActivate;
     [SerializeField] private AudioSource audioSource;
     
     private bool hasBeenCalled = false;
@@ -34,11 +34,17 @@ public class AudioActivator : MonoBehaviour
         // Marcar como llamada
         hasBeenCalled = true;
         
-        // Activar el GameObject
-        if (objectToActivate != null)
+        // Activar los GameObjects
+        if (objectsToActivate != null)
         {
-            objectToActivate.SetActive(true);
-            Debug.Log($"GameObject '{objectToActivate.name}' activado.");
+            foreach (GameObject obj in objectsToActivate)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(true);
+                    Debug.Log($"GameObject '{obj.name}' activado.");
+                }
+            }
         }
         else
         {
