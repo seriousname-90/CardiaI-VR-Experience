@@ -65,4 +65,9 @@ public class AudioManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         ReproducirLocucion(indice);
     }
+
+    public void ReproducirProximaLocucionConDelay(float delay)
+    {
+        StartCoroutine(ReproducirConDelay(locucionActual, delay));
+    }
 }
