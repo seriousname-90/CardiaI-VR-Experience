@@ -7,10 +7,10 @@ public class TwoHandCounter : MonoBehaviour
 {
     [Header("Configuración de Tiempos")]
     [Tooltip("Tiempo de carga inicial (segundos)")]
-    public float chargeTime = 5f;
+    public float chargeTime;
     
     [Tooltip("Tiempo del video/acción final (segundos)")]
-    public float actionTime = 10f;
+    public float actionTime;
     
     [Header("Referencias UI")]
     public Image chargeProgressBar;    // Barra circular de carga
@@ -18,6 +18,8 @@ public class TwoHandCounter : MonoBehaviour
     
     [Header("Video")]
     public VideoPlayer videoPlayer;     // El VideoPlayer que reproducirá el video
+    [Header("Audio")]
+    public AudioManager audioManager;   // Para reproducir locuciones (opcional)
     
     [Header("Eventos")]
     public UnityEngine.Events.UnityEvent OnChargeCompleted;   // Cuando terminan los 5 seg
@@ -86,6 +88,7 @@ public class TwoHandCounter : MonoBehaviour
     {
         isCharging = true;
         phaseCoroutine = StartCoroutine(ChargeCoroutine());
+        audioManager.ReproducirLocucion(5); // Reproducir locución de carga (opcional)
         Debug.Log($"Carga iniciada. Necesitas {chargeTime} segundos");
     }
     

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e00603d0b622fe94d9a744946f083846, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: -0.312, y: 0.339, z: -5.841}
+  rotacionDestino: {x: 0, y: -90, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -7880,6 +7881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: -0.8880001, y: 0.254, z: -4.92}
+  rotacionDestino: {x: -180, y: -87.97601, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -8734,6 +8736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: -0.922, y: 0.3051, z: -4.8247604}
+  rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -14651,6 +14654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0.599, y: 0.45600003, z: -6.135}
+  rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -17256,6 +17260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0.934, y: 0.348, z: -4.93}
+  rotacionDestino: {x: 0, y: 90, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -19931,6 +19936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: -0.017000047, y: 0.254, z: -5.82}
+  rotacionDestino: {x: 0.000121160156, y: 2.0244563, z: 180}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -23100,6 +23106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0.9, y: 0.254, z: -4.984}
+  rotacionDestino: {x: 0.0000042827037, y: 272.0244, z: 179.99988}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -40957,6 +40964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0.934, y: 0.348, z: -4.93}
+  rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -41659,6 +41667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: -0.922, y: 0.3051, z: -4.8247604}
+  rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -41951,6 +41960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0.18, y: 0.339, z: -5.841}
+  rotacionDestino: {x: 0, y: -90, z: 0}
   velocidad: 1
   alTerminarMovimiento:
     m_PersistentCalls:
@@ -43522,6 +43532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0, y: 0.044, z: -4.777}
+  rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1.5
   alTerminarMovimiento:
     m_PersistentCalls:
