@@ -75,4 +75,16 @@ public class ObjectManager : MonoBehaviour
         if (pantallaActual < pantallas.Length && pantallas[pantallaActual] != null)
             pantallas[pantallaActual].SetActive(true);
     }
+
+    public void CambiarEscenaHeart()
+    {
+        Debug.Log("Cambiando a la escena Heart.");
+        SceneManager.LoadScene("HeartActivation");
+    }
+
+    public void CambiarEscenaResultados()
+    {
+        Debug.Log("Cambiando a la escena Heart.");
+        SceneManager.LoadScene("AppResults");
+    }
 }
