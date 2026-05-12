@@ -941,7 +941,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: 3
+          m_FloatArgument: 7.6
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -12473,7 +12473,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 3
+          m_FloatArgument: 7.3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -17275,7 +17275,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -17395,18 +17395,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1857268744}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ReproducirProximaLocucionConDelay
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 3
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 70085113}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17427,7 +17415,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 18
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -17439,7 +17427,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 18
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -17451,7 +17439,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 18
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -17475,7 +17463,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 18
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
@@ -17551,12 +17539,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
-  - {fileID: 8300000, guid: 000a29104881adc4fba075d3b00dd026, type: 3}
-  - {fileID: 8300000, guid: 99a765dde5639cc4993c48858ecdc727, type: 3}
-  - {fileID: 8300000, guid: 0217484643261784aadc6c3fd196b3eb, type: 3}
-  - {fileID: 8300000, guid: 56e52d3f0bd059c4abf6316f68e638f4, type: 3}
-  - {fileID: 8300000, guid: 69a848c2f0ad49b46b2f721dc1927638, type: 3}
-  - {fileID: 8300000, guid: b7a2d82799981f246bd678414dca208d, type: 3}
+  - {fileID: 8300000, guid: 6a06569df41a42144952fe56826fc35e, type: 3}
+  - {fileID: 8300000, guid: bff517e79db440b4c93a7f3ffc0e5414, type: 3}
+  - {fileID: 8300000, guid: 346e7da51a932084691f1d360b15024d, type: 3}
+  - {fileID: 8300000, guid: 9683a2a50957cb74a88786c635a68855, type: 3}
+  - {fileID: 8300000, guid: bd010e2697ced164e90d0697aff0f152, type: 3}
   audioSource: {fileID: 1857268745}
   boton: {fileID: 794009956}
   subtitlePlayer: {fileID: 0}
