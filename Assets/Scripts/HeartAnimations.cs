@@ -28,11 +28,10 @@ public class HeartAnimations : MonoBehaviour
     
     void Start()
     {
+        DetenerBolitas();
         animator = GetComponent<Animator>();
         animator.speed = 0f;
         animator.Play(nombreAnimacion, 0, 0f);
-
-        DetenerBolitas();
     }
 
     void DetenerBolitas()
@@ -108,16 +107,16 @@ public class HeartAnimations : MonoBehaviour
         float duracionReal = duracionNormal / velocidadSegmentos / 2;
         
         bolitaAuricula.speed = velocidadSegmentos;
-        bolitaAuricula.Play("SA-Auricula", 0, inicio);
+        bolitaAuricula.Play("SA-Auricula", 0, 0f);
 
         bolitaAV.speed = velocidadSegmentos;
-        bolitaAV.Play("SA-AV", 0, inicio);
+        bolitaAV.Play("SA-AV", 0, 0f);
 
         bolitaPurkinjeIzq.speed = velocidadSegmentos;
-        bolitaPurkinjeIzq.Play("SA-Pur1", 0, inicio);
+        bolitaPurkinjeIzq.Play("SA-Pur1", 0, 0f);
 
         bolitaPurkinjeDer.speed = velocidadSegmentos;
-        bolitaPurkinjeDer.Play("SA-Pur2", 0, inicio);
+        bolitaPurkinjeDer.Play("SA-Pur2", 0, 0f);
         
         yield return new WaitForSeconds(duracionReal);
 

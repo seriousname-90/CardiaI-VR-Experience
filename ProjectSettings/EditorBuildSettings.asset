@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HeartActivation.unity
     guid: 91f20a7d10cdcbe4b8bf38591cdcc31e
+  - enabled: 1
+    path: Assets/Scenes/AppResults.unity
+    guid: 0ceb249d4c95bed4bbaa5ecdaf24f17f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6f97722f5e78abd46bab106c1a8746a7, type: 2}
