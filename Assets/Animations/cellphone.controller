@@ -1,20 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1107 &-8850099044554085978
+--- !u!1107 &-5461203622847340644
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: New Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -550631876058807767}
-    m_Position: {x: 150, y: 260, z: 0}
+    m_State: {fileID: -1317713395407950429}
+    m_Position: {x: 290, y: 280, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 6053608029852789244}
-    m_Position: {x: 185, y: 325, z: 0}
+    m_State: {fileID: 3973393425197006470}
+    m_Position: {x: 450, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -24,15 +24,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -550631876058807767}
---- !u!1102 &-550631876058807767
+  m_DefaultState: {fileID: -1317713395407950429}
+--- !u!1102 &-1317713395407950429
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lighttickiling
+  m_Name: idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -45,7 +45,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2befe5ae09e8e864c9519ddd07867143, type: 2}
+  m_Motion: {fileID: 7400000, guid: 96d2b0eff819272449701e0b69eefba4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -57,13 +57,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Point Light
+  m_Name: cellphone
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
-    m_StateMachine: {fileID: -8850099044554085978}
+    m_Name: New Layer
+    m_StateMachine: {fileID: -5461203622847340644}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -73,14 +73,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &6053608029852789244
+--- !u!1102 &3973393425197006470
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lightOn
+  m_Name: posicioning
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -93,7 +93,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 62544a97b79fbc640aacfb45c1752799, type: 2}
+  m_Motion: {fileID: 7400000, guid: 132df8baffafbbe4d8cdd647b0539aa4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
