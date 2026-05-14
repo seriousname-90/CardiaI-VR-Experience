@@ -15,6 +15,7 @@ public class SocketCounter : MonoBehaviour
     [Header("Objeto a activar cuando ambos estén llenos")]
     public GameObject objetoAActivar;
     public AudioManager audioManager; 
+    public SceneChanger sceneChanger;
 
     private int contador = 0;
 
@@ -58,11 +59,7 @@ public class SocketCounter : MonoBehaviour
     private IEnumerator waitForAudioToFinish(float clipLength)
     {
         yield return new WaitForSeconds(clipLength);
-        CambiarEscena();
+        sceneChanger.CambiarEscena();
     }
 
-    private void CambiarEscena()
-    {
-        SceneManager.LoadScene("ApplicationTest");
-    }
 }
