@@ -15,7 +15,7 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
@@ -91,7 +91,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
@@ -118,13 +118,13 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
-    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _BaseColor: {r: 0.4811321, g: 0.33504578, b: 0.23375759, a: 1}
+    - _Color: {r: 0.4811321, g: 0.33504575, b: 0.23375756, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &8186347869181463338
+--- !u!114 &1686562514262309125
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
