@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444c470244fa6e547869cea4ea5ef82b, type: 3}
+  m_Name: examen3
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSequence
+  subtitles:
+  - delay: 0
+    trigger: {fileID: 11400000, guid: dd9473edbca4e4bfd9aa03742ca1723b, type: 2}
+  - delay: 8.5
+    trigger: {fileID: 11400000, guid: ceed37eb9f87341c3a2f71b91f7d3dbd, type: 2}
