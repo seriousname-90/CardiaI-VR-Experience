@@ -13490,8 +13490,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13772,8 +13772,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14241,7 +14241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 0}
-  forwardOffset: {x: -0.2, y: -0.4, z: 0.9}
+  forwardOffset: {x: 0, y: -0.4, z: 0.9}
   followSpeed: 10
   capasColision:
     serializedVersion: 2

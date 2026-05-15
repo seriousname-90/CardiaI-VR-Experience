@@ -14550,8 +14550,8 @@ MonoBehaviour:
     frente a ti, ac\xE9rcate y cierra el pu\xF1o</size></b>\nPara soltarlo, relaja
     la mano"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15433,7 +15433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -15563,6 +15563,7 @@ MonoBehaviour:
   objetos:
   - {fileID: 129817633}
   posicionesIniciales: []
+  rotacionesIniciales: []
   sonidoRespawn: {fileID: 493778002}
 --- !u!82 &493778002
 AudioSource:
@@ -16221,7 +16222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 754135207}
-  forwardOffset: {x: -0.2, y: -0.4, z: 0.9}
+  forwardOffset: {x: 0, y: -0.4, z: 0.9}
   followSpeed: 10
   capasColision:
     serializedVersion: 2
@@ -16744,6 +16745,7 @@ MonoBehaviour:
   objetos:
   - {fileID: 129817633}
   posicionesIniciales: []
+  rotacionesIniciales: []
   sonidoRespawn: {fileID: 742775708}
 --- !u!64 &742775710
 MeshCollider:
@@ -21546,8 +21548,8 @@ MonoBehaviour:
   m_text: "Prueba acercar tu mano al objeto y cierra el pu\xF1o para tomarlo.\\nSi
     quieres soltarlo, abre la mano y estira los dedos completamente"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34767,8 +34769,8 @@ MonoBehaviour:
   m_text: "Aprende a usar nuestro dispositivo para monitorear tu coraz\xF3n desde
     casa"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35299,8 +35301,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Speaker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40648,8 +40650,8 @@ MonoBehaviour:
 
     Vamos a comenzar'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -43143,6 +43145,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3612956784247903735, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3612956784247903735, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
