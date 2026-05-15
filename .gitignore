@@ -101,3 +101,4 @@ InitTestScene*.unity*
 Assets/Fonts/Figtree/Figtree-VariableFont_wght SDF.asset
 Assets/Fonts/Figtree/Figtree-VariableFont_wght SDF.asset.meta
 *.csproj.lscache
+TempAssembly.dll
