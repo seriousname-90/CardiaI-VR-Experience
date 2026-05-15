@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lobby1-d
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Bubba
+    speaker: Cardi
     message: "Aqu\xED aprender\xE1s a usar a CAI100, un electrocardi\xF3grafo que
-      puede monitorear tu coraz\xF3n desde casa."
+      puede \\nmonitorear tu coraz\xF3n desde casa."
     duration: 7

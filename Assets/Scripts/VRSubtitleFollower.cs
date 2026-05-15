@@ -6,6 +6,7 @@ public class VRSubtitleFollower : MonoBehaviour
     public Transform targetCamera;          // La cámara del VR
     public Vector3 forwardOffset = new Vector3(0, -0.2f, 1.5f);  // Offset hacia adelante
     public float followSpeed = 5f;          // Velocidad de movimiento
+    public LayerMask capasColision;         // Capas que bloquean el subtítulo
     
     [Header("Rotación Y (Horizontal)")]
     public float maxYAngleDistance = 30f;    // Ángulo máximo para activar rotación
@@ -40,6 +41,16 @@ public class VRSubtitleFollower : MonoBehaviour
                                  targetCamera.up * forwardOffset.y +
                                  targetCamera.right * forwardOffset.x;
         
+        // --- INICIO DE IMPLEMENTACIÓN DE COLISIÓN ---
+        RaycastHit hit;
+        Vector3 direction = targetPosition - targetCamera.position;
+        if (Physics.Raycast(targetCamera.position, direction, out hit, direction.magnitude, capasColision))
+        {
+            // Si hay algo en medio, lo ponemos un poco antes del impacto
+            targetPosition = hit.point - direction.normalized * 0.1f;
+        }
+        // --- FIN DE IMPLEMENTACIÓN DE COLISIÓN ---
+
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
         
         // 2. ROTACIÓN Y (Horizontal) - SmoothDampAngle
