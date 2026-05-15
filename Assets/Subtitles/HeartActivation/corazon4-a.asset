@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
+  m_Name: corazon4-a
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
+  subtitle:
+    speaker: Bubba
+    message: "3. El has de His lo conduce hacia los ventr\xEDculos para que el coraz\xF3n
+      \\npueda latir."
+    duration: 5.5

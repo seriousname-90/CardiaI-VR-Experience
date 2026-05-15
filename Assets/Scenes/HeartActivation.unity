@@ -18353,7 +18353,12 @@ MonoBehaviour:
   audioSource: {fileID: 1857268745}
   boton: {fileID: 794009956}
   subtitlePlayer: {fileID: 337502200}
-  secuencias: []
+  secuencias:
+  - {fileID: 11400000, guid: 18a0f5684aefd4de58e47b7f45381722, type: 2}
+  - {fileID: 11400000, guid: 69d6c32878a5a49fda3549e706a1c436, type: 2}
+  - {fileID: 11400000, guid: 1449787f708eb488686d92fc6ee2bfc2, type: 2}
+  - {fileID: 11400000, guid: a99fc00d6e0ab48f2bc2ca95a9a008a5, type: 2}
+  - {fileID: 11400000, guid: 593906b2ee52044c2862a72f84d9ed25, type: 2}
 --- !u!82 &1857268745
 AudioSource:
   m_ObjectHideFlags: 0
