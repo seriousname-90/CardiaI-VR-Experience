@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444c470244fa6e547869cea4ea5ef82b, type: 3}
+  m_Name: corazon5
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitleSequence
+  subtitles:
+  - delay: 0
+    trigger: {fileID: 11400000, guid: f4fa233b1866d483c89d68a6fbe90511, type: 2}
+  - delay: 8
+    trigger: {fileID: 11400000, guid: 5cbf08ce4669b4992bc8df7affd2d57a, type: 2}
+  - delay: 15
+    trigger: {fileID: 11400000, guid: f14e67c5deb074fd2b255dc67512ce36, type: 2}
+  - delay: 22
+    trigger: {fileID: 11400000, guid: ce7c54716ebb643c6a94a55b870bfae0, type: 2}
