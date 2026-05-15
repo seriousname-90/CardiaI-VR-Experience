@@ -15,5 +15,5 @@ MonoBehaviour:
   subtitle:
     speaker: Bubba
     message: "\xA1Hola, Bienvenido/a! Mira a tu alrededor, est\xE1s en la experiencia
-      de realidad virtual cai100 de Cardiai!"
+      de\\nrealidad virtual cai100 de Cardiai!"
     duration: 8
