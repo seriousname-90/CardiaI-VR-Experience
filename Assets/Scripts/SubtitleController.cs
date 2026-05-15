@@ -69,6 +69,7 @@ public class SubtitleController : MonoBehaviour
     {
         // Obtener configuración del speaker
         currentConfig = GetSpeakerConfig(speaker);
+        message = message.Replace("\\n", "\n"); // convertir \n literal a salto de línea real
         
         // Configurar speaker
         if (speakerText != null)

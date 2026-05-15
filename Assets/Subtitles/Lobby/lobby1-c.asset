@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "!!Hola!! \xA1\xA1\xA1Mucho gusto!!!"
+    message: "!Hola! \xA1Mucho gusto!"
     duration: 1.7
