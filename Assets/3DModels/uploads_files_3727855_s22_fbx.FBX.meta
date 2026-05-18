@@ -1,64 +1,9 @@
 fileFormatVersion: 2
-guid: 8bfc3afda7c572f44b785d8feb6a13a6
+guid: 10581a5be036d4243814379c52c601e6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 450fcfe132ca49441b2972b773bd9b60, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 6f1d73df12845ff45912f0f0a489ca0b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: apple logo.001
-    second: {fileID: 2100000, guid: 2e644f086c3fbd14191e3a4ed54a9298, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: basecolor.001
-    second: {fileID: 2100000, guid: f90adc7d9822195448870525b13382d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: black.002
-    second: {fileID: 2100000, guid: cebb30222ff71c54c8cdbc1b1664977b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glass.002
-    second: {fileID: 2100000, guid: aa92cb5e9d16c91489acb62b08e17b9f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gray.001
-    second: {fileID: 2100000, guid: f05e893bf83ed0549a445d381a497cb6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lensinglass
-    second: {fileID: 2100000, guid: 8ba8242c0c28c3a4d9cc1a350f193a7b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metaL.001
-    second: {fileID: 2100000, guid: 788e80a155e21bf478a38dfd36c1db65, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metalframe.002
-    second: {fileID: 2100000, guid: c79281b43078c5a498c40d6f93e40c67, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: screen.001
-    second: {fileID: 2100000, guid: 463dc3d71a547c04a9b29272b899989b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
