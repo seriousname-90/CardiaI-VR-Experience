@@ -1,32 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
 using System.Collections;
 
 public class ButtonStateApp : MonoBehaviour
 {
     public Button boton;
-
+    
     public AudioManager audioManager;
     public Animator caiAnimator;
     public ActivarComponente activarCilindro;
     public ActivarComponente botonSiguiente;
     public SceneChanger sceneChanger;
-
+    
+    [Header("Configuración de Bloqueo")]
+    public float cooldownTime = 2f; // Tiempo mínimo entre presiones
+    
     private int contador = 0;
-
+    private bool isOnCooldown = false;
+    
     void Start()
     {
         boton.onClick.AddListener(OnButtonPressed);
     }
-
+    
     public void OnButtonPressed()
     {
+        // Si está en cooldown, ignorar
+        if (isOnCooldown)
+        {
+            Debug.Log("Botón en cooldown, ignorando presión");
+            return;
+        }
+        
+        // Iniciar cooldown
+        StartCoroutine(Cooldown());
+        
         Debug.Log("Botón presionado. Contador actual: " + contador);
-
+        
         UIAnimate anim = boton.GetComponent<UIAnimate>();
-
+        
         if (anim != null) 
             StartCoroutine(anim.AnimarDesaparecer());
         else 
@@ -43,7 +56,6 @@ public class ButtonStateApp : MonoBehaviour
         }
         else if (contador == 1)
         {
-            // Verificar que objectManager existe
             if (audioManager != null)
                 audioManager.ReproducirLocucion(7); 
             botonSiguiente.ActivarObjetoConDelay(17f);
@@ -57,12 +69,16 @@ public class ButtonStateApp : MonoBehaviour
             contador++;
             Debug.Log("Botón presionado por tercera vez. Objetos activados");
         }
-         else
+        else
         {
             Debug.Log("Botón presionado más de tres veces. No se realizarán más acciones.");
         }
     }
-
-
     
+    IEnumerator Cooldown()
+    {
+        isOnCooldown = true;
+        yield return new WaitForSeconds(cooldownTime);
+        isOnCooldown = false;
+    }
 }
