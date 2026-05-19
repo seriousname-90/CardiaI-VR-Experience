@@ -537,7 +537,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 2585ef3777d8b2e489097b62c204426e, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: d2d76b936c742304886817ab8560bd38, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -798,7 +798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &22526083
 Transform:
   m_ObjectHideFlags: 0
@@ -24221,7 +24221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1252355543
 Transform:
   m_ObjectHideFlags: 0
@@ -24499,7 +24499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07ee868eb4100be449160d607055ffec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.336
+      value: 1.922
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07ee868eb4100be449160d607055ffec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44001,7 +44001,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 2585ef3777d8b2e489097b62c204426e, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: d2d76b936c742304886817ab8560bd38, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -45368,7 +45368,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 22b84f738930754458da23e66451ef46, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.204
+  m_Volume: 0.178
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -45466,10 +45466,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
   posicionDestino: {x: 0, y: 0.044, z: -4.777}
   rotacionDestino: {x: 0, y: 0, z: 0}
-  velocidad: 1.5
+  velocidad: 0.5
   alTerminarMovimiento:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 22526082}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2007506662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1252355542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1857268748}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 042d13bb3ae2c5d499ed7a6d08fd116e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1989901464
 GameObject:
   m_ObjectHideFlags: 0
@@ -50988,7 +51036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2007506663
 Transform:
   m_ObjectHideFlags: 0
