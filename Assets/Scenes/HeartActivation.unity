@@ -601,8 +601,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.45566
+  m_Center: {x: -0.8348841, y: -0.00000037049134, z: 0.1207726}
 --- !u!82 &70085118
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5734,7 +5734,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Nodo SA
 
-        (Sinusal)'
+        (Sinoauricular)'
       objectReference: {fileID: 0}
     - target: {fileID: 6251926473222291062, guid: 8492a4409b9776e48994a8503aab7016, type: 3}
       propertyPath: m_fontSize
@@ -8726,7 +8726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &599032615
 Transform:
   m_ObjectHideFlags: 0
@@ -8782,8 +8782,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.8995015, b: 0, a: 1}
-  m_Intensity: 0.15
-  m_Range: 0.13
+  m_Intensity: 0.2
+  m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -12279,8 +12279,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2.7339177
+  m_Center: {x: 0.0000001264747, y: 1.1128207, z: -0.14435868}
 --- !u!82 &794009961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12964,7 +12964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251926473222291062, guid: 8492a4409b9776e48994a8503aab7016, type: 3}
       propertyPath: m_text
-      value: "Nodo SA \n(Auriculoventricular)"
+      value: "Nodo AV \n(Auriculoventricular)"
       objectReference: {fileID: 0}
     - target: {fileID: 6251926473222291062, guid: 8492a4409b9776e48994a8503aab7016, type: 3}
       propertyPath: m_fontSize
@@ -13859,7 +13859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1219877712
 Transform:
   m_ObjectHideFlags: 0
@@ -13915,8 +13915,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.8995015, b: 0, a: 1}
-  m_Intensity: 0.15
-  m_Range: 0.13
+  m_Intensity: 0.2
+  m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -17845,8 +17845,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.2504631
+  m_Center: {x: -0.24528655, y: 1.8557622, z: 0.000000038507633}
 --- !u!82 &1777422318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19018,7 +19018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1936555126
 Transform:
   m_ObjectHideFlags: 0
@@ -19074,8 +19074,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.8995015, b: 0, a: 1}
-  m_Intensity: 0.15
-  m_Range: 0.13
+  m_Intensity: 0.2
+  m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -19466,7 +19466,6 @@ GameObject:
   - component: {fileID: 1989596770}
   - component: {fileID: 1989596769}
   - component: {fileID: 1989596774}
-  - component: {fileID: 1989596775}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -19732,21 +19731,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1989596775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989596768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f002191c25117a4dbd27db9e8e81574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::XROriginSpawn
-  usarSpawnPoint: 1
-  posicionPorDefecto: {x: 0, y: 0, z: 0}
-  rotacionPorDefecto: {x: 0, y: 0, z: 0}
 --- !u!1 &2020566829
 GameObject:
   m_ObjectHideFlags: 0
@@ -20000,7 +19984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2036891855
 Transform:
   m_ObjectHideFlags: 0
@@ -20056,8 +20040,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.8995015, b: 0, a: 1}
-  m_Intensity: 0.15
-  m_Range: 0.13
+  m_Intensity: 0.2
+  m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
