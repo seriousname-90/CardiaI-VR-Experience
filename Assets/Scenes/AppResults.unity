@@ -8170,8 +8170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b07f2ca3663a6041b075ea23c02a6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Locomotion.PlayerLocomotor
-  _playerOrigin: {fileID: 0}
-  _playerHead: {fileID: 0}
+  _playerOrigin: {fileID: 1989596773}
+  _playerHead: {fileID: 754135207}
 --- !u!4 &1657193679
 Transform:
   m_ObjectHideFlags: 0
