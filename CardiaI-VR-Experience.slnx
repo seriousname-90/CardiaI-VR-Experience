@@ -1,7 +1,6 @@
 ﻿<Solution>
   <Project Path="Unity.Timeline.csproj" />
   <Project Path="Meta.Voice.NLayer.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Meta.XR.MultiplayerBlocks.Shared.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.csproj" />
   <Project Path="Meta.WitAi.Lib.csproj" />
@@ -80,6 +79,7 @@
   <Project Path="Meta.Wit.Composer.Editor.csproj" />
   <Project Path="Oculus.Interaction.UnityXR.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Analytics.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.ProBuilder.KdTree.csproj" />
   <Project Path="Unity.XR.Management.Editor.csproj" />
   <Project Path="Unity.ProBuilder.AddOns.Editor.csproj" />

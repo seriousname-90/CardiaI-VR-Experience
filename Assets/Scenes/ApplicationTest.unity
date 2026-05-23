@@ -19641,7 +19641,7 @@ RectTransform:
   m_GameObject: {fileID: 1369937063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0020864315, y: 0.003000864, z: 0.003304523}
+  m_LocalScale: {x: 0.0017575759, y: 0.003000864, z: 0.003304523}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1332440663}
@@ -22583,7 +22583,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 42.371944, y: 0, z: -581.79, w: -17.11441}
+  m_margin: {x: 42.371944, y: 0, z: -391.24277, w: -17.11441}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -24458,6 +24458,10 @@ MonoBehaviour:
   posicionDestino: {x: -2.731, y: 0.142, z: -1.778}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 0.7
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -24837,9 +24841,12 @@ MonoBehaviour:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
     componentToActivate: {fileID: 1332440662}
+    xOffset: -0.25
   - speakerName: Cardi
     textColor: {r: 0.4764151, g: 0.6098779, b: 1, a: 1}
     componentToActivate: {fileID: 1740526821}
+    xOffset: 0.25
+  subtitleFollower: {fileID: 906304233}
 --- !u!4 &2058048671
 Transform:
   m_ObjectHideFlags: 0

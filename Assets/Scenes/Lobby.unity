@@ -16198,7 +16198,7 @@ RectTransform:
   m_GameObject: {fileID: 633391943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.78527, y: 0.598, z: 1}
+  m_LocalScale: {x: 0.7797911, y: 0.5938277, z: 0.99302304}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1498798655}
@@ -16222,7 +16222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 754135207}
-  forwardOffset: {x: 0, y: -0.4, z: 0.9}
+  forwardOffset: {x: 0, y: -0.5, z: 0.8}
   followSpeed: 10
   capasColision:
     serializedVersion: 2
@@ -21511,14 +21511,14 @@ RectTransform:
   m_GameObject: {fileID: 1108878624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0303537, y: 0.9558099, z: 0.95581}
+  m_LocalScale: {x: 1.0704345, y: 0.9558099, z: 0.95581}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498798655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220.47214, y: -8.300294}
+  m_AnchoredPosition: {x: -218.8, y: -8.300294}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1108878626
@@ -21616,7 +21616,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 42.371944, y: 0, z: -581.79, w: -17.11441}
+  m_margin: {x: 42.371944, y: 0, z: -370.07635, w: -17.11441}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -35225,9 +35225,12 @@ MonoBehaviour:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
     componentToActivate: {fileID: 1206217883}
+    xOffset: -0.25
   - speakerName: Cardi
     textColor: {r: 0.4764151, g: 0.6098779, b: 1, a: 1}
     componentToActivate: {fileID: 1974251816}
+    xOffset: 0.25
+  subtitleFollower: {fileID: 633391948}
 --- !u!114 &1364804095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35543,7 +35546,7 @@ RectTransform:
   m_GameObject: {fileID: 1498798654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0020864315, y: 0.003000864, z: 0.003304523}
+  m_LocalScale: {x: 0.0017575759, y: 0.003000864, z: 0.003304523}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1206217884}
