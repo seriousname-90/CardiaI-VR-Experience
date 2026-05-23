@@ -19,6 +19,9 @@ public class SubtitleController : MonoBehaviour
     [Header("Configuración por Speaker")]
     public List<SpeakerConfig> speakerConfigs = new List<SpeakerConfig>();
     
+    [Header("Configuración de Posición del Canvas")]
+    public VRSubtitleFollower subtitleFollower; // Referencia al script que mueve el canvas
+    
     private Coroutine currentSubtitleCoroutine;
     private CanvasGroup canvasGroup;
     private Dictionary<string, SpeakerConfig> speakerConfigMap;
@@ -30,6 +33,7 @@ public class SubtitleController : MonoBehaviour
         public string speakerName;
         public Color textColor = Color.white;
         public GameObject componentToActivate;
+        public float xOffset = 0f; // Offset en X para este speaker
     }
     
     void Awake()
@@ -45,6 +49,10 @@ public class SubtitleController : MonoBehaviour
         {
             speakerConfigMap[config.speakerName.ToLower()] = config;
         }
+        
+        // Buscar el VRSubtitleFollower si no está asignado
+        if (subtitleFollower == null && subtitleCanvas != null)
+            subtitleFollower = subtitleCanvas.GetComponent<VRSubtitleFollower>();
     }
     
     public void PlaySubtitle(SubtitleData subtitle)
@@ -69,7 +77,15 @@ public class SubtitleController : MonoBehaviour
     {
         // Obtener configuración del speaker
         currentConfig = GetSpeakerConfig(speaker);
-        message = message.Replace("\\n", "\n"); // convertir \n literal a salto de línea real
+        
+        // Cambiar el offset X del canvas según el speaker
+        if (subtitleFollower != null && currentConfig != null)
+        {
+            Vector3 newOffset = subtitleFollower.forwardOffset;
+            newOffset.x = currentConfig.xOffset;
+            subtitleFollower.forwardOffset = newOffset;
+            Debug.Log($"Canvas offset X cambiado a {currentConfig.xOffset} para el speaker: {speaker}");
+        }
         
         // Configurar speaker
         if (speakerText != null)
@@ -140,13 +156,13 @@ public class SubtitleController : MonoBehaviour
     private SpeakerConfig GetSpeakerConfig(string speaker)
     {
         if (string.IsNullOrEmpty(speaker))
-            return new SpeakerConfig { textColor = Color.white };
+            return new SpeakerConfig { textColor = Color.white, xOffset = 0f };
         
         string key = speaker.ToLower();
         if (speakerConfigMap.ContainsKey(key))
             return speakerConfigMap[key];
         
-        return new SpeakerConfig { textColor = Color.white };
+        return new SpeakerConfig { textColor = Color.white, xOffset = 0f };
     }
     
     public void Hide()
