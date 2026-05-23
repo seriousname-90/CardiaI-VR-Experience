@@ -19047,6 +19047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LOBBY_
       objectReference: {fileID: 0}
+    - target: {fileID: 5362354005155865708, guid: 712228b899b07a241953a47ef03c9be3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7214163933190290071, guid: 712228b899b07a241953a47ef03c9be3, type: 3}
       propertyPath: m_Intensity
       value: 10.98
