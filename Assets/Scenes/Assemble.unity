@@ -410,6 +410,10 @@ MonoBehaviour:
   posicionDestino: {x: -0.312, y: 0.339, z: -5.841}
   rotacionDestino: {x: 0, y: -90, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -8034,6 +8038,10 @@ MonoBehaviour:
   posicionDestino: {x: -0.8880001, y: 0.254, z: -4.92}
   rotacionDestino: {x: -180, y: -87.97601, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls:
@@ -8890,6 +8898,10 @@ MonoBehaviour:
   posicionDestino: {x: -0.922, y: 0.3051, z: -4.8247604}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -11517,6 +11529,11 @@ Transform:
   - {fileID: 915764447}
   m_Father: {fileID: 1589522001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &617498078 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3441311914403554915, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
+  m_PrefabInstance: {fileID: 1980355772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &620563057
 GameObject:
   m_ObjectHideFlags: 0
@@ -15246,6 +15263,10 @@ MonoBehaviour:
   posicionDestino: {x: 0.599, y: 0.45600003, z: -6.135}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -17853,6 +17874,10 @@ MonoBehaviour:
   posicionDestino: {x: 0.934, y: 0.348, z: -4.93}
   rotacionDestino: {x: 0, y: 90, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -20931,6 +20956,10 @@ MonoBehaviour:
   posicionDestino: {x: -0.017000047, y: 0.254, z: -5.82}
   rotacionDestino: {x: 0.000121160156, y: 2.0244563, z: 180}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls:
@@ -25036,6 +25065,10 @@ MonoBehaviour:
   posicionDestino: {x: 0.9, y: 0.254, z: -4.984}
   rotacionDestino: {x: 0.0000042827037, y: 272.0244, z: 179.99988}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls:
@@ -42881,6 +42914,10 @@ MonoBehaviour:
   posicionDestino: {x: 0.934, y: 0.348, z: -4.93}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -43584,6 +43621,10 @@ MonoBehaviour:
   posicionDestino: {x: -0.922, y: 0.3051, z: -4.8247604}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -43878,6 +43919,10 @@ MonoBehaviour:
   posicionDestino: {x: 0.18, y: 0.339, z: -5.841}
   rotacionDestino: {x: 0, y: -90, z: 0}
   velocidad: 1
+  delayAntesMovimiento: 0
+  alIniciarDelay:
+    m_PersistentCalls:
+      m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls: []
@@ -45471,7 +45516,8 @@ MonoBehaviour:
   posicionDestino: {x: 0, y: 0.044, z: -4.777}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 0.5
-  alTerminarMovimiento:
+  delayAntesMovimiento: 2
+  alIniciarDelay:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 22526082}
@@ -45509,6 +45555,57 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 617498078}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 042d13bb3ae2c5d499ed7a6d08fd116e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  alTerminarMovimiento:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 22526082}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2007506662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1252355542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1857268748}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
@@ -52018,6 +52115,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6251926473222291062, guid: 8492a4409b9776e48994a8503aab7016, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6251926473222291062, guid: 8492a4409b9776e48994a8503aab7016, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
