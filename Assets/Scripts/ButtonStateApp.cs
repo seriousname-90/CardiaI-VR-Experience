@@ -9,9 +9,11 @@ public class ButtonStateApp : MonoBehaviour
     
     public AudioManager audioManager;
     public Animator caiAnimator;
+    public GameObject circleIndicator;
     public ActivarComponente activarCilindro;
     public ActivarComponente botonSiguiente;
     public SceneChanger sceneChanger;
+   
     
     [Header("Configuración de Bloqueo")]
     public float cooldownTime = 2f; // Tiempo mínimo entre presiones
@@ -50,6 +52,7 @@ public class ButtonStateApp : MonoBehaviour
             if (audioManager != null)
                 audioManager.ReproducirLocucion(2); 
             caiAnimator.Play("scalingLarge");
+            circleIndicator.SetActive(true);
             activarCilindro.ActivarObjetoConDelay(11f);
             contador++;
             Debug.Log("Botón presionado por primera vez. Locución inicial reproducida.");
