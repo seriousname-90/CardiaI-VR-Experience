@@ -80,4 +80,19 @@ public class ActivarComponente : MonoBehaviour
                 obj.SetActive(true);
         }
     }
+
+    public void DesactivarObjetosConDelay(float delay)
+    {
+        StartCoroutine(DesactivarObsConDelay(delay));
+    }
+
+    IEnumerator DesactivarObsConDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        foreach (GameObject obj in componentes)
+        {
+            if (obj != null)
+                obj.SetActive(false);
+        }
+    }
 }
