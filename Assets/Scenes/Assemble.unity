@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 22526083}
   - component: {fileID: 22526085}
   - component: {fileID: 22526084}
+  - component: {fileID: 22526086}
   m_Layer: 0
   m_Name: Light (2)
   m_TagString: Untagged
@@ -912,6 +913,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &22526086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22526082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bc0828177157a46853e9baad13fee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialChanger
+  objetoZ: {fileID: 295626294}
+  materialCuandoTrue: {fileID: 2100000, guid: c322571c668c9414aae07af13ff3ca93, type: 2}
+  materialCuandoFalse: {fileID: 2100000, guid: d3405308855ae0243a63cc628b8a9dfb, type: 2}
 --- !u!43 &30016854
 Mesh:
   m_ObjectHideFlags: 0
@@ -8419,6 +8435,11 @@ PrefabInstance:
 --- !u!4 &295626293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3681101550333616074, guid: 45a8981f645fe8e42829d5767e801759, type: 3}
+  m_PrefabInstance: {fileID: 295626292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &295626294 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1167127061071315615, guid: 45a8981f645fe8e42829d5767e801759, type: 3}
   m_PrefabInstance: {fileID: 295626292}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &299936497
@@ -21225,6 +21246,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3681101550333616074, guid: 45a8981f645fe8e42829d5767e801759, type: 3}
   m_PrefabInstance: {fileID: 957103968}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &957103970 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1167127061071315615, guid: 45a8981f645fe8e42829d5767e801759, type: 3}
+  m_PrefabInstance: {fileID: 957103968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &969280085
 Mesh:
   m_ObjectHideFlags: 0
@@ -24595,6 +24621,7 @@ GameObject:
   - component: {fileID: 1252355543}
   - component: {fileID: 1252355545}
   - component: {fileID: 1252355544}
+  - component: {fileID: 1252355546}
   m_Layer: 0
   m_Name: Light (4)
   m_TagString: Untagged
@@ -24711,6 +24738,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1252355546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252355542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bc0828177157a46853e9baad13fee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialChanger
+  objetoZ: {fileID: 957103970}
+  materialCuandoTrue: {fileID: 2100000, guid: c322571c668c9414aae07af13ff3ca93, type: 2}
+  materialCuandoFalse: {fileID: 2100000, guid: d3405308855ae0243a63cc628b8a9dfb, type: 2}
 --- !u!1 &1277782145
 GameObject:
   m_ObjectHideFlags: 0
@@ -46073,18 +46115,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 676393910}
-        m_TargetAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: c322571c668c9414aae07af13ff3ca93, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 617498078}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -51649,6 +51679,7 @@ GameObject:
   - component: {fileID: 2007506665}
   - component: {fileID: 2007506664}
   - component: {fileID: 2007506666}
+  - component: {fileID: 2007506667}
   m_Layer: 0
   m_Name: Light (3)
   m_TagString: Untagged
@@ -51783,6 +51814,21 @@ MonoBehaviour:
   - {fileID: 1252355542}
   audiomanager: {fileID: 0}
   activarAlIniciar: 0
+--- !u!114 &2007506667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007506662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bc0828177157a46853e9baad13fee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialChanger
+  objetoZ: {fileID: 676393910}
+  materialCuandoTrue: {fileID: 2100000, guid: c322571c668c9414aae07af13ff3ca93, type: 2}
+  materialCuandoFalse: {fileID: 2100000, guid: d3405308855ae0243a63cc628b8a9dfb, type: 2}
 --- !u!43 &2019473576
 Mesh:
   m_ObjectHideFlags: 0

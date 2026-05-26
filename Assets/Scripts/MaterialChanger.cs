@@ -9,22 +9,15 @@ public class MaterialChanger : MonoBehaviour
     public Material materialCuandoTrue;
     public Material materialCuandoFalse;
     
-    private Material materialOriginal;
-    
-    void Start()
+    void OnEnable()
     {
-        if (objetoZ != null)
-            materialOriginal = objetoZ.material;
+        if (objetoZ != null && materialCuandoTrue != null)
+            objetoZ.material = materialCuandoTrue;
     }
     
-    void Update()
+    void OnDisable()
     {
-        if (objetoZ != null)
-        {
-            if (gameObject.activeSelf)
-                objetoZ.material = materialCuandoTrue;
-            else
-                objetoZ.material = materialCuandoFalse;
-        }
+        if (objetoZ != null && materialCuandoFalse != null)
+            objetoZ.material = materialCuandoFalse;
     }
 }
