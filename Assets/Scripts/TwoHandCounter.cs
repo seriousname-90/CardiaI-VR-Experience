@@ -18,12 +18,16 @@ public class TwoHandCounter : MonoBehaviour
     
     [Header("Video")]
     public VideoPlayer videoPlayer;     // El VideoPlayer que reproducirá el video
-    [Header("Audio")]
+    
+    [Header("Audio - Carga")]
+    public AudioSource chargeAudioSource; // AudioSource con el clip para la etapa de carga
+    
+    [Header("Audio - Locuciones")]
     public AudioManager audioManager;   // Para reproducir locuciones (opcional)
     
     [Header("Eventos")]
-    public UnityEngine.Events.UnityEvent OnChargeCompleted;   // Cuando terminan los 5 seg
-    public UnityEngine.Events.UnityEvent OnActionCompleted;   // Cuando terminan los 10 seg
+    public UnityEngine.Events.UnityEvent OnChargeCompleted;   // Cuando terminan los chargeTime seg
+    public UnityEngine.Events.UnityEvent OnActionCompleted;   // Cuando terminan los actionTime seg
     public UnityEngine.Events.UnityEvent OnActionPaused;      // Cuando se pausa por salir dedos
     public UnityEngine.Events.UnityEvent OnActionResumed;     // Cuando se reanuda
     
@@ -33,7 +37,7 @@ public class TwoHandCounter : MonoBehaviour
     private float currentActionTime = 0f;
     private bool isCharging = false;
     private bool isActionPhase = false;
-    private bool chargeCompleted = false;  // ← La clave: la carga NO se repite
+    private bool chargeCompleted = false;
     private Coroutine phaseCoroutine;
     
     // Métodos públicos para los detectores
@@ -73,7 +77,7 @@ public class TwoHandCounter : MonoBehaviour
     
     private void HandleActionPhase()
     {
-        // Manejo de la fase de acción (video de 10 segundos)
+        // Manejo de la fase de acción (video de actionTime segundos)
         if (handsInside >= 2 && !isActionPhase && chargeCompleted)
         {
             StartAction();
@@ -88,6 +92,15 @@ public class TwoHandCounter : MonoBehaviour
     {
         isCharging = true;
         phaseCoroutine = StartCoroutine(ChargeCoroutine());
+        
+        // Reproducir audio de carga (desde el principio)
+        if (chargeAudioSource != null && chargeAudioSource.clip != null)
+        {
+            chargeAudioSource.time = 0f; // Reiniciar desde el inicio
+            chargeAudioSource.Play();
+            Debug.Log("Audio de carga reproducido");
+        }
+        
         audioManager.ReproducirLocucion(5); // Reproducir locución de carga (opcional)
         Debug.Log($"Carga iniciada. Necesitas {chargeTime} segundos");
     }
@@ -98,6 +111,14 @@ public class TwoHandCounter : MonoBehaviour
             StopCoroutine(phaseCoroutine);
         
         isCharging = false;
+        
+        // Pausar audio de carga
+        if (chargeAudioSource != null && chargeAudioSource.isPlaying)
+        {
+            chargeAudioSource.Pause();
+            Debug.Log($"Audio de carga pausado en el segundo {chargeAudioSource.time:F1}");
+        }
+        
         Debug.Log($"Carga pausada en {currentChargeTime:F1}/{chargeTime} segundos");
     }
     
@@ -122,7 +143,14 @@ public class TwoHandCounter : MonoBehaviour
         
         // ¡CARGA COMPLETADA!
         isCharging = false;
-        chargeCompleted = true;  // ← Nunca más se reinicia la carga
+        chargeCompleted = true;
+        
+        // Detener audio de carga (ya terminó)
+        if (chargeAudioSource != null && chargeAudioSource.isPlaying)
+        {
+            chargeAudioSource.Stop();
+            Debug.Log("Audio de carga detenido (carga completada)");
+        }
         
         // Ocultar barra de carga (opcional)
         if (chargeProgressBar != null)
@@ -191,7 +219,6 @@ public class TwoHandCounter : MonoBehaviour
             // Sincronizar el video (por si acaso)
             if (videoPlayer != null && videoPlayer.isPlaying)
             {
-                // Si el video se desincroniza, lo ajustamos (opcional)
                 if (Mathf.Abs((float)videoPlayer.time - currentActionTime) > 0.5f)
                 {
                     videoPlayer.time = currentActionTime;
@@ -229,6 +256,13 @@ public class TwoHandCounter : MonoBehaviour
         
         if (phaseCoroutine != null)
             StopCoroutine(phaseCoroutine);
+        
+        // Detener audio de carga
+        if (chargeAudioSource != null)
+        {
+            chargeAudioSource.Stop();
+            chargeAudioSource.time = 0f;
+        }
         
         if (chargeProgressBar != null)
         {
