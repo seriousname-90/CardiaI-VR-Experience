@@ -16,8 +16,14 @@ public class TwoHandCounter : MonoBehaviour
     public Image chargeProgressBar;    // Barra circular de carga
     public Image actionProgressBar;    // Barra circular opcional para la acción
     
-    [Header("Video")]
-    public VideoPlayer videoPlayer;     // El VideoPlayer que reproducirá el video
+    [Header("Video - Carga")]
+    public VideoPlayer videoPlayerSearching; // VideoPlayer para la etapa de carga (countdown)
+
+    [Header("Video - Carga")]
+    public VideoPlayer videoPlayerCountdown; // VideoPlayer para la etapa de carga (countdown)
+    
+    [Header("Video - Acción")]
+    public VideoPlayer videoPlayer;     // El VideoPlayer que reproducirá el video principal
     
     [Header("Audio - Carga")]
     public AudioSource chargeAudioSource; // AudioSource con el clip para la etapa de carga
@@ -77,6 +83,14 @@ public class TwoHandCounter : MonoBehaviour
     
     private void HandleActionPhase()
     {
+        // desactivar el video de countdown por si acaso
+        if (videoPlayerCountdown != null && videoPlayerCountdown.isPlaying)
+        {
+            videoPlayerCountdown.Stop();
+            videoPlayerCountdown.time = 0f;
+            videoPlayerCountdown.enabled = false; // Desactivar para liberar recursos
+            Debug.Log("Video de countdown detenido al entrar en fase de acción");
+        }
         // Manejo de la fase de acción (video de actionTime segundos)
         if (handsInside >= 2 && !isActionPhase && chargeCompleted)
         {
@@ -92,16 +106,33 @@ public class TwoHandCounter : MonoBehaviour
     {
         isCharging = true;
         phaseCoroutine = StartCoroutine(ChargeCoroutine());
+        // desactivar el video de searching por si acaso
+        if (videoPlayerSearching != null && videoPlayerSearching.isPlaying)
+        {
+            videoPlayerSearching.Stop();
+            videoPlayerSearching.time = 0f;
+            videoPlayerSearching.enabled = false; // Desactivar para liberar recursos
+            Debug.Log("Video de searching detenido al iniciar carga");
+        }
+        
+        // Reproducir video de countdown (desde el principio)
+        if (videoPlayerCountdown != null)
+        { 
+            videoPlayerCountdown.playbackSpeed = 1f; // velocidad normal
+            videoPlayerCountdown.Play();
+            Debug.Log("Video de countdown reproducido");
+        }
         
         // Reproducir audio de carga (desde el principio)
         if (chargeAudioSource != null && chargeAudioSource.clip != null)
         {
-            chargeAudioSource.time = 0f; // Reiniciar desde el inicio
             chargeAudioSource.Play();
             Debug.Log("Audio de carga reproducido");
         }
         
-        audioManager.ReproducirLocucion(5); // Reproducir locución de carga (opcional)
+        if (audioManager != null)
+            audioManager.ReproducirLocucion(5);
+        
         Debug.Log($"Carga iniciada. Necesitas {chargeTime} segundos");
     }
     
@@ -111,6 +142,13 @@ public class TwoHandCounter : MonoBehaviour
             StopCoroutine(phaseCoroutine);
         
         isCharging = false;
+        
+        // Pausar video de countdown
+        if (videoPlayerCountdown != null && videoPlayerCountdown.isPlaying)
+        {
+            videoPlayerCountdown.Pause();
+            Debug.Log($"Video de countdown pausado en el segundo {videoPlayerCountdown.time:F1}");
+        }
         
         // Pausar audio de carga
         if (chargeAudioSource != null && chargeAudioSource.isPlaying)
@@ -145,7 +183,16 @@ public class TwoHandCounter : MonoBehaviour
         isCharging = false;
         chargeCompleted = true;
         
-        // Detener audio de carga (ya terminó)
+        // Detener video de countdown
+        if (videoPlayerCountdown != null)
+        {
+            if (videoPlayerCountdown.isPlaying)
+                videoPlayerCountdown.Stop();
+            videoPlayerCountdown.time = 0f;
+            Debug.Log("Video de countdown detenido (carga completada)");
+        }
+        
+        // Detener audio de carga
         if (chargeAudioSource != null && chargeAudioSource.isPlaying)
         {
             chargeAudioSource.Stop();
@@ -168,11 +215,21 @@ public class TwoHandCounter : MonoBehaviour
         isActionPhase = true;
         phaseCoroutine = StartCoroutine(ActionCoroutine());
         
-        // Reproducir video
+        // Detener completamente el video de countdown si aún estuviera reproduciéndose
+        if (videoPlayerCountdown != null)
+        {
+            if (videoPlayerCountdown.isPlaying)
+                videoPlayerCountdown.Stop();
+            videoPlayerCountdown.time = 0f;
+            Debug.Log("Video de countdown detenido antes de iniciar acción");
+        }
+        
+        // Reproducir video principal
         if (videoPlayer != null)
         {
+            videoPlayer.time = 0f; // Reiniciar desde el inicio
             videoPlayer.Play();
-            Debug.Log("Video reproducido");
+            Debug.Log("Video principal reproducido");
         }
         
         OnActionResumed?.Invoke();
@@ -186,11 +243,11 @@ public class TwoHandCounter : MonoBehaviour
         
         isActionPhase = false;
         
-        // Pausar video
-        if (videoPlayer != null)
+        // Pausar video principal
+        if (videoPlayer != null && videoPlayer.isPlaying)
         {
             videoPlayer.Pause();
-            Debug.Log("Video pausado");
+            Debug.Log("Video principal pausado");
         }
         
         OnActionPaused?.Invoke();
@@ -216,7 +273,7 @@ public class TwoHandCounter : MonoBehaviour
             if (actionProgressBar != null)
                 actionProgressBar.fillAmount = currentActionTime / targetTime;
             
-            // Sincronizar el video (por si acaso)
+            // Sincronizar el video principal (por si acaso)
             if (videoPlayer != null && videoPlayer.isPlaying)
             {
                 if (Mathf.Abs((float)videoPlayer.time - currentActionTime) > 0.5f)
@@ -234,7 +291,7 @@ public class TwoHandCounter : MonoBehaviour
         if (actionProgressBar != null)
             actionProgressBar.fillAmount = 1f;
         
-        // Asegurar que el video termine
+        // Asegurar que el video principal termine
         if (videoPlayer != null && videoPlayer.isPlaying)
         {
             videoPlayer.Stop();
@@ -257,6 +314,22 @@ public class TwoHandCounter : MonoBehaviour
         if (phaseCoroutine != null)
             StopCoroutine(phaseCoroutine);
         
+        // Detener y resetear video de countdown
+        if (videoPlayerCountdown != null)
+        {
+            if (videoPlayerCountdown.isPlaying)
+                videoPlayerCountdown.Stop();
+            videoPlayerCountdown.time = 0f;
+        }
+        
+        // Detener y resetear video principal
+        if (videoPlayer != null)
+        {
+            if (videoPlayer.isPlaying)
+                videoPlayer.Stop();
+            videoPlayer.time = 0f;
+        }
+        
         // Detener audio de carga
         if (chargeAudioSource != null)
         {
@@ -272,9 +345,6 @@ public class TwoHandCounter : MonoBehaviour
         
         if (actionProgressBar != null)
             actionProgressBar.fillAmount = 0f;
-        
-        if (videoPlayer != null)
-            videoPlayer.Stop();
         
         Debug.Log("Sistema completamente reiniciado");
     }

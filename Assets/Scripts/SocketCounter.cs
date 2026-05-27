@@ -16,6 +16,7 @@ public class SocketCounter : MonoBehaviour
     public GameObject objetoAActivar;
     public AudioManager audioManager; 
     public SceneChanger sceneChanger;
+    public Animator animator; 
 
     private int contador = 0;
 
@@ -50,6 +51,7 @@ public class SocketCounter : MonoBehaviour
                 objetoAActivar.SetActive(true);
             if (audioManager != null)
                 audioManager.ReproducirLocucion(7);
+                animator.Play("buildCompleted"); 
                 Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets."); 
                 audioManager.ReproducirLocucionConDelay(8, 14f); // Reproducir locución final cuando termine la anterior
                 StartCoroutine(waitForAudioToFinish(22f)); // TODO: CAMBIAR A BOTOON O NOSE 
