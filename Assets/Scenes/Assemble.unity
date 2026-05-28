@@ -11809,8 +11809,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<size=20>Bot\xF3n</size>\nEnciende o apaga el dispositivo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17755,6 +17755,7 @@ GameObject:
   - component: {fileID: 789895514}
   - component: {fileID: 789895513}
   - component: {fileID: 789895517}
+  - component: {fileID: 789895518}
   m_Layer: 0
   m_Name: CAI Body
   m_TagString: Untagged
@@ -17787,6 +17788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 6899fb8b2b8ef9949926e6655afdc9a5, type: 2}
   - {fileID: 2100000, guid: 6899fb8b2b8ef9949926e6655afdc9a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -18149,10 +18151,58 @@ MonoBehaviour:
   _interactableView: {fileID: 529853789}
   _whenHover:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 789895518}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082876692}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnhover:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 789895518}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082876692}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
@@ -18168,16 +18218,64 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _whenUnselect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 789895518}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082876692}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: DesactivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 789895514}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c59923876c7a91d4dabc1363f0ce0a0f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082876692}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082876692}
+        m_TargetAssemblyTypeName: MaterialManager, Assembly-CSharp
+        m_MethodName: ActivarMaterialSecundario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18239,6 +18337,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.8698535, y: 0.95998245, z: 2.2734556}
   m_Center: {x: 0.057771485, y: -0.15440995, z: 0.023895878}
+--- !u!114 &789895518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789895506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: a34543ecad7179443ae990e0128503ba, type: 2}
 --- !u!1 &791047194
 GameObject:
   m_ObjectHideFlags: 0
@@ -22940,6 +23051,7 @@ GameObject:
   - component: {fileID: 1082876689}
   - component: {fileID: 1082876691}
   - component: {fileID: 1082876690}
+  - component: {fileID: 1082876692}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -22988,6 +23100,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6899fb8b2b8ef9949926e6655afdc9a5, type: 2}
+  - {fileID: 2100000, guid: 6899fb8b2b8ef9949926e6655afdc9a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23019,6 +23132,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082876688}
   m_Mesh: {fileID: 4493585093827132993, guid: 0e892940c608581428508fd5e988d007, type: 3}
+--- !u!114 &1082876692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082876688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f484905b046ce10488c0745f69573f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialManager
+  materialSecundario: {fileID: 2100000, guid: a34543ecad7179443ae990e0128503ba, type: 2}
 --- !u!1 &1132535493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -374873874203324378, guid: 45a8981f645fe8e42829d5767e801759, type: 3}
@@ -26466,8 +26592,8 @@ MonoBehaviour:
 
     Estructura principal del dispositivo'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28510,8 +28636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<size=20>Electrodos</size>\nCaptan la actividad el\xE9trica del coraz\xF3n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
-  m_sharedMaterial: {fileID: 3503200536894492306, guid: e13dfab464bd3a54e8bdbe3da09a6c3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
