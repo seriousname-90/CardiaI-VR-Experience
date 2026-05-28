@@ -10,6 +10,7 @@ public class HeartAnimations : MonoBehaviour
     private bool saReproducido = false;
     private bool avReproducido = false;
     private bool hisReproducido = false;
+    private Coroutine fibrilacionCoroutine;
     
     private bool reproduciendoSegmento = false;
     
@@ -272,6 +273,7 @@ public class HeartAnimations : MonoBehaviour
 
     public void ReproducirTaquicardia()
     {
+        DetenerFibrilacionAtrial();
         CambiarVelocidad(bolitaAuricula, "SA-Auricula", 1.5f);
         CambiarVelocidad(bolitaAV, "SA-AV", 1.5f);
         CambiarVelocidad(bolitaPurkinjeIzq, "SA-Pur1", 1.5f);
@@ -282,12 +284,68 @@ public class HeartAnimations : MonoBehaviour
 
     public void ReproducirBradicardia()
     {
+        DetenerFibrilacionAtrial();
         CambiarVelocidad(bolitaAuricula, "SA-Auricula", 0.5733f);
         CambiarVelocidad(bolitaAV, "SA-AV", 0.5733f);
         CambiarVelocidad(bolitaPurkinjeIzq, "SA-Pur1", 0.5733f);
         CambiarVelocidad(bolitaPurkinjeDer, "SA-Pur2", 0.5733f); // Reducir la velocidad para simular bradicardia (40 latidos por minuto es 0.5733 veces la velocidad normal)
         // función para modificar la velociidad del audio source y el pitch para que suene más lento
         audioSource.pitch = 0.6666f; // Reducir el pitch para que suene más lento
+    }
+
+    public void ReproducirFibrilacionAtrial()
+    {
+        // Detener fibrilación anterior si existe
+        if (fibrilacionCoroutine != null)
+            StopCoroutine(fibrilacionCoroutine);
+        
+        // Iniciar fibrilación
+        fibrilacionCoroutine = StartCoroutine(FibrilacionLoop());
+    }
+
+    public void DetenerFibrilacionAtrial()
+    {
+        if (fibrilacionCoroutine != null)
+        {
+            StopCoroutine(fibrilacionCoroutine);
+            fibrilacionCoroutine = null;
+        }
+        
+        // Restaurar velocidad normal
+        float velocidadNormal = 0.86f;
+        animator.speed = velocidadNormal;
+        if (bolitaAuricula != null) bolitaAuricula.speed = velocidadNormal;
+        if (bolitaAV != null) bolitaAV.speed = velocidadNormal;
+        if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = velocidadNormal;
+        if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = velocidadNormal;
+        if (audioSource != null) audioSource.pitch = 1f;
+    }
+
+    private IEnumerator FibrilacionLoop()
+    {
+        while (true)
+        {
+            // Generar velocidad aleatoria entre 0.5 y 1.8 (ritmo caótico)
+            float velocidadAleatoria = Random.Range(0.5f, 1.8f);
+            
+            // Calcular pitch correspondiente: pitch = velocidadAnimacion / 0.86
+            // porque velocidad 0.86 = pitch 1, velocidad 0.5733 = pitch 0.6666
+            float pitchCalculado = velocidadAleatoria / 0.86f;
+            
+            // Aplicar velocidad a todas las animaciones
+            animator.speed = velocidadAleatoria;
+            if (bolitaAuricula != null) bolitaAuricula.speed = velocidadAleatoria;
+            if (bolitaAV != null) bolitaAV.speed = velocidadAleatoria;
+            if (bolitaPurkinjeIzq != null) bolitaPurkinjeIzq.speed = velocidadAleatoria;
+            if (bolitaPurkinjeDer != null) bolitaPurkinjeDer.speed = velocidadAleatoria;
+            
+            // Aplicar pitch al audio
+            if (audioSource != null) audioSource.pitch = pitchCalculado;
+            
+            // Esperar entre 0.2 y 1.5 segundos antes del próximo cambio
+            float tiempoEspera = Random.Range(0.2f, 1.5f);
+            yield return new WaitForSeconds(tiempoEspera);
+        }
     }
 
     public void Reiniciar()
