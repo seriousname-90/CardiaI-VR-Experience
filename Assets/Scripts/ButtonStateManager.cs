@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;  
+using TMPro;
+using System.Collections;
 
 public class ButtonStateManager : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class ButtonStateManager : MonoBehaviour
     public ObjectManager objectManager;
     public AudioManager audioManager;
 
+    [Header("Configuración de Bloqueo")]
+    public float cooldownTime = 2f; // Tiempo mínimo entre presiones
     private int contador = 0;
+    private bool isOnCooldown = false;
 
     void Start()
     {
@@ -21,6 +25,16 @@ public class ButtonStateManager : MonoBehaviour
 
     public void OnButtonPressed()
     {
+        // Si está en cooldown, ignorar
+        if (isOnCooldown)
+        {
+            Debug.Log("Botón en cooldown, ignorando presión");
+            return;
+        }
+
+        // Iniciar cooldown
+        StartCoroutine(Cooldown());
+
         Debug.Log("Botón presionado. Contador actual: " + contador);
 
         UIAnimate anim = boton.GetComponent<UIAnimate>();
@@ -67,6 +81,13 @@ public class ButtonStateManager : MonoBehaviour
         {
             Debug.Log("Botón presionado más de dos veces. No se realizarán más acciones.");
         }
+    }
+
+    IEnumerator Cooldown()
+    {
+        isOnCooldown = true;
+        yield return new WaitForSeconds(cooldownTime);
+        isOnCooldown = false;
     }
 
     
