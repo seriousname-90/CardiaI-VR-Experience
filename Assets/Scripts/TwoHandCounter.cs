@@ -16,7 +16,7 @@ public class TwoHandCounter : MonoBehaviour
     public Image chargeProgressBar;    // Barra circular de carga
     public Image actionProgressBar;    // Barra circular opcional para la acción
     
-    [Header("Video - Carga")]
+    [Header("Video - Conectando")]
     public VideoPlayer videoPlayerSearching; // VideoPlayer para la etapa de carga (countdown)
 
     [Header("Video - Carga")]
@@ -106,6 +106,7 @@ public class TwoHandCounter : MonoBehaviour
     {
         isCharging = true;
         phaseCoroutine = StartCoroutine(ChargeCoroutine());
+        
         // desactivar el video de searching por si acaso
         if (videoPlayerSearching != null && videoPlayerSearching.isPlaying)
         {
@@ -199,7 +200,7 @@ public class TwoHandCounter : MonoBehaviour
             Debug.Log("Audio de carga detenido (carga completada)");
         }
         
-        // Ocultar barra de carga (opcional)
+        // Ocultar barra de carga 
         if (chargeProgressBar != null)
             chargeProgressBar.gameObject.SetActive(false);
         
@@ -215,27 +216,21 @@ public class TwoHandCounter : MonoBehaviour
         isActionPhase = true;
         phaseCoroutine = StartCoroutine(ActionCoroutine());
         
-        // Detener completamente el video de countdown si aún estuviera reproduciéndose
-        if (videoPlayerCountdown != null)
-        {
-            if (videoPlayerCountdown.isPlaying)
-                videoPlayerCountdown.Stop();
-            videoPlayerCountdown.time = 0f;
-            Debug.Log("Video de countdown detenido antes de iniciar acción");
-        }
-        
-        // Reproducir video principal
+        // Iniciar el video de forma segura
         if (videoPlayer != null)
         {
-            videoPlayer.time = 0f; // Reiniciar desde el inicio
+            // Forzar que el tiempo sea 0
+            videoPlayer.time = 0f;
+            
             videoPlayer.Play();
-            Debug.Log("Video principal reproducido");
+            
+            Debug.Log("Video principal iniciado");
         }
         
         OnActionResumed?.Invoke();
         Debug.Log($"Acción iniciada. Duración: {actionTime} segundos");
     }
-    
+
     private void PauseAction()
     {
         if (phaseCoroutine != null)
