@@ -42,7 +42,7 @@ public class VRSubtitleFollower : MonoBehaviour
                                  targetCamera.right * forwardOffset.x;
         
         // --- INICIO DE IMPLEMENTACIÓN DE COLISIÓN ---
-        RaycastHit hit;
+        /*RaycastHit hit;
         Vector3 direction = targetPosition - targetCamera.position;
         if (Physics.Raycast(targetCamera.position, direction, out hit, direction.magnitude, capasColision))
         {
@@ -50,7 +50,7 @@ public class VRSubtitleFollower : MonoBehaviour
             targetPosition = hit.point - direction.normalized * 0.1f;
         }
         // --- FIN DE IMPLEMENTACIÓN DE COLISIÓN ---
-
+        */
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
         
         // 2. ROTACIÓN Y (Horizontal) - SmoothDampAngle
