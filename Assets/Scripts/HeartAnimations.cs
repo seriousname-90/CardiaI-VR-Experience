@@ -262,17 +262,30 @@ public class HeartAnimations : MonoBehaviour
         anim.gameObject.SetActive(true);
     }
 
+    private void CambiarVelocidad(Animator anim, string estado, float velocidad)
+    {
+        if (anim == null) return;
+        
+        animator.speed = velocidad;
+        anim.speed = velocidad;
+    }
+
     public void ReproducirTaquicardia()
     {
-        EmpezarLoopCompleto(1.5f); // Aumentar la velocidad para simular taquicardia
+        CambiarVelocidad(bolitaAuricula, "SA-Auricula", 1.5f);
+        CambiarVelocidad(bolitaAV, "SA-AV", 1.5f);
+        CambiarVelocidad(bolitaPurkinjeIzq, "SA-Pur1", 1.5f);
+        CambiarVelocidad(bolitaPurkinjeDer, "SA-Pur2", 1.5f); // Aumentar la velocidad para simular taquicardia
         // función para modificar la velociidad del audio source y el pitch para que suene más rápido
         audioSource.pitch = 1.74f; // Aumentar el pitch para que suene más rápido
     }
 
     public void ReproducirBradicardia()
     {
-        EmpezarLoopCompleto(0.5733f); // Reducir la velocidad para simular bradicardia (40 latidos por minuto es 0.5733 veces la velocidad normal)
-
+        CambiarVelocidad(bolitaAuricula, "SA-Auricula", 0.5733f);
+        CambiarVelocidad(bolitaAV, "SA-AV", 0.5733f);
+        CambiarVelocidad(bolitaPurkinjeIzq, "SA-Pur1", 0.5733f);
+        CambiarVelocidad(bolitaPurkinjeDer, "SA-Pur2", 0.5733f); // Reducir la velocidad para simular bradicardia (40 latidos por minuto es 0.5733 veces la velocidad normal)
         // función para modificar la velociidad del audio source y el pitch para que suene más lento
         audioSource.pitch = 0.6666f; // Reducir el pitch para que suene más lento
     }
