@@ -219,9 +219,6 @@ public class TwoHandCounter : MonoBehaviour
         // Iniciar el video de forma segura
         if (videoPlayer != null)
         {
-            // Forzar que el tiempo sea 0
-            videoPlayer.time = 0f;
-            
             videoPlayer.Play();
             
             Debug.Log("Video principal iniciado");
