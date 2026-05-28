@@ -8151,9 +8151,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275842677}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000002925362, y: 0.99999946, z: 0.0011143088, w: 0.000000151358}
+  m_LocalRotation: {x: -0.000002925362, y: 0.99999946, z: 0.0011143088, w: 0.00000015135788}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39257443, y: 0.20911904, z: 0.39662385}
+  m_LocalScale: {x: 0.3925744, y: 0.20911904, z: 0.39662397}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1285207962}
@@ -9135,6 +9135,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: buttonGlowing
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
       m_Calls:
@@ -9148,6 +9160,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: noGlowBtn
           m_BoolArgument: 0
         m_CallState: 2
   _whenInteractorViewAdded:
@@ -18356,19 +18380,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6998216853227805586}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pieceGlowing
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 789895514}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 6998216853227805586}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: c59923876c7a91d4dabc1363f0ce0a0f, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: glowing
           m_BoolArgument: 0
         m_CallState: 2
   _whenInteractorViewAdded:
@@ -24022,6 +24058,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AudioActivator, Assembly-CSharp
         m_MethodName: PlayAllAudiosAndActivate
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 789895515}
+        m_TargetAssemblyTypeName: Oculus.Interaction.InteractableUnityEventWrapper,
+          Oculus.Interaction
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -46005,6 +46054,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: noGlowBtn
+          m_BoolArgument: 1
+        m_CallState: 2
   alTerminarMovimiento:
     m_PersistentCalls:
       m_Calls:
@@ -52757,6 +52818,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d42e44bf1d2f8043a23687bcc5e5c92, type: 2}
+    - target: {fileID: 6911130074079773216, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911130074079773216, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0000011324883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911130074079773216, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.163034e-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911130074079773216, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 4.065758e-20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911130074079773216, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 7212056345886131694, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
       propertyPath: m_Name
       value: ElectrodeR
@@ -52843,7 +52924,37 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9016345824618490077, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968075790}
+    - targetCorrespondingSourceObject: {fileID: 8821835459022366696, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6998216853227805586}
   m_SourcePrefab: {fileID: 100100000, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+--- !u!1 &6998216853227805585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8821835459022366696, guid: 86fee8add51320b4fac84e2d35253072, type: 3}
+  m_PrefabInstance: {fileID: 6998216853227805584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6998216853227805586
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998216853227805585}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbee6106de6936047ab79f917a1e3820, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
