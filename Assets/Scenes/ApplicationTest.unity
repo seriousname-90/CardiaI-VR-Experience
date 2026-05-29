@@ -18495,7 +18495,7 @@ PrefabInstance:
       objectReference: {fileID: 1857268744}
     - target: {fileID: 820058314775450260, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: activarAlIniciar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -18658,6 +18658,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3612956784247903735, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
+      propertyPath: m_text
+      value: Siguiente
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612956784247903735, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18665,6 +18669,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5564345091760376586, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18777,8 +18785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActivarComponente
   componente: {fileID: 976018336}
   componentes: []
-  audiomanager: {fileID: 0}
-  activarAlIniciar: 0
+  audiomanager: {fileID: 1857268744}
+  activarAlIniciar: 1
 --- !u!1 &1096480016
 GameObject:
   m_ObjectHideFlags: 0
@@ -24865,7 +24873,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c04d83cf5f6a659458417cda6d645763, type: 3}
   - {fileID: 8300000, guid: 0f2788d71b2821b468fce1f57a6e3dc6, type: 3}
   audioSource: {fileID: 1857268745}
-  boton: {fileID: 0}
+  boton: {fileID: 976018336}
   subtitlePlayer: {fileID: 2058048668}
   secuencias:
   - {fileID: 11400000, guid: ffa2b42e8e2954cec913e7d7be157802, type: 2}
