@@ -70,4 +70,23 @@ public class AudioManager : MonoBehaviour
     {
         StartCoroutine(ReproducirConDelay(locucionActual, delay));
     }
+
+    // REPRODUCCIÓN EN DESORDEN (para botones de escena 5 Resultados)
+    public void ReproducirLocucionInteractiva(int indice)
+    {
+        // Validación básica de que el índice exista en el arreglo
+        if (locuciones == null || indice < 0 || indice >= locuciones.Length) return;
+
+        if (locuciones[indice] != null && audioSource != null)
+        {
+            // Detenemos lo que esté sonando para que no se traslapen los audios
+            audioSource.Stop();
+            
+            // Usamos Play() asignando el clip directamente para poder frenarlo si cambia de pestaña
+            audioSource.clip = locuciones[indice];
+            audioSource.Play();
+
+            Debug.Log($"[Tabs] Reproduciendo locución interactiva {indice}: {locuciones[indice].name}");
+        }
+    }
 }
