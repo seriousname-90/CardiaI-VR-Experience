@@ -13204,7 +13204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 0}
-  forwardOffset: {x: 0, y: -0.4, z: 0.9}
+  forwardOffset: {x: 0, y: -0.4, z: 1}
   followSpeed: 10
   capasColision:
     serializedVersion: 2
@@ -25914,11 +25914,11 @@ MonoBehaviour:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
     componentToActivate: {fileID: 944650448}
-    xOffset: -0.25
+    xOffset: -0.1
   - speakerName: Cardi
     textColor: {r: 0.4764151, g: 0.6098779, b: 1, a: 1}
     componentToActivate: {fileID: 1454492608}
-    xOffset: 0.25
+    xOffset: 0.1
   subtitleFollower: {fileID: 749001282}
 --- !u!4 &1392752919
 Transform:
@@ -45845,6 +45845,7 @@ GameObject:
   - component: {fileID: 1989596769}
   - component: {fileID: 1989596774}
   - component: {fileID: 1989596775}
+  - component: {fileID: 1989596776}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -46216,6 +46217,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1989596776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989596768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ae4268771564e44a831b9c4d621620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnStart
+  posicionDestino: {x: 0, y: 0.336, z: 0}
 --- !u!1 &1989901464
 GameObject:
   m_ObjectHideFlags: 0
