@@ -16602,7 +16602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 754135207}
-  forwardOffset: {x: 0, y: -0.5, z: 0.8}
+  forwardOffset: {x: 0, y: -0.5, z: 1}
   followSpeed: 10
   capasColision:
     serializedVersion: 2
@@ -35605,11 +35605,11 @@ MonoBehaviour:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
     componentToActivate: {fileID: 1206217883}
-    xOffset: -0.25
+    xOffset: -0.1
   - speakerName: Cardi
     textColor: {r: 0.4764151, g: 0.6098779, b: 1, a: 1}
     componentToActivate: {fileID: 414106989}
-    xOffset: 0.25
+    xOffset: 0.1
   subtitleFollower: {fileID: 633391948}
 --- !u!114 &1364804095
 MonoBehaviour:
@@ -41546,8 +41546,9 @@ GameObject:
   - component: {fileID: 1989596771}
   - component: {fileID: 1989596770}
   - component: {fileID: 1989596769}
-  - component: {fileID: 1989596775}
   - component: {fileID: 1989596774}
+  - component: {fileID: 1989596775}
+  - component: {fileID: 1989596776}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -41729,7 +41730,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 22b84f738930754458da23e66451ef46, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.084
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -41910,6 +41911,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1989596776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989596768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ae4268771564e44a831b9c4d621620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnStart
+  posicionDestino: {x: 0, y: 0, z: 0}
 --- !u!1001 &1998893429
 PrefabInstance:
   m_ObjectHideFlags: 0
