@@ -15,9 +15,9 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - Body
-  - Electrode
+  - ElectrodeR
   - Button
-  - 
+  - ElectrodeL
   - 
   - 
   - 

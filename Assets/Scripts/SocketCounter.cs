@@ -26,7 +26,6 @@ public class SocketCounter : MonoBehaviour
         foreach (var socket in sockets)
         {
             socket.selectEntered.AddListener(OnObjectPlaced);
-            socket.selectExited.AddListener(OnObjectRemoved);
         }
     }
 
@@ -35,12 +34,6 @@ public class SocketCounter : MonoBehaviour
         contador++;
         VerificarEstado();
         Debug.Log($"Objeto colocado en socket. Contador: {contador}");
-    }
-
-    void OnObjectRemoved(SelectExitEventArgs args)
-    {
-        contador--;
-        VerificarEstado();
     }
 
     void VerificarEstado()
