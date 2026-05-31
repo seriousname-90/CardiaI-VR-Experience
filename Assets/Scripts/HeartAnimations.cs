@@ -24,6 +24,12 @@ public class HeartAnimations : MonoBehaviour
     public Animator bolitaPurkinjeIzq;   // 40 frames
     public Animator bolitaPurkinjeDer;   // 40 frames
 
+    [Header("Animators FA")]
+    public Animator FAauricula; // animación temblorosa para fibrilación auricular
+    public GameObject FABall1; // animación temblorosa para fibrilación auricular
+    public GameObject FABall2; // animación temblorosa para fibrilación auricular
+
+
     [Header("Objetos a desactivar al finalizar la animación")]
     public TrailRenderer[] trails;
     
@@ -280,6 +286,9 @@ public class HeartAnimations : MonoBehaviour
         CambiarVelocidad(bolitaPurkinjeDer, "SA-Pur2", 1.5f); // Aumentar la velocidad para simular taquicardia
         // función para modificar la velociidad del audio source y el pitch para que suene más rápido
         audioSource.pitch = 1.74f; // Aumentar el pitch para que suene más rápido
+        FAauricula.Play("idleAtrial", 0, 0f); // Detener animación temblorosa de fibrilación auricular
+        FABall1.SetActive(false); // Desactivar bolita temblorosa 1
+        FABall2.SetActive(false); // Desactivar bolita temblorosa 2
     }
 
     public void ReproducirBradicardia()
@@ -291,6 +300,9 @@ public class HeartAnimations : MonoBehaviour
         CambiarVelocidad(bolitaPurkinjeDer, "SA-Pur2", 0.5733f); // Reducir la velocidad para simular bradicardia (40 latidos por minuto es 0.5733 veces la velocidad normal)
         // función para modificar la velociidad del audio source y el pitch para que suene más lento
         audioSource.pitch = 0.6666f; // Reducir el pitch para que suene más lento
+        FAauricula.Play("idleAtrial", 0, 0f); // Detener animación temblorosa de fibrilación auricular
+        FABall1.SetActive(false); // Desactivar bolita temblorosa 1
+        FABall2.SetActive(false); // Desactivar bolita temblorosa 2
     }
 
     public void ReproducirFibrilacionAtrial()
@@ -301,6 +313,11 @@ public class HeartAnimations : MonoBehaviour
         
         // Iniciar fibrilación
         fibrilacionCoroutine = StartCoroutine(FibrilacionLoop());
+        FAauricula.Play("FA", 0, 0f); // Iniciar animación temblorosa de fibrilación auricular
+        FABall1.SetActive(true); // Activar bolita temblorosa 1
+        FABall2.SetActive(true); // Activar bolita temblorosa 2
+        FABall1.GetComponent<Animator>().Play("FAball1", 0, 0f); // Iniciar animación de bolita temblorosa 1
+        FABall2.GetComponent<Animator>().Play("FAball2", 0, 0f); // Iniciar animación de bolita temblorosa 2
     }
 
     public void DetenerFibrilacionAtrial()

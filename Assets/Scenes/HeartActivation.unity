@@ -1072,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6613071643026962570, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_Name
+      value: Bone008
+      objectReference: {fileID: 0}
     - target: {fileID: -5551814020010245717, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -37.864117
@@ -1104,9 +1108,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 117.89103
       objectReference: {fileID: 0}
+    - target: {fileID: 363608396633150093, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_Name
+      value: Bone003
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
       propertyPath: m_Name
       value: Heart_MultipleAgain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242873744288675125, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_Name
+      value: Bone007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160721502380860013, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5682108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160721502380860013, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7914191
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160721502380860013, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7914191
       objectReference: {fileID: 0}
     - target: {fileID: 2982153217933790380, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
       propertyPath: m_IsActive
@@ -1152,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6171334360745820316, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      propertyPath: m_Name
+      value: Bone009
+      objectReference: {fileID: 0}
     - target: {fileID: 7441189195826355505, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1189,6 +1217,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 251263863}
+    - targetCorrespondingSourceObject: {fileID: 1175433746210437962, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 796443847}
   m_SourcePrefab: {fileID: 100100000, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
 --- !u!4 &251263859 stripped
 Transform:
@@ -1239,6 +1270,7 @@ MonoBehaviour:
   bolitaAV: {fileID: 538930622}
   bolitaPurkinjeIzq: {fileID: 670809188}
   bolitaPurkinjeDer: {fileID: 677450913}
+  FAauricula: {fileID: 0}
   trails:
   - {fileID: 373891021}
   - {fileID: 677450915}
@@ -4684,6 +4716,33 @@ MonoBehaviour:
   componentes: []
   audiomanager: {fileID: 0}
   activarAlIniciar: 0
+--- !u!1 &796443846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175433746210437962, guid: f18b4e4012a3ccb4392c6dcadeaecfd7, type: 3}
+  m_PrefabInstance: {fileID: 251263858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &796443847
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796443846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 793c8c42886eb8149a4976e3ee0a7bb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &816077961
 GameObject:
   m_ObjectHideFlags: 0
