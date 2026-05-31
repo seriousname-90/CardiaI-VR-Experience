@@ -214,14 +214,32 @@ public class TwoHandCounter : MonoBehaviour
     private void StartAction()
     {
         isActionPhase = true;
-        phaseCoroutine = StartCoroutine(ActionCoroutine());
         
-        // Iniciar el video de forma segura
+        // IMPORTANTE: NO iniciar la corrutina aquí todavía
+        // Primero aseguramos que el video reproduzca
+        
         if (videoPlayer != null)
         {
-            videoPlayer.Play();
+            // Asegurar que el tiempo esté correcto
+            if (videoPlayer.time != currentActionTime)
+                videoPlayer.time = currentActionTime;
             
-            Debug.Log("Video principal iniciado");
+            // Forzar que el video se prepare y reproduzca
+            if (!videoPlayer.isPrepared)
+            {
+                videoPlayer.Prepare();
+                StartCoroutine(EsperarYReproducirAccion());
+            }
+            else
+            {
+                videoPlayer.Play();
+                // Iniciar corrutina DESPUÉS de que el video comenzó
+                phaseCoroutine = StartCoroutine(ActionCoroutine());
+            }
+        }
+        else
+        {
+            phaseCoroutine = StartCoroutine(ActionCoroutine());
         }
         
         OnActionResumed?.Invoke();
@@ -250,6 +268,8 @@ public class TwoHandCounter : MonoBehaviour
     {
         float targetTime = actionTime;
         
+        Debug.Log($"ActionCoroutine iniciada - currentActionTime: {currentActionTime}");
+        
         while (currentActionTime < targetTime)
         {
             // Verificar que sigan ambas manos
@@ -261,18 +281,12 @@ public class TwoHandCounter : MonoBehaviour
             
             currentActionTime += Time.deltaTime;
             
-            // Barra de progreso para la acción (opcional)
+            // Actualizar barra de progreso
             if (actionProgressBar != null)
                 actionProgressBar.fillAmount = currentActionTime / targetTime;
             
-            // Sincronizar el video principal (por si acaso)
-            if (videoPlayer != null && videoPlayer.isPlaying)
-            {
-                if (Mathf.Abs((float)videoPlayer.time - currentActionTime) > 0.5f)
-                {
-                    videoPlayer.time = currentActionTime;
-                }
-            }
+            // ELIMINÉ la sincronización problemática
+            // El video ahora avanza solo sin que lo forcémos
             
             yield return null;
         }
@@ -283,7 +297,6 @@ public class TwoHandCounter : MonoBehaviour
         if (actionProgressBar != null)
             actionProgressBar.fillAmount = 1f;
         
-        // Asegurar que el video principal termine
         if (videoPlayer != null && videoPlayer.isPlaying)
         {
             videoPlayer.Stop();
@@ -292,7 +305,25 @@ public class TwoHandCounter : MonoBehaviour
         OnActionCompleted?.Invoke();
         Debug.Log("¡ACCIÓN COMPLETADA! Video terminado.");
     }
-    
+
+    private IEnumerator EsperarYReproducirAccion()
+    {
+        // Esperar hasta que el video esté preparado
+        while (!videoPlayer.isPrepared)
+        {
+            yield return null;
+        }
+        
+        // Reproducir video
+        videoPlayer.Play();
+        
+        // Esperar un frame para que el video realmente empiece
+        yield return null;
+        
+        // AHORA sí iniciar la corrutina de acción
+        phaseCoroutine = StartCoroutine(ActionCoroutine());
+    }
+        
     // Método para reiniciar TODO (si lo necesitas)
     public void FullReset()
     {
