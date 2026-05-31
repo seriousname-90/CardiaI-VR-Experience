@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5564345091760376586, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_Pivot.x
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7231637
+      value: -1.015
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -347,11 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.8056765
+      value: -2.867
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.1562959
+      value: 1.039
       objectReference: {fileID: 0}
     - target: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1271,6 +1271,8 @@ MonoBehaviour:
   bolitaPurkinjeIzq: {fileID: 670809188}
   bolitaPurkinjeDer: {fileID: 677450913}
   FAauricula: {fileID: 0}
+  FABall1: {fileID: 0}
+  FABall2: {fileID: 0}
   trails:
   - {fileID: 373891021}
   - {fileID: 677450915}
