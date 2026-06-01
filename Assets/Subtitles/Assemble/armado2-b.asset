@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: 'A tu alrededor hay tres plataformas con las piezas necesarias. '
-    duration: 4
+    message: "Te encuentras en el centro de la habitaci\xF3n. Frente a ti ver\xE1s
+      el \\nholograma.  "
+    duration: 4.5
