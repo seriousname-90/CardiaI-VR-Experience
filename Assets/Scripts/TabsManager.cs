@@ -21,6 +21,12 @@ public class TabsManager : MonoBehaviour
     [Header("Flujo de Cierre de Escena")]
     public GameObject botonPreguntarFin;
 
+    [Header("Alternancia de Componentes Externos")]
+    // Arrastra aquí el contenedor padre que agrupa visualmente todos tus botones de pestañas en la escena
+    public GameObject contenedorPestañas;
+    // Arrastra aquí el componente externo X que quieres activar en su lugar
+    public GameObject componenteExterno;
+
     private float tiempoProximoClic = 0f;
     private float delayEntreClics = 0.4f; 
 
@@ -62,6 +68,38 @@ public class TabsManager : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    // FUNCIÓN 1: Oculta las pestañas de la interfaz y muestra el componente externo
+    public void OcultarTabsYMostrarComponente()
+    {
+        // Apagamos el contenedor global de las pestañas
+        if (contenedorPestañas != null)
+        {
+            contenedorPestañas.SetActive(false);
+        }
+
+        // Encendemos el componente externo X que tiene los nuevos botones
+        if (componenteExterno != null)
+        {
+            componenteExterno.SetActive(true);
+        }
+    }
+
+    // FUNCIÓN 2: Se llama desde el botón interno del componente X para regresar a las pestañas
+    public void MostrarTabsYOcultarComponente()
+    {
+        // Apagamos el componente externo X
+        if (componenteExterno != null)
+        {
+            componenteExterno.SetActive(false);
+        }
+
+        // Volvemos a encender el contenedor original con las pestañas
+        if (contenedorPestañas != null)
+        {
+            contenedorPestañas.SetActive(true);
         }
     }
 }
