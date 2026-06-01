@@ -20166,8 +20166,8 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 117511526}
-  _rigidbody: {fileID: 117511527}
+  _pointableElement: {fileID: 0}
+  _rigidbody: {fileID: 0}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _slippiness: 0
@@ -20232,8 +20232,8 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 117511526}
-  _rigidbody: {fileID: 117511527}
+  _pointableElement: {fileID: 0}
+  _rigidbody: {fileID: 0}
   _grabSource: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
@@ -20251,7 +20251,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 117511530}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2036356149
 MonoBehaviour:
