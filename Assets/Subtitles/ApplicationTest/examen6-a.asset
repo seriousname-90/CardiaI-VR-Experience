@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "En unos segundos comenzar\xE1 la medici\xF3n. Mantente sentado, relajado
-      y \\nevita moverte o hablar."
-    duration: 7
+    message: "En unos segundos comenzar\xE1 la medici\xF3n. Mantente sentado,  \\nrelajado
+      y evita moverte o hablar."
+    duration: 8

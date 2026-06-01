@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: examen5-b
+  m_Name: examen7-c
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "\xA1Perfecto! El dispositivo est\xE1 conectado. Coloca tus dedos y
-      mant\xE9nlos \\nen la posici\xF3n como se muestra en pantalla."
-    duration: 7.5
+    message: "Pero primero, vamos a entender qu\xE9 pas\xF3 dentro de tu coraz\xF3n
+      \\ndurante esos segundos."
+    duration: 6

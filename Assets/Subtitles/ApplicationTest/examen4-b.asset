@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Acerca tu mano al tel\xE9fono y presiona el bot\xF3n de inicio de medici\xF3n
-      en \\nla pantalla."
+    message: "Frente a ti ver\xE1s tu tel\xE9fono con la aplicaci\xF3n abierta. 
+      Esta es \\nla app de CardiAI"
     duration: 6

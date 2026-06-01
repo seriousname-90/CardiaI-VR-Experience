@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: examen8-d
+  m_Name: examen7-b
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Presiona Continuar cuando est\xE9s listo."
-    duration: 3
+    message: "En una situaci\xF3n real, aqu\xED es donde el dispositivo te mostrar\xEDa
+      \\nun resultado."
+    duration: 6
