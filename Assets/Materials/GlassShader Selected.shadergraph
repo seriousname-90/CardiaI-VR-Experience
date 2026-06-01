@@ -186,10 +186,10 @@
     },
     "m_Color": {
         "color": {
-            "r": 0.7028301954269409,
-            "g": 0.8397466540336609,
-            "b": 1.0,
-            "a": 0.4901960790157318
+            "r": 0.2524474561214447,
+            "g": 0.5353018641471863,
+            "b": 0.8773584961891174,
+            "a": 1.0
         },
         "mode": 0
     }
@@ -781,7 +781,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Alpha",
     "m_StageCapability": 2,
-    "m_Value": 0.10000000149011612,
+    "m_Value": 0.4000000059604645,
     "m_DefaultValue": 1.0,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -918,7 +918,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Metallic",
     "m_StageCapability": 2,
-    "m_Value": 0.5,
+    "m_Value": 0.20000000298023225,
     "m_DefaultValue": 0.0,
     "m_Labels": [],
     "m_LiteralMode": false
