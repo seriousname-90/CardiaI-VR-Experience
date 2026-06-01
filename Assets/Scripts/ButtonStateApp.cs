@@ -59,22 +59,14 @@ public class ButtonStateApp : MonoBehaviour
         }
         else if (contador == 1)
         {
-            if (audioManager != null)
-                audioManager.ReproducirLocucion(7); 
-            botonSiguiente.ActivarObjetoConDelay(17f);
-            contador++;
-            Debug.Log("Botón presionado por segunda vez. Objetos activados");
-        }
-        else if (contador == 2)
-        {
             if (sceneChanger != null)
                 sceneChanger.CambiarEscena();
             contador++;
-            Debug.Log("Botón presionado por tercera vez. Objetos activados");
+            Debug.Log("Botón presionado por segunda vez. Objetos activados");
         }
         else
         {
-            Debug.Log("Botón presionado más de tres veces. No se realizarán más acciones.");
+            Debug.Log("Botón presionado más de dos veces. No se realizarán más acciones.");
         }
     }
     
