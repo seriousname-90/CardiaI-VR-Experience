@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5977129
 Transform:
   m_ObjectHideFlags: 0
@@ -15794,7 +15794,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6d893853d3cc0de46a7c6e69a4f9bc2b, type: 3}
   - {fileID: 8300000, guid: 0cce94421ff526248ad3011cc6a7ff9e, type: 3}
   - {fileID: 8300000, guid: c04d83cf5f6a659458417cda6d645763, type: 3}
-  - {fileID: 8300000, guid: 0f2788d71b2821b468fce1f57a6e3dc6, type: 3}
   audioSource: {fileID: 1857268745}
   boton: {fileID: 1550388773}
   subtitlePlayer: {fileID: 2058048668}
@@ -16234,6 +16233,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 111038409}
+        m_TargetAssemblyTypeName: ActivarComponente, Assembly-CSharp
+        m_MethodName: ActivarObjetoConDelay
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 21
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
