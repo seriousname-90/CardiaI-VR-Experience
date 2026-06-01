@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: examen3-b
+  m_Name: afib-b
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Cardi
-    message: "Cuando la luz sea verde, significa que est\xE1 listo para conectarse."
-    duration: 5
+    speaker: Bubba
+    message: "Ya no sigue un patr\xF3n fijo. As\xED es una fibrilaci\xF3n auricular.
+      El \\ncoraz\xF3n late sin orden."
+    duration: 5.5

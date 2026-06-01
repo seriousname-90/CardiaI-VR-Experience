@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "Escuchas como la canci\xF3n pierde el ritmo, ya no sigue un patr\xF3n
-      fijo. \\nAs\xED es una fibrilaci\xF3n auricular. El coraz\xF3n late sin orden."
-    duration: 8
+    message: "\xBFEscuchas c\xF3mo la canci\xF3n pierde el ritmo? Mira c\xF3mo el
+      impulso \\nnace de cualquiera de los puntos y de manera irregular."
+    duration: 7.5
