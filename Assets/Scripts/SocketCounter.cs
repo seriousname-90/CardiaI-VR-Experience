@@ -46,7 +46,7 @@ public class SocketCounter : MonoBehaviour
                 audioManager.ReproducirLocucion(7);
                 animator.Play("buildCompleted"); 
                 Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets."); 
-                audioManager.ReproducirLocucionConDelay(8, 14f); // Reproducir locución final cuando termine la anterior
+                audioManager.ReproducirLocucionConDelay(8, 13.5f); // Reproducir locución final cuando termine la anterior
                 StartCoroutine(waitForAudioToFinish(22f)); // TODO: CAMBIAR A BOTOON O NOSE 
         }
     }

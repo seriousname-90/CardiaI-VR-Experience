@@ -39639,13 +39639,13 @@ MonoBehaviour:
   locuciones:
   - {fileID: 8300000, guid: 7f600dd8cc134174cacfff80b3d0e066, type: 3}
   - {fileID: 8300000, guid: 7d2571476542af641842943e3f87629d, type: 3}
-  - {fileID: 8300000, guid: c90856e98378b3943ac0d13f7fbcdb5d, type: 3}
+  - {fileID: 8300000, guid: 64e9c6656e2a37f4c85d9223a0a93a9b, type: 3}
   - {fileID: 8300000, guid: c41234ea4a2f32346bcc781d9bda39c7, type: 3}
-  - {fileID: 8300000, guid: 42bebd7fcec16d644a2952d558bf5c82, type: 3}
+  - {fileID: 8300000, guid: 5ac8ce045786e3c4c8b5f1d0048ce9df, type: 3}
   - {fileID: 8300000, guid: b28a0f5d21f9425429934e7b1afbbdaf, type: 3}
-  - {fileID: 8300000, guid: 2f95915551c0d5946b758d29bb42e924, type: 3}
-  - {fileID: 8300000, guid: 416369114f6922245ba3c9d5a6cc44be, type: 3}
+  - {fileID: 8300000, guid: df775b0e4ca9d7b4482f5b6b40cef945, type: 3}
   - {fileID: 8300000, guid: c9b7476fc2534d54f880cf4a9a641d96, type: 3}
+  - {fileID: 8300000, guid: 1ed46fab2fa6fd648966de078afc7262, type: 3}
   audioSource: {fileID: 1857268748}
   boton: {fileID: 255578594}
   subtitlePlayer: {fileID: 1392752916}
@@ -47061,11 +47061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_FloatArgument
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_FloatArgument
-      value: 13.5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_FloatArgument
@@ -47561,7 +47561,7 @@ MonoBehaviour:
   posicionDestino: {x: 0, y: 0.044, z: -5}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 0.5
-  delayAntesMovimiento: 2
+  delayAntesMovimiento: 4
   alIniciarDelay:
     m_PersistentCalls:
       m_Calls:
@@ -47636,7 +47636,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10.5
+          m_FloatArgument: 15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -47648,7 +47648,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10.5
+          m_FloatArgument: 15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -47660,7 +47660,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10.5
+          m_FloatArgument: 15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -47672,7 +47672,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10.5
+          m_FloatArgument: 14.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
