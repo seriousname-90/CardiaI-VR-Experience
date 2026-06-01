@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Ok, presione el bot\xF3n en el dispositivo para encenderlo. Cuando
-      la luz \\nsea verde, significa que est\xE1 listo para conectarse. "
-    duration: 8.5
+    message: "Ok, presiona el bot\xF3n en el dispositivo para encenderlo y observa
+      \\nla luz en el medio."
+    duration: 6.5

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: examen3-b
+  m_Name: examen3-c
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Cuando la luz \\nsea verde, significa que est\xE1 listo para conectarse."
-    duration: 5
+    message: "Cuando se conecte, la luz ser\xE1 azul."
+    duration: 3.5

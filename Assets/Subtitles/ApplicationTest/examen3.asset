@@ -15,5 +15,7 @@ MonoBehaviour:
   subtitles:
   - delay: 0
     trigger: {fileID: 11400000, guid: dd9473edbca4e4bfd9aa03742ca1723b, type: 2}
-  - delay: 8.5
+  - delay: 6.5
     trigger: {fileID: 11400000, guid: ceed37eb9f87341c3a2f71b91f7d3dbd, type: 2}
+  - delay: 11.5
+    trigger: {fileID: 11400000, guid: a182ec9d45da64798a10ce577898908f, type: 2}
