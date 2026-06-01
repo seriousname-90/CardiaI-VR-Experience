@@ -77,4 +77,14 @@ public class UIAnimate : MonoBehaviour
             btn.onClick.Invoke();
         }
     }
-} 
+
+    // NUEVA FUNCIÓN: Dispara el OnClick desde los eventos de Oculus Interaction SDK
+    public void PresionarBotonSimulado()
+    {
+        Button btn = GetComponent<Button>();
+        if (btn != null)
+        {
+            btn.onClick.Invoke();
+        }
+    }
+}
