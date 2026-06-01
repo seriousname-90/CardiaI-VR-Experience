@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: armado2
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleSequence
   subtitles:
-  - delay: 0.7
+  - delay: 0
     trigger: {fileID: 11400000, guid: eb7e5707d6052405aa8688fc8e77cc29, type: 2}
-  - delay: 7.5
+  - delay: 6
     trigger: {fileID: 11400000, guid: d624b77bb09b2447b8572d8ebd30e116, type: 2}
-  - delay: 11.5
+  - delay: 10.5
     trigger: {fileID: 11400000, guid: 39175984f0b6d45898fbaad84e77a999, type: 2}
-  - delay: 20
+  - delay: 18.5
     trigger: {fileID: 11400000, guid: 18c76fcbdc818497fb6ca83237a32521, type: 2}
+  - delay: 27.5
+    trigger: {fileID: 11400000, guid: 3c98537f09638469faf919a51f56bb77, type: 2}

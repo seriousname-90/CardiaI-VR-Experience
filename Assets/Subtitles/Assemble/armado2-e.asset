@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4401270cf2bdf140bc22fe74e72e681, type: 3}
-  m_Name: armado2-d
+  m_Name: armado2-e
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Para atraer una pieza hacia ti, extiende tu mano, apunta con la \\npalma
-      hacia la plataforma y cierra el pu\xF1o para atraerla."
-    duration: 9
+    message: "Luego toma el objeto y col\xF3calo en su lugar. Cuando est\xE9s listo,
+      \\ntrae la primera pieza."
+    duration: 5.5

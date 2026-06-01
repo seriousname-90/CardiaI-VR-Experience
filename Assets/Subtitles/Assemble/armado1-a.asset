@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "Este es CAI100, el dispositivo que vas a aprender a usar hoy. Antes
-      de \\nempezar, Cardi y t\xFA van a armarlo juntos. As\xED podr\xE1s conocer
-      cada una de \\nsus partes. "
-    duration: 8.5
+    message: "Antes de empezar, Cardi y t\xFA van a armarlo juntos, as\xED podr\xE1n
+      \\nconocer cada una de sus partes. "
+    duration: 5.5
