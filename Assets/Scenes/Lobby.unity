@@ -16631,7 +16631,7 @@ RectTransform:
   m_GameObject: {fileID: 633391943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7797911, y: 0.5938277, z: 0.99302304}
+  m_LocalScale: {x: 0.3206521, y: 0.24418344, z: 0.4083336}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1498798655}
@@ -16655,15 +16655,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 754135207}
-  forwardOffset: {x: 0, y: -0.5, z: 1}
-  followSpeed: 10
-  capasColision:
-    serializedVersion: 2
-    m_Bits: 1
-  maxYAngleDistance: 20
-  smoothYTime: 0.2
-  minXAngle: 0
-  maxXAngle: 0
+  forwardOffset: {x: 0, y: -0.18, z: 0.3}
+  followSpeed: 100
+  smoothYTime: 0
+  smoothXTime: 0.1
 --- !u!1001 &674548050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35488,7 +35483,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.043, z: -0.162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6643804, y: 0.6643804, z: 0.6643804}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 633391947}
@@ -35517,11 +35512,11 @@ MonoBehaviour:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
     componentToActivate: {fileID: 1206217883}
-    xOffset: -0.1
+    xOffset: -0.12
   - speakerName: Cardi
     textColor: {r: 0.4764151, g: 0.6098779, b: 1, a: 1}
     componentToActivate: {fileID: 414106989}
-    xOffset: 0.1
+    xOffset: 0.12
   subtitleFollower: {fileID: 633391948}
 --- !u!114 &1364804095
 MonoBehaviour:
@@ -35729,7 +35724,7 @@ RectTransform:
   m_GameObject: {fileID: 1498798654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0017575759, y: 0.003000864, z: 0.003304523}
+  m_LocalScale: {x: 0.0022080427, y: 0.0037699854, z: 0.004151472}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1206217884}
@@ -35740,7 +35735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.33399963}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498798656
