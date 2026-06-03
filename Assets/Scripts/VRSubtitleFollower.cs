@@ -3,30 +3,21 @@ using UnityEngine;
 public class VRSubtitleFollower : MonoBehaviour
 {
     [Header("Configuración de Seguimiento")]
-    public Transform targetCamera;          // La cámara del VR
-    public Vector3 forwardOffset = new Vector3(0, -0.2f, 1.5f);  // Offset hacia adelante
-    public float followSpeed = 5f;          // Velocidad de movimiento
-    public LayerMask capasColision;         // Capas que bloquean el subtítulo
+    public Transform targetCamera;
+    public Vector3 forwardOffset = new Vector3(0, -0.2f, 1.5f);
+    public float followSpeed = 15f;
     
-    [Header("Rotación Y (Horizontal)")]
-    public float maxYAngleDistance = 30f;    // Ángulo máximo para activar rotación
-    public float smoothYTime = 0.3f;         // Suavizado de rotación Y
+    [Header("Rotación")]
+    public float smoothYTime = 0.1f;
+    public float smoothXTime = 0.1f;
+    
     private float currentYAngle;
+    private float currentXAngle;
     private float yVelocity;
-    private bool isAligned = true;
-    
-    [Header("Rotación X (Vertical - Clamp)")]
-    public float minXAngle;           // Límite inferior (mirando abajo)
-    public float maxXAngle;            // Límite superior (mirando arriba)
-    
-    private RectTransform rectTransform;
-    private Canvas canvas;
+    private float xVelocity;
     
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvas = GetComponent<Canvas>();
-        
         if (targetCamera == null)
             targetCamera = Camera.main.transform;
     }
@@ -41,48 +32,26 @@ public class VRSubtitleFollower : MonoBehaviour
                                  targetCamera.up * forwardOffset.y +
                                  targetCamera.right * forwardOffset.x;
         
-        // --- INICIO DE IMPLEMENTACIÓN DE COLISIÓN ---
-        /*RaycastHit hit;
-        Vector3 direction = targetPosition - targetCamera.position;
-        if (Physics.Raycast(targetCamera.position, direction, out hit, direction.magnitude, capasColision))
-        {
-            // Si hay algo en medio, lo ponemos un poco antes del impacto
-            targetPosition = hit.point - direction.normalized * 0.1f;
-        }
-        // --- FIN DE IMPLEMENTACIÓN DE COLISIÓN ---
-        */
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
         
-        // 2. ROTACIÓN Y (Horizontal) - SmoothDampAngle
+        // 2. ROTACIÓN Y (Horizontal)
         float targetYAngle = targetCamera.eulerAngles.y;
-        float angleDelta = Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetYAngle));
+        currentYAngle = Mathf.SmoothDampAngle(currentYAngle, targetYAngle, ref yVelocity, smoothYTime);
         
-        if (angleDelta > maxYAngleDistance)
-        {
-            isAligned = false;
-        }
-        
-        if (!isAligned)
-        {
-            currentYAngle = Mathf.SmoothDampAngle(currentYAngle, targetYAngle, ref yVelocity, smoothYTime);
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, currentYAngle, transform.eulerAngles.z);
-            
-            if (Mathf.Abs(Mathf.DeltaAngle(currentYAngle, targetYAngle)) < 1f)
-                isAligned = true;
-        }
-        
-        // 3. ROTACIÓN X (Vertical) - Clamp
+        // 3. ROTACIÓN X (Vertical) - Inversa a la cámara
         float targetXRotation = targetCamera.eulerAngles.x;
         
-        // Normalizar ángulo para clamp
+        // Normalizar ángulo (0 a 360)
         if (targetXRotation > 180f)
             targetXRotation -= 360f;
         
-        float clampedX = Mathf.Clamp(targetXRotation, minXAngle, maxXAngle);
+        // Invertir: si cámara mira arriba (-90), panel mira abajo (90) para seguir de frente
+        float targetXAngle = +targetXRotation;
         
-        // Aplicar rotación X sin afectar la rotación Y actual
-        Vector3 currentRotation = transform.eulerAngles;
-        currentRotation.x = -clampedX;  // Negativo para que mire hacia el jugador
-        transform.eulerAngles = currentRotation;
+        // Aplicar suavizado
+        currentXAngle = Mathf.SmoothDamp(currentXAngle, targetXAngle, ref xVelocity, smoothXTime);
+        
+        // Aplicar rotación final
+        transform.rotation = Quaternion.Euler(currentXAngle, currentYAngle, 0);
     }
 }
