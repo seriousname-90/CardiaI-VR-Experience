@@ -37436,6 +37436,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -356
       objectReference: {fileID: 0}
+    - target: {fileID: -5840414186250751513, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2483e293cb7ed6d46a22a47be12d3ed4, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 910211b29b812344684e814e273eecd0, type: 2}
+    - target: {fileID: -678588488315902003, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 910211b29b812344684e814e273eecd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
       propertyPath: m_Name
       value: LOBBY-LINDO
@@ -37448,6 +37460,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6087329964746205487, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ae5fce98773e5e489bc09af9f55c1ad, type: 2}
+    - target: {fileID: 6829333093618665122, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a74248735c66284f9b64b03f4cbea8a, type: 2}
+    - target: {fileID: 7122344722331227949, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ae5fce98773e5e489bc09af9f55c1ad, type: 2}
+    - target: {fileID: 7689933196473089988, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ae5fce98773e5e489bc09af9f55c1ad, type: 2}
+    - target: {fileID: 8100320773420232829, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8460f6d429774d44aa6023050cdd8465, type: 2}
+    - target: {fileID: 9041501268891265052, guid: 122b12286798e1342a73837f193b0ad5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7229199944782302912, guid: 2ab56ee2772d5b5498be930625fc54de, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -43303,10 +43339,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5812171391392939645, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: speakerConfigs.Array.data[0].xOffset
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812171391392939645, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: speakerConfigs.Array.data[1].xOffset
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: targetCamera
       value: 
       objectReference: {fileID: 754135207}
+    - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: forwardOffset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
