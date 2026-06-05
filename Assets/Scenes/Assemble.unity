@@ -7860,6 +7860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: forwardOffset.y
+      value: -0.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23488,7 +23492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
@@ -23544,7 +23548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: ReproducirProximaLocucionConDelay
+      value: ReproducirLocucion
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -23600,11 +23604,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_FloatArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 551000168048912231, guid: 5cc82a91a0f0ab14d84f0c7a27a69fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_FloatArgument
