@@ -7,6 +7,8 @@ public class ActivarComponente : MonoBehaviour
     public GameObject componente; // Arrastra cualquier componente
     public GameObject[] componentes; // Arrastra aquí el objeto "Button" de la jerarquía 
     public AudioManager audiomanager; // Arrastra el AudioManager 
+    public Animator cardiAnimator; // Arrastra el Animator del corazón
+    public string firstAnimation; // Nombre de la animación a reproducir
  
     public bool activarAlIniciar; // Si quieres que se active al iniciar
 
@@ -15,6 +17,16 @@ public class ActivarComponente : MonoBehaviour
         if (activarAlIniciar)
         {
             ActivarAudioConDelay();
+            AnimarCordi();
+        }
+    }
+
+    public void AnimarCordi()
+    {
+        if (cardiAnimator != null)
+        {
+            cardiAnimator.Play(firstAnimation);
+            Debug.Log("Activando animación de corazón");
         }
     }
 
