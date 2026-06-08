@@ -797,6 +797,8 @@ MonoBehaviour:
   componente: {fileID: 444802200}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!82 &111038410 stripped
 AudioSource:
@@ -1375,6 +1377,8 @@ MonoBehaviour:
   componente: {fileID: 256187856}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &256187856
 GameObject:
@@ -2953,6 +2957,8 @@ MonoBehaviour:
   - {fileID: 310646205}
   - {fileID: 1244986880}
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1001 &516576310
 PrefabInstance:
@@ -12887,6 +12893,8 @@ MonoBehaviour:
   componente: {fileID: 630809881}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!4 &945988516 stripped
 Transform:
@@ -12946,8 +12954,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 754135207}
+    - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: forwardOffset.y
-      value: -0.09
+      value: -0.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16958,6 +16970,8 @@ MonoBehaviour:
   componente: {fileID: 1550388773}
   componentes: []
   audiomanager: {fileID: 1857268744}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 1
 --- !u!1 &1555337196
 GameObject:
