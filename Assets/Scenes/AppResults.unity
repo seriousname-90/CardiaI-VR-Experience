@@ -1416,6 +1416,8 @@ MonoBehaviour:
   componente: {fileID: 70085113}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1001 &93123283
 PrefabInstance:
@@ -1470,8 +1472,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 754135207}
+    - target: {fileID: 6283653538664784260, guid: 28e3f9cbfee3f29498e25f21c44ae41a, type: 3}
       propertyPath: forwardOffset.y
-      value: -0.09
+      value: -0.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15559,6 +15565,8 @@ MonoBehaviour:
   componente: {fileID: 1112721240}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!114 &1112721247 stripped
 MonoBehaviour:
@@ -16195,6 +16203,8 @@ MonoBehaviour:
   componente: {fileID: 13636674}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &1145612717
 GameObject:
@@ -17752,6 +17762,8 @@ MonoBehaviour:
   componente: {fileID: 1777422313}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &1423421371
 GameObject:
@@ -18903,6 +18915,8 @@ MonoBehaviour:
   componente: {fileID: 1645101677}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &1652517354
 GameObject:
@@ -19480,6 +19494,8 @@ MonoBehaviour:
   componente: {fileID: 1777422313}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &1803918030
 GameObject:
@@ -20261,6 +20277,8 @@ MonoBehaviour:
   componente: {fileID: 70085113}
   componentes: []
   audiomanager: {fileID: 0}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
   activarAlIniciar: 0
 --- !u!1 &1936555125
 GameObject:
