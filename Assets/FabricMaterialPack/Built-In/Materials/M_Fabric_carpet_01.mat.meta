@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d75cf508c80a2447ae7f0e784e0cb84
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381872
+  packageName: Fabric Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/FabricMaterialPack/Built-In/Materials/M_Fabric_carpet_01.mat
+  uploadId: 920816

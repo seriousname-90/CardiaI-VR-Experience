@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 258f1d61a8869ed44a44aff5ce7ef4b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381872
+  packageName: Fabric Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/FabricMaterialPack/Built-In/Materials/M_Fabric_Pattern_01.mat
+  uploadId: 920816

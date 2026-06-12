@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eddf066ba30035f48a4ae00c839e2fce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381872
+  packageName: Fabric Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/FabricMaterialPack/Built-In/Materials/M_Fabric_roughPattern_01.mat
+  uploadId: 920816
