@@ -280,7 +280,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.043, z: -0.162}
-  m_LocalScale: {x: 0.6643804, y: 0.6643804, z: 0.6643804}
+  m_LocalScale: {x: 0.49407974, y: 0.49407974, z: 0.49407974}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6628844264437861288}
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSubtitleFollower
   targetCamera: {fileID: 0}
-  forwardOffset: {x: 0, y: -0.18, z: 0.3}
+  forwardOffset: {x: 0, y: -0.12, z: 0.3}
   followSpeed: 100
   smoothYTime: 0
   smoothXTime: 0.1
