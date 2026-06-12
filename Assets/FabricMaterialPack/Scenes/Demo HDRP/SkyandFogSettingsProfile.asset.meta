@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b5dd14860ee50334c980e015c87e1e29
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381872
+  packageName: Fabric Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/FabricMaterialPack/Scenes/Demo HDRP/SkyandFogSettingsProfile.asset
+  uploadId: 920816

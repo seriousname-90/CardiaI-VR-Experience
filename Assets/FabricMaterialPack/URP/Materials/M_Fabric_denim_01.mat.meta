@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d76603996e7c54439b6d13876ac38e9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381872
+  packageName: Fabric Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/FabricMaterialPack/URP/Materials/M_Fabric_denim_01.mat
+  uploadId: 920816
