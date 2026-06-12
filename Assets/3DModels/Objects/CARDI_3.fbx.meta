@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 137c0bad7c2d04a4d9785815d098a86a
+guid: c6d2a191b036a054f96f4d52a2c76a79
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,63 +7,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 248f84a47e02bf846a302a8ba3a8f15f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 2edda3fd89bc2bb44ab458a61dba0de1, type: 2}
+    second: {fileID: 2100000, guid: c29ead366a59ce64d9878966ee3979a9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: a0d9fa04b2a4443479ffb8e3395d6714, type: 2}
+      name: Material.005
+    second: {fileID: 2100000, guid: 4dd92a7a0d0f00c4c87d6b0040a18f15, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 96494c5095f532245a63e61f7e0d48bd, type: 2}
+      name: plastico-blanco
+    second: {fileID: 2100000, guid: ce742025299366446a5b2b174dd37ff7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Paredes
-    second: {fileID: 2100000, guid: 2c6df7a5eccc50645be429be522d7f2f, type: 2}
+      name: plastico-blanco.001
+    second: {fileID: 2100000, guid: 33e1ea939deb0e6499f98f6bc4ce47dd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: circle2
-    second: {fileID: 2100000, guid: 2f66bae477b38a84086f8e82def21d43, type: 2}
+      name: plastico-blanco.002
+    second: {fileID: 2100000, guid: 33d74d51fca8ad24fac22cb21f2de8bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: circle3
-    second: {fileID: 2100000, guid: b4b388feaca35a64988d901fccd98a43, type: 2}
+      name: plastico-blanco.003
+    second: {fileID: 2100000, guid: 3830bcc723b015a45bdcccbfeb527d57, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: madera pisos
-    second: {fileID: 2100000, guid: 9305b579863a87548a7a2901f19f69ed, type: 2}
+      name: plastico-celeste
+    second: {fileID: 2100000, guid: 1b34d5b6805a34f42a5055ecbc2f05a8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: plants
-    second: {fileID: 2100000, guid: 1fb0932a11ba7554387128b45933660c, type: 2}
+      name: plastico-celeste.001
+    second: {fileID: 2100000, guid: 424c735ce5e52734ba571618737d831e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: stage3
-    second: {fileID: 2100000, guid: 9c538f18373aca8408198621655dda48, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: circle3_baseColor
-    second: {fileID: 2800000, guid: 0f426a4fec80106408050e781248a3ad, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: plants_baseColor
-    second: {fileID: 2800000, guid: 30c7ad31b8187da49a35116a089394a1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: stage2_baseColor
-    second: {fileID: 2800000, guid: 275479c7e27f63d479b231a38f6c64a8, type: 3}
+      name: plastico-celeste.002
+    second: {fileID: 2100000, guid: 171e010288d11ad4bb1340d3b923415a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
