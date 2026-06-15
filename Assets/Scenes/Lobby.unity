@@ -38508,6 +38508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveIndicator
       objectReference: {fileID: 0}
+    - target: {fileID: 1929756798245216013, guid: ef6e4cfaa1c37af4cadc1d0df8d8f8d0, type: 3}
+      propertyPath: m_Volume
+      value: 0.286
+      objectReference: {fileID: 0}
     - target: {fileID: 4080915446077357712, guid: ef6e4cfaa1c37af4cadc1d0df8d8f8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -38883,15 +38887,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5268115436447484983, guid: 3ef36f7fd4458c748bc5b090b30ec57d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -102.5
+      value: -104.22
       objectReference: {fileID: 0}
     - target: {fileID: 5268115436447484983, guid: 3ef36f7fd4458c748bc5b090b30ec57d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.3
+      value: -15.877
       objectReference: {fileID: 0}
     - target: {fileID: 5268115436447484983, guid: 3ef36f7fd4458c748bc5b090b30ec57d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -62
+      value: -61.663
       objectReference: {fileID: 0}
     - target: {fileID: 5268115436447484983, guid: 3ef36f7fd4458c748bc5b090b30ec57d, type: 3}
       propertyPath: m_LocalRotation.w

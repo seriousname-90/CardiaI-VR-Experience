@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d9b9b1c497e3c044beda157d91f9614
+guid: 02501f2a1dc9579409ad5aed9c9427a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,133 +123,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: touch_0
+      name: touch 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7233
-        width: 688
-        height: 602
+        y: 14465
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.4850434, y: 0.45726728}
+      pivot: {x: 0.49506342, y: 0.4661761}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c54e3d4377c1a4d8bde86b7f4a65a1
-      internalID: 1500960290
+      spriteID: 0697e5a1eea9799409a27574115fb3a9
+      internalID: -2035003905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: touch_1
+      name: touch 1_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 6631
-        width: 688
-        height: 602
+        y: 13260
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.48369735, y: 0.47205362}
+      pivot: {x: 0.49506342, y: 0.47745073}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 086caf69b18befa4eaeeb9c75033f359
-      internalID: 1997028536
+      spriteID: 60965e185be88a342baf170c28ca3483
+      internalID: 1055281451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: touch_2
+      name: touch 1_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 6029
-        width: 688
-        height: 602
+        y: 12045
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.48369735, y: 0.49068454}
+      pivot: {x: 0.48596382, y: 0.48397222}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac45d206eb142e94e87ce6d53257e24f
-      internalID: -63421831
+      spriteID: bad535b25aacb9e439f6addc2c2ac8e5
+      internalID: -1806147809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: touch_3
+      name: touch 1_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 5427
-        width: 688
-        height: 602
+        y: 10850
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.49999964, y: 0.5752837}
+      pivot: {x: 0.5053986, y: 0.5739756}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00b7e5bab65ec7d4fae388e67997b1d3
-      internalID: -590274089
+      spriteID: e6dcba7133c07b140b32dfd331d96df8
+      internalID: -224368754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: touch_4
+      name: touch 1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 4825
-        width: 688
-        height: 602
+        y: 9609
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.4802376, y: 0.47741416}
+      pivot: {x: 0.47349548, y: 0.46973386}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f737ac2136919844fa5063a8d6029ac3
-      internalID: 1183086366
+      spriteID: 980d5c843f2ae1647aa98f73df42c57d
+      internalID: 1524341032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: touch_5
+      name: touch 1_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 4223
-        width: 688
-        height: 602
+        y: 8440
+        width: 1376
+        height: 1205
       alignment: 9
-      pivot: {x: 0.4761358, y: 0.4636344}
+      pivot: {x: 0.49566126, y: 0.5111474}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397f5916a596a0748bcfbe12a86049cc
-      internalID: -538914249
+      spriteID: 66c78c6bc32b5a94c809d29eab372437
+      internalID: 158545556
       vertices: []
       indices: 
       edges: []
@@ -258,7 +258,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cbc70e7b26b749c44b20340cd7e5b924
+    spriteID: 127cdff1648a0964e81cb1e5582dca55
     internalID: 0
     vertices: []
     indices: 
@@ -267,17 +267,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":13.0},"gridSpriteSize":{"x":688.0,"y":602.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":13.0},"gridSpriteSize":{"x":1376.0,"y":1205.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      touch_0: 1500960290
-      touch_1: 1997028536
-      touch_2: -63421831
-      touch_3: -590274089
-      touch_4: 1183086366
-      touch_5: -538914249
+      touch 1_0: -2035003905
+      touch 1_1: 1055281451
+      touch 1_2: -1806147809
+      touch 1_3: -224368754
+      touch 1_4: 1524341032
+      touch 1_5: 158545556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
