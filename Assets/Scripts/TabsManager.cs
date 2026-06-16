@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI; // REQUISITO: Añadimos esto para manejar los botones de interfaz
+using System.Collections.Generic;
 
 public class TabsManager : MonoBehaviour
 {
@@ -30,14 +31,27 @@ public class TabsManager : MonoBehaviour
     private float tiempoProximoClic = 0f;
     private float delayEntreClics = 0.4f; 
 
+    // Conjunto para guardar las mallas de los botones que el usuario ya presionó
+    private HashSet<MeshRenderer> botonesPresionadosAnteriores = new HashSet<MeshRenderer>();
+
     public void SeleccionarBoton(MeshRenderer botonPresionado)
     {
         if (Time.time < tiempoProximoClic) return;
         tiempoProximoClic = Time.time + delayEntreClics;
 
-        if (botonPreguntarFin != null && !botonPreguntarFin.activeSelf)
+        // Registramos el botón actual en nuestro contador de visitados
+        if (!botonesPresionadosAnteriores.Contains(botonPresionado))
         {
-            botonPreguntarFin.SetActive(true);
+            botonesPresionadosAnteriores.Add(botonPresionado);
+        }
+
+        // El botón de terminar experiencia aparece solo si ya se presionaron los 3 tabs únicos
+        if (botonesPresionadosAnteriores.Count >= 3)
+        {
+            if (botonPreguntarFin != null && !botonPreguntarFin.activeSelf)
+            {
+                botonPreguntarFin.SetActive(true);
+            }
         }
 
         for (int i = 0; i < pestanas.Length; i++)
@@ -46,21 +60,31 @@ public class TabsManager : MonoBehaviour
             {
                 if (pestanas[i].mallaBoton == botonPresionado)
                 {
-                    // 1. Cambiamos aspecto visual y encendemos info
+                    // Cambiamos aspecto visual al seleccionado y encendemos su info
                     pestanas[i].mallaBoton.material = materialSeleccionado;
                     if (pestanas[i].panelInfo != null) pestanas[i].panelInfo.SetActive(true);
 
-                    // 2. BLOQUEO: Desactivamos el botón físico para que no reciba más rayos ni clics
+                    // Ya NO ponemos el interactable en false. Sigue activo para clics.
                     if (pestanas[i].componenteInteractable != null)
                     {
-                        pestanas[i].componenteInteractable.interactable = false;
+                        pestanas[i].componenteInteractable.interactable = true;
                     }
                 }
                 else
                 {
-                    // Al cambiar de pestaña, restauramos los demás botones para que vuelvan a ser clickeables
-                    pestanas[i].mallaBoton.material = materialNormal;
                     if (pestanas[i].panelInfo != null) pestanas[i].panelInfo.SetActive(false);
+
+                    // Si este botón NO es el actual, pero YA fue presionado en el pasado,
+                    // mantiene el aspecto visual de seleccionado (usando tu material "GlassShader Selected")
+                    if (botonesPresionadosAnteriores.Contains(pestanas[i].mallaBoton))
+                    {
+                        pestanas[i].mallaBoton.material = materialSeleccionado;
+                    }
+                    else
+                    {
+                        // Si nunca ha sido presionado, vuelve a su estado normal de fábrica
+                        pestanas[i].mallaBoton.material = materialNormal;
+                    }
 
                     if (pestanas[i].componenteInteractable != null)
                     {
