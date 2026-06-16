@@ -16420,13 +16420,8 @@ MonoBehaviour:
   targetCamera: {fileID: 754135207}
   forwardOffset: {x: 0, y: -0.5, z: 1}
   followSpeed: 10
-  capasColision:
-    serializedVersion: 2
-    m_Bits: 1
-  maxYAngleDistance: 20
   smoothYTime: 0.2
-  minXAngle: 0
-  maxXAngle: 0
+  smoothXTime: 0.1
 --- !u!1001 &674548050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37652,7 +37647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
   sceneName: Lobby
   cambiarAutomaticoAlEntrar: 1
-  segundosDeEspera: 15
+  segundosDeEspera: 6
 --- !u!43 &1836467172
 Mesh:
   m_ObjectHideFlags: 0
