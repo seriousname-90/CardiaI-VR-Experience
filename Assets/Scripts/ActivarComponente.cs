@@ -60,7 +60,7 @@ public class ActivarComponente : MonoBehaviour
 
     IEnumerator ActivarDelay()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
         if (audiomanager != null)
             audiomanager.ReproducirLocucion(0);
             Debug.Log("Reproduciendo locución inicial con delay");
