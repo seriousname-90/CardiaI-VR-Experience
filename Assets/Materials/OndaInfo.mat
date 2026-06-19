@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6474954641276838292
+--- !u!114 &-5657189427557798022
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OndaArritmia
+  m_Name: OndaInfo
   m_Shader: {fileID: -6465566751694194690, guid: 2cd81df8d4b9e4096b6fc9b005af74f3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -36,7 +36,6 @@ Material:
   disabledShaderPasses:
   - DepthOnly
   - MOTIONVECTORS
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -62,7 +61,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _CastShadows: 0
+    - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 10
     - _DstBlendAlpha: 10
