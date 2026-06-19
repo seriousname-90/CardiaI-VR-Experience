@@ -28,6 +28,10 @@ public class HeartAnimations : MonoBehaviour
     public Animator FAauricula; // animación temblorosa para fibrilación auricular
     public GameObject FABall1; // animación temblorosa para fibrilación auricular
     public GameObject FABall2; // animación temblorosa para fibrilación auricular
+    public Animator cortina1;
+    public Animator cortina2;
+    public bool cerrarCortinas;
+    public AudioClip courtains;
 
 
     [Header("Objetos a desactivar al finalizar la animación")]
@@ -39,6 +43,17 @@ public class HeartAnimations : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.speed = 0f;
         animator.Play(nombreAnimacion, 0, 0f);
+        if (cerrarCortinas){
+            CerrarCortinas();
+        }
+            
+    }
+
+    private void CerrarCortinas()
+    {
+        cortina1.Play("closeCurtain");
+        cortina2.Play("closeCurtain2");
+        audioSource.PlayOneShot(courtains);
     }
 
     void DetenerBolitas()
