@@ -4,6 +4,8 @@ public class AwakeHeart : MonoBehaviour
 {
     public HeartAnimations heartAnimations;
     public AudioSource heartAudioSource;
+    public Animator cortina1;
+    public Animator cortina2;
 
     private void Start()
     {
@@ -13,7 +15,7 @@ public class AwakeHeart : MonoBehaviour
 
     private System.Collections.IEnumerator IniciarConDelay()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         
         if (heartAnimations != null)
         {
