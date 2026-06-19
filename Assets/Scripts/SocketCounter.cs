@@ -13,9 +13,8 @@ public class SocketCounter : MonoBehaviour
     public GameObject[] grabElectrodes;
 
     [Header("Objeto a activar cuando ambos estén llenos")]
-    public GameObject objetoAActivar;
+    public ActivarComponente objetoAActivar;
     public AudioManager audioManager; 
-    public SceneChanger sceneChanger;
     public Animator animator; 
 
     private int contador = 0;
@@ -41,20 +40,14 @@ public class SocketCounter : MonoBehaviour
         if (contador >= 2)
         {
             if (objetoAActivar != null)
-                objetoAActivar.SetActive(true);
+                objetoAActivar.ActivarObjetoConDelay(23.5f);
             if (audioManager != null)
                 audioManager.ReproducirLocucion(7);
                 animator.Play("buildCompleted"); 
                 Debug.Log("Reproduciendo locución de éxito por colocar ambos objetos en los sockets."); 
                 audioManager.ReproducirLocucionConDelay(8, 13.5f); // Reproducir locución final cuando termine la anterior
-                StartCoroutine(waitForAudioToFinish(22f)); // TODO: CAMBIAR A BOTOON O NOSE 
-        }
-    }
 
-    private IEnumerator waitForAudioToFinish(float clipLength)
-    {
-        yield return new WaitForSeconds(clipLength);
-        sceneChanger.CambiarEscena();
+        }
     }
 
 }
