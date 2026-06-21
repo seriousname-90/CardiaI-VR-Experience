@@ -121837,6 +121837,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.19498
       objectReference: {fileID: 0}
+    - target: {fileID: 5917151005427941921, guid: f65b2db18764adf46abaff9aedb17ed7, type: 3}
+      propertyPath: inclinacionAgente
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5972427167501447400, guid: f65b2db18764adf46abaff9aedb17ed7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.56
