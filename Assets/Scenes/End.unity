@@ -6327,56 +6327,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1819059615}
-  - component: {fileID: 1819059614}
-  - component: {fileID: 1819059613}
   - component: {fileID: 1819059616}
   - component: {fileID: 1819059617}
+  - component: {fileID: 1819059618}
   m_Layer: 0
-  m_Name: Empty_ObjectManager
+  m_Name: Orquestrator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1819059613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819059612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d2628d29d333042a8ad71f9d09bb71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  boton: {fileID: 0}
-  objectManager: {fileID: 1819059614}
-  audioManager: {fileID: 1819059616}
-  cooldownTime: 2
---- !u!114 &1819059614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819059612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992f028a274fe26418866b342d57b2fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  audioSource: {fileID: 1989596775}
-  objetosAActivar:
-  - {fileID: 689794676}
-  - {fileID: 129817633}
-  - {fileID: 1939269089}
-  buttonText: {fileID: 0}
-  myCanvas: {fileID: 0}
-  pantallas:
-  - {fileID: 168194409}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1819059615
 Transform:
   m_ObjectHideFlags: 0
@@ -6405,10 +6365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
-  - {fileID: 8300000, guid: b37e67cc30806be41925e5722b6eaf1a, type: 3}
-  - {fileID: 8300000, guid: a2d0eca652bee3c4eb867c1f5112b33c, type: 3}
-  - {fileID: 8300000, guid: 8fa68c95e9a8cb24f991b54cc5cd507a, type: 3}
-  - {fileID: 8300000, guid: 9ba3d3a37f07c4f4eac8775f1af74905, type: 3}
+  - {fileID: 8300000, guid: da477846cb2d84d32a5725efbc042d3a, type: 3}
+  - {fileID: 8300000, guid: e533c0cc2c4ea43fe8d540039f8ade20, type: 3}
   audioSource: {fileID: 1989596775}
   boton: {fileID: 0}
   subtitlePlayer: {fileID: 1364804095}
@@ -6432,6 +6390,24 @@ MonoBehaviour:
   sceneName: Lobby
   cambiarAutomaticoAlEntrar: 1
   segundosDeEspera: 6
+--- !u!114 &1819059618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819059612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82284fc3a8d785445b050e3edee09687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActivarComponente
+  componente: {fileID: 0}
+  componentes: []
+  audiomanager: {fileID: 1819059616}
+  cardiAnimator: {fileID: 0}
+  firstAnimation: 
+  activarAlIniciar: 1
 --- !u!43 &1836467172
 Mesh:
   m_ObjectHideFlags: 0
