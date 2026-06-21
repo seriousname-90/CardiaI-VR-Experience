@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -5295,19 +5295,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1857268747}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9219,7 +9207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -12695,7 +12683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2329507759778332422, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -13091,10 +13079,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActivarComponente
   componente: {fileID: 1645101677}
   componentes: []
-  audiomanager: {fileID: 0}
+  audiomanager: {fileID: 1857268744}
   cardiAnimator: {fileID: 0}
   firstAnimation: 
-  activarAlIniciar: 0
+  activarAlIniciar: 1
 --- !u!1 &1652517354
 GameObject:
   m_ObjectHideFlags: 0
@@ -14219,6 +14207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
+  - {fileID: 8300000, guid: 31a082a4a0e976545a4a3e361287ff57, type: 3}
   - {fileID: 8300000, guid: 1cf0d629963cc4526a660f5ccee7e4f3, type: 3}
   - {fileID: 8300000, guid: 56a38ada9064842b3a9d7c8a303dec1f, type: 3}
   - {fileID: 8300000, guid: 8e6846bf0366842aa99e17ff7b40572b, type: 3}
@@ -16049,6 +16038,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ce3bb330cc74ce49929ae6e4c9a35a9, type: 2}
+    - target: {fileID: 3839814566896831816, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4346334115812979760, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.143699
@@ -16060,6 +16053,10 @@ PrefabInstance:
     - target: {fileID: 4346334115812979760, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537592666775211152, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752201181042302161, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalScale.x
