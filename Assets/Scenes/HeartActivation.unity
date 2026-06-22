@@ -1319,7 +1319,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e3697ec6eee65054ab27b11a1f307f6d, type: 3}
+  m_Resource: {fileID: 8300000, guid: a3f1f07b8d498864a8a6e1b6cff67618, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14710,6 +14710,30 @@ MonoBehaviour:
           m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5411327072597673325}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5411327072597673324}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   executeOnlyOnce: 1
 --- !u!114 &794009966
@@ -29530,6 +29554,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SALA-DECORADA
       objectReference: {fileID: 0}
+    - target: {fileID: 5795083163234636132, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875950579171863763, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6092579228657349128, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -29551,6 +29583,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+--- !u!1 &5411327072597673324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5795083163234636132, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+  m_PrefabInstance: {fileID: 5411327072597673323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5411327072597673325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5875950579171863763, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+  m_PrefabInstance: {fileID: 5411327072597673323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

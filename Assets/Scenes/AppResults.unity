@@ -16114,6 +16114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SALA-DECORADA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5722899052471910740, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6092579228657349128, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16145,6 +16149,10 @@ PrefabInstance:
     - target: {fileID: 7215497555306296605, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalPosition.y
       value: -11.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564060059379333025, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_Shadows.m_Resolution
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 8910732142807973800, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalScale.x
