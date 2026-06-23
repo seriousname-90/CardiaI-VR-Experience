@@ -1321,7 +1321,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a3f1f07b8d498864a8a6e1b6cff67618, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -27088,8 +27088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
-  - {fileID: 8300000, guid: 6a06569df41a42144952fe56826fc35e, type: 3}
-  - {fileID: 8300000, guid: bff517e79db440b4c93a7f3ffc0e5414, type: 3}
+  - {fileID: 8300000, guid: 22ed661504c8cb74a83794e369b9eb9a, type: 3}
+  - {fileID: 8300000, guid: c3ae1b656fad50040b0e7d2fe2ddb39d, type: 3}
   - {fileID: 8300000, guid: 346e7da51a932084691f1d360b15024d, type: 3}
   - {fileID: 8300000, guid: 9683a2a50957cb74a88786c635a68855, type: 3}
   - {fileID: 8300000, guid: bd010e2697ced164e90d0697aff0f152, type: 3}

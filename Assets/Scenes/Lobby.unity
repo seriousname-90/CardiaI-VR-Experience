@@ -14779,10 +14779,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
-  - {fileID: 8300000, guid: b37e67cc30806be41925e5722b6eaf1a, type: 3}
-  - {fileID: 8300000, guid: a2d0eca652bee3c4eb867c1f5112b33c, type: 3}
-  - {fileID: 8300000, guid: 8fa68c95e9a8cb24f991b54cc5cd507a, type: 3}
-  - {fileID: 8300000, guid: 9ba3d3a37f07c4f4eac8775f1af74905, type: 3}
+  - {fileID: 8300000, guid: 235219176061cc843b9929aa0ddeef6a, type: 3}
+  - {fileID: 8300000, guid: 3e64aa655fd145c45bf90020984bf462, type: 3}
+  - {fileID: 8300000, guid: 9df5a515d1975ac4a84774f966e534ff, type: 3}
+  - {fileID: 8300000, guid: 42ea773659dd0654bb98b6e796e016e3, type: 3}
   audioSource: {fileID: 1989596775}
   boton: {fileID: 327284236966653959}
   subtitlePlayer: {fileID: 1364804095}
