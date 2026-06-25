@@ -508,6 +508,11 @@ MonoBehaviour:
   cardiAnimator: {fileID: 0}
   firstAnimation: 
   activarAlIniciar: 0
+--- !u!95 &105842664 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4167444970140429684, guid: 5de9ddcf8adc4e449972ca154ab298f1, type: 3}
+  m_PrefabInstance: {fileID: 105842660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &118624959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +869,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 168194412}
+    - targetCorrespondingSourceObject: {fileID: 8980549144392899874, guid: 241656add64d24f69947d955e504d3bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 168194415}
   m_SourcePrefab: {fileID: -4216948427090074523, guid: 241656add64d24f69947d955e504d3bb, type: 3}
 --- !u!4 &168194408 stripped
 Transform:
@@ -888,6 +896,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAnimate
   duracion: 0.2
+--- !u!114 &168194415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168194409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7fafc6140bdb4a9e8888d25c35a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnActiveStateChanged
+  onBecameActive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 105842664}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: end1
+          m_BoolArgument: 0
+        m_CallState: 2
+  executeOnlyOnce: 1
 --- !u!1 &184638464
 GameObject:
   m_ObjectHideFlags: 0
@@ -5710,7 +5746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1364804093
 Transform:
   m_ObjectHideFlags: 0
@@ -6573,11 +6609,7 @@ MonoBehaviour:
   audioSource: {fileID: 1989596775}
   boton: {fileID: 0}
   subtitlePlayer: {fileID: 1364804095}
-  secuencias:
-  - {fileID: 11400000, guid: 7d13f766fbca79e4f914349c87dc3ec5, type: 2}
-  - {fileID: 11400000, guid: 1d67b86657d456a4f9c69740f4bcb784, type: 2}
-  - {fileID: 11400000, guid: 5b4a44a877d2b084093e25081bba2c78, type: 2}
-  - {fileID: 11400000, guid: a4f862e5d210a2d46a2c6be3304369dc, type: 2}
+  secuencias: []
 --- !u!114 &1819059617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6592,7 +6624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
   sceneName: Lobby
   cambiarAutomaticoAlEntrar: 1
-  segundosDeEspera: 6
+  segundosDeEspera: 40
 --- !u!114 &1819059618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7594,7 +7626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ae4268771564e44a831b9c4d621620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnStart
-  posicionDestino: {x: 0, y: 0, z: 0}
+  posicionDestino: {x: -3.33, y: 0, z: -3.313}
 --- !u!43 &1992183717
 Mesh:
   m_ObjectHideFlags: 0
