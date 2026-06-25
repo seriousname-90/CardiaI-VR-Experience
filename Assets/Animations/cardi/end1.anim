@@ -15335,7 +15335,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 12.9
+  - time: 14.4
     functionName: ActivarObjetoConDelay
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -11057,7 +11057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37c879fba358c44a9c50a6a13381e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
-  posicionDestino: {x: -2.701, y: 0.142, z: -1.945}
+  posicionDestino: {x: -2.701, y: 0.142, z: -1.875}
   rotacionDestino: {x: 0, y: 0, z: 0}
   velocidad: 0.4
   delayAntesMovimiento: 0
