@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "Antes de empezar, Cardi y t\xFA van a armarlo juntos, as\xED podr\xE1n
-      \\nconocer cada una de sus partes. "
+    message: "Antes de empezar, Cardi te ayudar\xE1 a armar a CAI100, as\xED aprenderas
+      sobre sus partes."
     duration: 5.5

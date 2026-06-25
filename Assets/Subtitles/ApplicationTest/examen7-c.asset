@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Pero primero, vamos a entender qu\xE9 pas\xF3 dentro de tu coraz\xF3n
-      \\ndurante esos segundos."
-    duration: 6
+    message: "Pero primero, vamos a entender qu\xE9 pasa dentro de un coraz\xF3n
+      durante esos segundos."
+    duration: 6.8

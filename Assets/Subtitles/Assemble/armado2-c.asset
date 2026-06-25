@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: 'Este es CAI100, esperando a ser ensamblado. Mira a tu alrededor \npara
-      encontrar las piezas necesarias para hacerlo. '
-    duration: 8
+    message: "Ahora, sigue el coraz\xF3n hacia la primer pieza."
+    duration: 4

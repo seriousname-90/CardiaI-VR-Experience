@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: 'Perfecto.  Vamos a realizar tu primer examen. '
-    duration: 3.5
+    message: 'Perfecto. Vamos a realizar tu primer examen. '
+    duration: 4

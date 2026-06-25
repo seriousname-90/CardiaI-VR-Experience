@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: Muy bien. Ahora la siguiente pieza.
+    message: Muy bien. Ahora busca la siguiente pieza.
     duration: 3.5

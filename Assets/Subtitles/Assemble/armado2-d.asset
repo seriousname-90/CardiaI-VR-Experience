@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Para atraer una pieza hacia ti, extiende tu mano, apunta con la \\npalma
+    message: "Para traer una pieza hacia ti, extiende tu mano, apunta con la palma
       hacia la plataforma y cierra el pu\xF1o para atraerla."
     duration: 9

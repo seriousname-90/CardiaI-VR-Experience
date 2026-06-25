@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Este es el bot\xF3n de encendido."
-    duration: 2.5
+    message: "Este es el bot\xF3n de encendido, col\xF3calo en su lugar."
+    duration: 4.5

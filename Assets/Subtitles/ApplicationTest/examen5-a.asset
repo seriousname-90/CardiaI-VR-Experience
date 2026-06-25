@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Coloca tus dedos y mant\xE9nnos en la posici\xF3n como se muestra en
-      \\npantalla."
-    duration: 5
+    message: "La aplicaci\xF3n est\xE1 buscando el dispositivo, observa el color
+      del led en el medio"
+    duration: 6

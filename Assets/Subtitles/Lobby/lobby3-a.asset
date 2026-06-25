@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "Perfecto!! Cuando te sientas listo, presiona el bot\xF3n para continuar"
-    duration: 4
+    message: "\xA1Perfecto! Cuando te sientas listo, presiona el bot\xF3n para continuar."
+    duration: 5

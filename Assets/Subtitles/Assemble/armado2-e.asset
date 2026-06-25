@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Luego toma el objeto y col\xF3calo en su lugar. Cuando est\xE9s listo,
-      \\ntrae la primera pieza."
-    duration: 5.5
+    message: "Cuando est\xE9s listo, trae la primera pieza."
+    duration: 3.5

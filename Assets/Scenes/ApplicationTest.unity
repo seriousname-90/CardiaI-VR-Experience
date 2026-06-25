@@ -9712,13 +9712,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   locuciones:
-  - {fileID: 8300000, guid: e3963dd464e19a145a13994597ba6fa9, type: 3}
-  - {fileID: 8300000, guid: 85a193e71a4334447a7bdeb16a99106a, type: 3}
-  - {fileID: 8300000, guid: fbc81ad24b8a59645af28d1f22559b2e, type: 3}
-  - {fileID: 8300000, guid: 28adc96173e180d4a90c1e9ebf777739, type: 3}
-  - {fileID: 8300000, guid: 90780e043cf7afd4eb5ca69138e691ac, type: 3}
-  - {fileID: 8300000, guid: 0cce94421ff526248ad3011cc6a7ff9e, type: 3}
-  - {fileID: 8300000, guid: c04d83cf5f6a659458417cda6d645763, type: 3}
+  - {fileID: 8300000, guid: 2391845c17a762e479f59ab6c853be49, type: 3}
+  - {fileID: 8300000, guid: a6b93cc000c13c048bddea5df7005165, type: 3}
+  - {fileID: 8300000, guid: 7e79cfcac8c6bef41b412f472f1cba9e, type: 3}
+  - {fileID: 8300000, guid: d613823213c7764419853edddfa883d5, type: 3}
+  - {fileID: 8300000, guid: 1b29d5d4c10024a43bc84c0e280d9ece, type: 3}
+  - {fileID: 8300000, guid: 18fa86120b6ab2f4883f2d793f3fe81b, type: 3}
+  - {fileID: 8300000, guid: 74f28c76ad69eab41b24f7a6f9100c94, type: 3}
   audioSource: {fileID: 1857268745}
   boton: {fileID: 1550388773}
   subtitlePlayer: {fileID: 953213757}

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Cuando la luz sea verde, significa que est\xE1 listo para conectarse."
-    duration: 5
+    message: "Cuando se conecte, la luz ser\xE1 azul."
+    duration: 3.5

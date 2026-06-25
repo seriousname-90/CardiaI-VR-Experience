@@ -108409,13 +108409,13 @@ MonoBehaviour:
   locuciones:
   - {fileID: 8300000, guid: 974e3db1d7535ed44b9b1998a62a8716, type: 3}
   - {fileID: 8300000, guid: b6980f2829ed6c64db1085ec19501d9c, type: 3}
-  - {fileID: 8300000, guid: 52d6a504df9976f41a195ad28c52ec74, type: 3}
-  - {fileID: 8300000, guid: c41234ea4a2f32346bcc781d9bda39c7, type: 3}
-  - {fileID: 8300000, guid: 0ac4578ef7ea0044ba806ad9508a1399, type: 3}
-  - {fileID: 8300000, guid: b28a0f5d21f9425429934e7b1afbbdaf, type: 3}
-  - {fileID: 8300000, guid: be6b53ac8ffe74e4f91742aa0b0df0d2, type: 3}
-  - {fileID: 8300000, guid: c9b7476fc2534d54f880cf4a9a641d96, type: 3}
-  - {fileID: 8300000, guid: 1ed46fab2fa6fd648966de078afc7262, type: 3}
+  - {fileID: 8300000, guid: 60b125c1ee280044cb6c3b547cc1c069, type: 3}
+  - {fileID: 8300000, guid: 92fd58638fcb4584ab770103d0eec94e, type: 3}
+  - {fileID: 8300000, guid: f0a066677de49b64c8ace92d637b051f, type: 3}
+  - {fileID: 8300000, guid: 90df0ba038a7d97468f6a4b8e53ff335, type: 3}
+  - {fileID: 8300000, guid: 15b8f346cabc2f64cb6b469c074b083f, type: 3}
+  - {fileID: 8300000, guid: 7065e969dfb1ebd419c488b5af3ec22e, type: 3}
+  - {fileID: 8300000, guid: 20c78fbf9e1249743b419e007d520a4d, type: 3}
   audioSource: {fileID: 1857268748}
   boton: {fileID: 255578594}
   subtitlePlayer: {fileID: 544598897}

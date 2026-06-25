@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Listo, la medici\xF3n ha terminado. Puedes retirar tus manos del \\ndispositivo
-      y pasar a la siguiente etapa."
-    duration: 8
+    message: "\xA1Listo! La medici\xF3n ha terminado."
+    duration: 3

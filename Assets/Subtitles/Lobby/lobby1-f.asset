@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: Vamos!
-    duration: 3
+    message: "\xA1Vamos!"
+    duration: 1

@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Muy bien. Ahora sigue al holograma y presta atenci\xF3n a d\xF3nde
-      te \\ngu\xEDa. "
-    duration: 6
+    message: "Prep\xE1rate para moverte, vas a ir conmigo."
+    duration: 3

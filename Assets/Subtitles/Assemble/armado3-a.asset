@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: Esa es la carcasa.
-    duration: 2.5
+    message: "Esa es la carcasa, t\xF3mala y col\xF3cala en el holograma. "
+    duration: 5

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: Esos son los electrodos.
-    duration: 2.5
+    message: "Esos son los electrodos, t\xF3malos y colocalos en su lugar."
+    duration: 5

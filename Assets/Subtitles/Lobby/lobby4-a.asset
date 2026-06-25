@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Bubba
-    message: "\xA1Que emocionante! Ya vamos a comenzar"
+    message: "\xA1Que emocionante! Ya vamos a comenzar.\L"
     duration: 2.5

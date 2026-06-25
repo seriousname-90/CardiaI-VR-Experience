@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "Cuando se conecte, la luz ser\xE1 azul."
+    message: "Presiona el bot\xF3n en el dispositivo para encenderlo."
     duration: 3.5

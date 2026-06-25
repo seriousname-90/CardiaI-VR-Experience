@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
     speaker: Cardi
-    message: "As\xED aprender\xE1s a interpretar lo que el dispositivo detecta."
-    duration: 4
+    message: "As\xED aprender\xE1s a interpretar lo que el dispositivo detecta. "
+    duration: 4.5

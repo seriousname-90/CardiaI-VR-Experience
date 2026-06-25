@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: armado1-b
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Bubba
-    message: "Si te das la vuelta, ver\xE1s un holograma. Ac\xE9rcate a \xE9l y presiona
-      \\nel bot\xF3n para comenzar."
-    duration: 5.5
+    speaker: Cardi
+    message: "Este coraz\xF3n ser\xE1 tu gu\xEDa visual durante esta etapa \xA1no
+      lo pierdas de vista!  "
+    duration: 6

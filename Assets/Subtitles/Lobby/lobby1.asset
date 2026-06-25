@@ -15,13 +15,13 @@ MonoBehaviour:
   subtitles:
   - delay: 0
     trigger: {fileID: 11400000, guid: 44e22245feb82444a9ac8a9839a07bd3, type: 2}
-  - delay: 7.8
+  - delay: 8
     trigger: {fileID: 11400000, guid: 234dfc2f5de5dad4ea257ec413921060, type: 2}
   - delay: 12
     trigger: {fileID: 11400000, guid: d52a578efe69bf84d943b76149bad536, type: 2}
-  - delay: 14
+  - delay: 13.7
     trigger: {fileID: 11400000, guid: 18f98833f46a05743ac7a2449db5b26e, type: 2}
-  - delay: 21
+  - delay: 21.7
     trigger: {fileID: 11400000, guid: 6693f404ada005d46b8628b80c5d07ba, type: 2}
-  - delay: 24.5
+  - delay: 26.2
     trigger: {fileID: 11400000, guid: b35e224a524281142a1234f0ff9a19e2, type: 2}
