@@ -4627,8 +4627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Prueba acercar tu mano al objeto y cierra el pu\xF1o para tomarlo.\\nSi
-    quieres soltarlo, abre la mano y estira los dedos completamente"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5810,7 +5809,7 @@ MonoBehaviour:
   fadeInTime: 0.2
   fadeOutTime: 0.2
   defaultDuration: 3
-  typewriterSpeed: 60
+  typewriterSpeed: 110
   speakerConfigs:
   - speakerName: Bubba
     textColor: {r: 0.6237268, g: 0.4481132, b: 1, a: 1}
@@ -6638,7 +6637,9 @@ MonoBehaviour:
   audioSource: {fileID: 1989596775}
   boton: {fileID: 0}
   subtitlePlayer: {fileID: 1364804095}
-  secuencias: []
+  secuencias:
+  - {fileID: 11400000, guid: 43e4baee2a04048bb95eadd8eb410967, type: 2}
+  - {fileID: 11400000, guid: cae468895995e4b88856b8af927fca5a, type: 2}
 --- !u!114 &1819059617
 MonoBehaviour:
   m_ObjectHideFlags: 0
