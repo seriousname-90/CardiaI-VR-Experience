@@ -29518,6 +29518,14 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2835858538689700462, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835858538689700462, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3265233754316316151, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -29605,6 +29613,14 @@ PrefabInstance:
     - target: {fileID: 7564060059379333025, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_Lightmapping
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564060059379333025, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564060059379333025, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

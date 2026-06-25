@@ -18343,6 +18343,18 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 4150
       objectReference: {fileID: 0}
+    - target: {fileID: 4999658901381198886, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999658901381198886, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999658901381198886, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.57
+      objectReference: {fileID: 0}
     - target: {fileID: 5347672626758158263, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -18367,6 +18379,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1914870653}
+    - target: {fileID: 7178262917253951269, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7404774056048265092, guid: d95b8c10bab9af3468ddd448d5460396, type: 3}
       propertyPath: 'objetos.Array.data[0]'
       value: 
