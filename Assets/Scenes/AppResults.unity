@@ -7023,7 +7023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &794009957
 Transform:
   m_ObjectHideFlags: 0
@@ -15510,7 +15510,7 @@ Transform:
   m_GameObject: {fileID: 1989596768}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 2.591, y: 0.812, z: 1.387}
+  m_LocalPosition: {x: 2.446, y: 0.812, z: 1.379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15627,7 +15627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ae4268771564e44a831b9c4d621620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnStart
-  posicionDestino: {x: 2.591, y: 0.812, z: 1.387}
+  posicionDestino: {x: 2.446, y: 0.812, z: 1.379}
 --- !u!1 &2020566829
 GameObject:
   m_ObjectHideFlags: 0
@@ -16816,7 +16816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2130637189
 MonoBehaviour:
   m_ObjectHideFlags: 0
