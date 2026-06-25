@@ -29518,6 +29518,10 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3265233754316316151, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ce3bb330cc74ce49929ae6e4c9a35a9, type: 2}
     - target: {fileID: 4752201181042302161, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.641
@@ -29577,7 +29581,7 @@ PrefabInstance:
     - target: {fileID: 6123882517195471191, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 11ab7448af8161e4c8be1923aea4161f, type: 2}
+      objectReference: {fileID: 2100000, guid: 52f56ffae911c414b8ffdc95b91b9fa1, type: 2}
     - target: {fileID: 6307245914823878766, guid: 522938f5c1cbede4280f206208aa3760, type: 3}
       propertyPath: m_Mesh
       value: 
