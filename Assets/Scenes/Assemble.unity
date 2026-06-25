@@ -98717,7 +98717,19 @@ MonoBehaviour:
       m_Calls: []
   alTerminarMovimiento:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2842912514460340433}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: cardiShow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!43 &1655202060
 Mesh:
   m_ObjectHideFlags: 0
@@ -127322,7 +127334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1108188077565367163, guid: f65b2db18764adf46abaff9aedb17ed7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.176
+      value: -3.699
       objectReference: {fileID: 0}
     - target: {fileID: 1108188077565367163, guid: f65b2db18764adf46abaff9aedb17ed7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -127502,7 +127514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationEvents
   nombreAnimacion1: floating
-  nombreAnimacion2: 
+  nombreAnimacion2: floatingBack
 --- !u!114 &2842912514460340437
 MonoBehaviour:
   m_ObjectHideFlags: 0
