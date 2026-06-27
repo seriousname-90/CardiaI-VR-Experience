@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // REQUISITO: Necesario para usar Corrutinas (IEnumerator)
+using System.Collections;
 
 public class SceneChanger : MonoBehaviour
 {
@@ -8,17 +8,24 @@ public class SceneChanger : MonoBehaviour
     public string sceneName;
 
     [Header("Cambio Automático (Opcional)")]
-    // Si marcas esto, la cuenta atrás iniciará sola al entrar a la escena
     public bool cambiarAutomaticoAlEntrar = false;
     public float segundosDeEspera = 3f;
 
     void Start()
     {
-        // Si la casilla está marcada, arranca la cuenta atrás de inmediato
         if (cambiarAutomaticoAlEntrar)
         {
             CambiarEscenaConRetraso(segundosDeEspera);
         }
+    }
+
+    void Awake()
+    {
+        // Limpia todos los volumes heredados de escenas anteriores
+        UnityEngine.Rendering.VolumeManager.instance.ResetMainStack();
+        
+        // Fuerza limpieza de lightmaps
+        LightmapSettings.lightmaps = LightmapSettings.lightmaps;
     }
     
     public void CambiarEscena()
@@ -27,7 +34,8 @@ public class SceneChanger : MonoBehaviour
         PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
         
-        // Cambiar a la nueva escena
+ 
+        // Cambio normal
         SceneManager.LoadScene(sceneName);
     }
     
@@ -35,7 +43,9 @@ public class SceneChanger : MonoBehaviour
     {
         PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("HeartActivation");
+        
+        // Siempre usar el limpiador cuando vamos a HeartActivation
+        Resources.UnloadUnusedAssets();
     }
     
     public void CambiarEscenaResultados()
@@ -45,7 +55,6 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("AppResults");
     }
 
-    // NUEVA FUNCIÓN: Se puede llamar desde un botón o dejar que actúe sola
     public void CambiarEscenaConRetraso(float segundos)
     {
         StartCoroutine(EsperaYCambia(segundos));
@@ -53,10 +62,7 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator EsperaYCambia(float segundos)
     {
-        // Detiene la ejecución aquí durante los segundos indicados
         yield return new WaitForSeconds(segundos);
-
-        // Ejecuta el flujo normal de guardado y carga
         CambiarEscena();
     }
 }

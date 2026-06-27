@@ -8,6 +8,7 @@ public class ButtonStateManager : MonoBehaviour
     public Button boton;
     public ObjectManager objectManager;
     public AudioManager audioManager;
+    public SceneChanger sceneChanger;
 
     [Header("Configuración de Bloqueo")]
     public float cooldownTime = 2f; // Tiempo mínimo entre presiones
@@ -74,7 +75,7 @@ public class ButtonStateManager : MonoBehaviour
             if (audioManager != null)
                 audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;
-            StartCoroutine(objectManager.CambiarEscenaLobby());
+            sceneChanger.CambiarEscenaConRetraso(3f); // Cambiar escena después de 3 segundos
             Debug.Log("Botón presionado por tercera vez, cambio de escena programado.");
         }
          else

@@ -54,7 +54,7 @@ public class ObjectManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f); // Espera 3 segundos antes de cambiar la escena
         Debug.Log("Cambiando a la escena Assemble.");
-        SceneManager.LoadScene("Assemble");
+        SceneManager.LoadScene("HeartActivation");
     }
 
     public void AvanzarPantalla()
