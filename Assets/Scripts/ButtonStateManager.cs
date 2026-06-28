@@ -75,7 +75,7 @@ public class ButtonStateManager : MonoBehaviour
             if (audioManager != null)
                 audioManager.ReproducirLocucion(3); // Locución para tercera acción
             contador++;
-            sceneChanger.CambiarEscenaConRetraso(3f); // Cambiar escena después de 3 segundos
+            // sceneChanger.CambiarEscenaConRetraso(3f); // Cambiar escena después de 3 segundos
             Debug.Log("Botón presionado por tercera vez, cambio de escena programado.");
         }
          else

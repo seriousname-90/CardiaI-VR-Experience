@@ -6,6 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     [Header("Configuración")]
     public string sceneName;
+    public SceneFader sceneFader;
 
     [Header("Cambio Automático (Opcional)")]
     public bool cambiarAutomaticoAlEntrar = false;
@@ -62,6 +63,7 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator EsperaYCambia(float segundos)
     {
+        sceneFader.FadeOut();
         yield return new WaitForSeconds(segundos);
         CambiarEscena();
     }

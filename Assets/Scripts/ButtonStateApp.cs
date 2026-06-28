@@ -60,7 +60,7 @@ public class ButtonStateApp : MonoBehaviour
         else if (contador == 1)
         {
             if (sceneChanger != null)
-                sceneChanger.CambiarEscena();
+                sceneChanger.CambiarEscenaConRetraso(2f);
             contador++;
             Debug.Log("Botón presionado por segunda vez. Objetos activados");
         }
