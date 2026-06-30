@@ -119,7 +119,7 @@ A través de **6 escenas**, el usuario recorre:
 
 ---
 
-## 👥 Contribuciones
+## Equipo
 
 | Persona | Rol |
 | :--- | :--- |
@@ -131,13 +131,13 @@ A través de **6 escenas**, el usuario recorre:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 *(Definir según política institucional)*
 
 ---
 
-## 📬 Contactos
+## Contactos
 
 *(contactos)*
 
