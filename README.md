@@ -124,7 +124,7 @@ A través de **6 escenas**, el usuario recorre:
 | Persona | Rol |
 | :--- | :--- |
 | Carlos Ávalos | Desarrollador |
-| Daniel Zeas | Desarrollador |
+| Daniel Zeas | Asistente de desarrollo |
 | Sandy Paola Pinzón | Diseñadora |
 | Gabriela Salazar | Diseñadora |
 | Sara Sibaja | Diseñadora |
