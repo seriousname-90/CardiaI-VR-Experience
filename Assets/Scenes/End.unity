@@ -2267,6 +2267,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8021264534399190923, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
+    - {fileID: 1590792545011225587, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7236476106946295961, guid: 7a0e7d4bd32ec3046a38194d9af5447d, type: 3}
       insertIndex: -1
@@ -7075,7 +7076,7 @@ MonoBehaviour:
   sceneName: Lobby
   sceneFader: {fileID: 1501466463}
   cambiarAutomaticoAlEntrar: 0
-  segundosDeEspera: 40
+  segundosDeEspera: 0
 --- !u!114 &1819059618
 MonoBehaviour:
   m_ObjectHideFlags: 0
