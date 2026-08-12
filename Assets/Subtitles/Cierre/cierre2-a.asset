@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cierre2-a
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTrigger
   subtitle:
-    speaker: Bubba
+    speaker: Cardi
     message: "\xA1Gracias por acompa\xF1arnos! Cuando est\xE9s listo, puedes quitarte
       el visor."
     duration: 5
