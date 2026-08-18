@@ -43,6 +43,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx              # <--- AÑADIDO: cubre archivos .slnx
 *.suo
 *.tmp
 *.user
@@ -98,6 +99,18 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+# Visual Studio Code configuration
+.vscode/
+.vsconfig
+
+# APK builds folder (si contiene archivos compilados)
+/Apk/
+
+# Archivos temporales de solución
+*.lscache
+TempAssembly.dll
+
+# Las líneas que ya tenías al final:
 Assets/Fonts/Figtree/Figtree-VariableFont_wght SDF.asset
 Assets/Fonts/Figtree/Figtree-VariableFont_wght SDF.asset.meta
 *.csproj.lscache
