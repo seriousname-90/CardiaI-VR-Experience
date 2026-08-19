@@ -292,6 +292,7 @@ public class HeartAnimations : MonoBehaviour
         anim.speed = velocidad;
     }
 
+    [ContextMenu("Reproducir Taquicardia")]
     public void ReproducirTaquicardia()
     {
         DetenerFibrilacionAtrial();
@@ -306,6 +307,7 @@ public class HeartAnimations : MonoBehaviour
         FABall2.SetActive(false); // Desactivar bolita temblorosa 2
     }
 
+    [ContextMenu("Reproducir Bradicardia")]
     public void ReproducirBradicardia()
     {
         DetenerFibrilacionAtrial();
