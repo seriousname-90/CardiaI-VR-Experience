@@ -130,17 +130,3 @@ A través de **6 escenas**, el usuario recorre:
 | Sara Sibaja | Diseñadora |
 
 ---
-
-## Licencia
-
-*(Definir según política institucional)*
-
----
-
-## Contactos
-
-*(contactos)*
-
----
-
-*Actualizado: Junio 2026*
