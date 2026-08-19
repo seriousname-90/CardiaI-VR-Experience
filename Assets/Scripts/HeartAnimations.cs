@@ -320,6 +320,8 @@ public class HeartAnimations : MonoBehaviour
         FABall2.SetActive(false); // Desactivar bolita temblorosa 2
     }
 
+
+    [ContextMenu("Reproducir Fibrilación Atrial")]
     public void ReproducirFibrilacionAtrial()
     {
         // Detener fibrilación anterior si existe
