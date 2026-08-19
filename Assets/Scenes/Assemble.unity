@@ -10256,10 +10256,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RespawnOnFall
   objetos:
-  - {fileID: 0}
-  posicionesIniciales: []
+  - {fileID: 789895506}
+  - {fileID: 317576229}
+  - {fileID: 3289847}
+  - {fileID: 1954045875}
+  posicionesIniciales:
+  - {x: 0.624, y: 0.3062, z: -5.51}
+  - {x: -0.4797, y: 0.3028, z: -5.4397}
+  - {x: -0.275, y: 0.311, z: -5.816}
+  - {x: 0.275, y: 0.311, z: -5.816}
   rotacionesIniciales: []
-  sonidoRespawn: {fileID: 352944890}
+  sonidoRespawn: {fileID: 516576312}
 --- !u!82 &352944890
 AudioSource:
   m_ObjectHideFlags: 0
