@@ -7,15 +7,13 @@
 
 ## Índice
 
-- [Visión general](#-visión-general)
+- [Visión general](#visión-general)
 - [El problema real](#-el-problema-real)
-- [Flujo de la experiencia](#-flujo-de-la-experiencia)
-- [Salas de la experiencia](#-salas-de-la-experiencia)
-- [Demo y videos](#-demo-y-videos)
-- [Tecnologías utilizadas](#-tecnologías-utilizadas)
-- [Contribuciones](#-contribuciones)
-- [Licencia](#-licencia)
-- [Contactos](#-contactos)
+- [Flujo de la experiencia](#flujo-de-la-experiencia)
+- [Salas de la experiencia](#salas-de-la-experiencia)
+- [Demo y videos](#demo-y-videos)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Equipo](#equipo)
 
 ---
 
